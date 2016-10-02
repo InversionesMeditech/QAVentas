@@ -1,0 +1,40 @@
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCobranza.exe
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCobranza.pdb
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.csprojResolveAssemblyReference.cache
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Cliente.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Panel.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Properties.Resources.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.csproj.GenerateResource.Cache
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.exe.licenses
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.exe
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.pdb
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCbrDao.dll
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCbrDao.pdb
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.exe
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCobranza.exe
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCobranza.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCbrDao.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.csprojResolveAssemblyReference.cache
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Cliente.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Panel.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Properties.Resources.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.csproj.GenerateResource.Cache
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.exe.licenses
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Cotizaciones.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Conceptos.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.OrdenCompra.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Permisos.resources
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Usuario.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Conceptos.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Cotizaciones.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.OrdenCompra.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Permisos.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\obj\Debug\AQCobranza.Usuario.resources
+D:\DESARROLLO\AQCobranza\AQCobranza\bin\Debug\AQCobranza.exe.config
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\bin\Debug\AQCobranza.exe.config
