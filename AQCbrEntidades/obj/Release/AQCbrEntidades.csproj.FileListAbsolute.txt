@@ -1,0 +1,9 @@
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\bin\Release\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\bin\Release\AQCbrEntidades.pdb
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\bin\Release\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\bin\Release\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.csprojResolveAssemblyReference.cache

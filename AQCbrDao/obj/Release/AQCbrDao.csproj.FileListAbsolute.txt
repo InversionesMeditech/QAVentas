@@ -1,0 +1,14 @@
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Release\AQCbrDao.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Release\AQCbrDao.pdb
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Release\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Release\AQCbrEntidades.pdb
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Release\AQCbrDao.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Release\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Release\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Release\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.pdb

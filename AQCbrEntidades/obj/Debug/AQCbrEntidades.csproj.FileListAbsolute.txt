@@ -1,0 +1,8 @@
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\bin\Debug\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\bin\Debug\AQCbrEntidades.pdb
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\obj\Debug\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrEntidades\obj\Debug\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\bin\Debug\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\bin\Debug\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Debug\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Debug\AQCbrEntidades.pdb

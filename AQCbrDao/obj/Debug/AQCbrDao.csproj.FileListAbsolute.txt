@@ -1,0 +1,14 @@
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Debug\AQCbrDao.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Debug\AQCbrDao.pdb
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Debug\AQCbrEntidades.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\bin\Debug\AQCbrEntidades.pdb
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.csprojResolveAssemblyReference.cache
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.dll
+D:\DESARROLLO\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Debug\AQCbrDao.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Debug\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Debug\AQCbrEntidades.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Debug\AQCbrEntidades.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.dll
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.pdb
+E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Debug\AQCbrDao.csprojResolveAssemblyReference.cache
