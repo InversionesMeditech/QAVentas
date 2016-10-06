@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQCbrDao.dll" size="17920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQCbrDao.dll" size="18432">
       <assemblyIdentity name="AQCbrDao" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tm1psBaifb1tIhAozH73nfSQ3wbaUwTdYKCAKKSPzQE=</dsig:DigestValue>
+        <dsig:DigestValue>GQhHHJ0NRLEm5HPRn9doSS0K/81MLAClgGz+JVXZ4mQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zMtWkHkKKv7qbDnkDIzqu+f3B+6cm4YpHoDvbpPuKco=</dsig:DigestValue>
+        <dsig:DigestValue>ubHvvN4H7cuIcGvoil6r7yzbXkDqhW0t4LQb/AEBJHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -834,14 +834,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QA-Ventas.exe" size="1412608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QA-Ventas.exe" size="1425408">
       <assemblyIdentity name="QA-Ventas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QFkaWPkogEJ1Rgf3ybmRwCnaAxYovEjbX54fm6Q5WIw=</dsig:DigestValue>
+        <dsig:DigestValue>t4KOMfpo05fMspSpc7VmbxZqVy9t4LhJaIV5OsdRflw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -4720,6 +4720,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncostoxunidad;
             
+            private global::System.Data.DataColumn columncod_extra;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ps_Conceptos_BuscarDataTable() {
@@ -4787,6 +4789,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_extraColumn {
+                get {
+                    return this.columncod_extra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4822,13 +4832,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ps_Conceptos_BuscarRow Addps_Conceptos_BuscarRow(string Cod_concep, string concepto, string Observaciones, double costoxunidad) {
+            public ps_Conceptos_BuscarRow Addps_Conceptos_BuscarRow(string Cod_concep, string concepto, string Observaciones, double costoxunidad, string cod_extra) {
                 ps_Conceptos_BuscarRow rowps_Conceptos_BuscarRow = ((ps_Conceptos_BuscarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod_concep,
                         concepto,
                         Observaciones,
-                        costoxunidad};
+                        costoxunidad,
+                        cod_extra};
                 rowps_Conceptos_BuscarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowps_Conceptos_BuscarRow);
                 return rowps_Conceptos_BuscarRow;
@@ -4862,6 +4873,7 @@ namespace AQCobranza {
                 this.columnconcepto = base.Columns["concepto"];
                 this.columnObservaciones = base.Columns["Observaciones"];
                 this.columncostoxunidad = base.Columns["costoxunidad"];
+                this.columncod_extra = base.Columns["cod_extra"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4875,6 +4887,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnObservaciones);
                 this.columncostoxunidad = new global::System.Data.DataColumn("costoxunidad", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncostoxunidad);
+                this.columncod_extra = new global::System.Data.DataColumn("cod_extra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_extra);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_concep}, true));
                 this.columnCod_concep.AllowDBNull = false;
@@ -4882,6 +4896,8 @@ namespace AQCobranza {
                 this.columnCod_concep.MaxLength = 10;
                 this.columnconcepto.MaxLength = 150;
                 this.columnObservaciones.MaxLength = 2147483647;
+                this.columncod_extra.ReadOnly = true;
+                this.columncod_extra.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5708,6 +5724,16 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columng_fondo;
             
+            private global::System.Data.DataColumn columnDir_cliente;
+            
+            private global::System.Data.DataColumn columncod_extra;
+            
+            private global::System.Data.DataColumn columnD_validez;
+            
+            private global::System.Data.DataColumn columncod_conImpr;
+            
+            private global::System.Data.DataColumn columncosto_unit_cot;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ps_Cotizacion_BuscarDataTable() {
@@ -6071,6 +6097,46 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Dir_clienteColumn {
+                get {
+                    return this.columnDir_cliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_extraColumn {
+                get {
+                    return this.columncod_extra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn D_validezColumn {
+                get {
+                    return this.columnD_validez;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_conImprColumn {
+                get {
+                    return this.columncod_conImpr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn costo_unit_cotColumn {
+                get {
+                    return this.columncosto_unit_cot;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6147,7 +6213,12 @@ namespace AQCobranza {
                         Header_cotizaRow parentHeader_cotizaRowByHeader_cotiza_ps_Cotizacion_Buscar, 
                         byte[] g_Encabezado, 
                         byte[] g_piepag, 
-                        byte[] g_fondo) {
+                        byte[] g_fondo, 
+                        string Dir_cliente, 
+                        string cod_extra, 
+                        int D_validez, 
+                        string cod_conImpr, 
+                        double costo_unit_cot) {
                 ps_Cotizacion_BuscarRow rowps_Cotizacion_BuscarRow = ((ps_Cotizacion_BuscarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         num_ord,
@@ -6190,7 +6261,12 @@ namespace AQCobranza {
                         null,
                         g_Encabezado,
                         g_piepag,
-                        g_fondo};
+                        g_fondo,
+                        Dir_cliente,
+                        cod_extra,
+                        D_validez,
+                        cod_conImpr,
+                        costo_unit_cot};
                 if ((parentHeader_cotizaRowByHeader_cotiza_ps_Cotizacion_Buscar != null)) {
                     columnValuesArray[37] = parentHeader_cotizaRowByHeader_cotiza_ps_Cotizacion_Buscar[0];
                 }
@@ -6257,6 +6333,11 @@ namespace AQCobranza {
                 this.columng_Encabezado = base.Columns["g_Encabezado"];
                 this.columng_piepag = base.Columns["g_piepag"];
                 this.columng_fondo = base.Columns["g_fondo"];
+                this.columnDir_cliente = base.Columns["Dir_cliente"];
+                this.columncod_extra = base.Columns["cod_extra"];
+                this.columnD_validez = base.Columns["D_validez"];
+                this.columncod_conImpr = base.Columns["cod_conImpr"];
+                this.columncosto_unit_cot = base.Columns["costo_unit_cot"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6344,6 +6425,16 @@ namespace AQCobranza {
                 base.Columns.Add(this.columng_piepag);
                 this.columng_fondo = new global::System.Data.DataColumn("g_fondo", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columng_fondo);
+                this.columnDir_cliente = new global::System.Data.DataColumn("Dir_cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDir_cliente);
+                this.columncod_extra = new global::System.Data.DataColumn("cod_extra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_extra);
+                this.columnD_validez = new global::System.Data.DataColumn("D_validez", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnD_validez);
+                this.columncod_conImpr = new global::System.Data.DataColumn("cod_conImpr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_conImpr);
+                this.columncosto_unit_cot = new global::System.Data.DataColumn("costo_unit_cot", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncosto_unit_cot);
                 this.columnnum_ord.ReadOnly = true;
                 this.columnDet_Cot.AllowDBNull = false;
                 this.columnDet_Cot.MaxLength = 10;
@@ -6378,6 +6469,10 @@ namespace AQCobranza {
                 this.columnCod_concep.MaxLength = 10;
                 this.columnCod_Cot.AllowDBNull = false;
                 this.columnCod_Cot.MaxLength = 50;
+                this.columnDir_cliente.MaxLength = 150;
+                this.columncod_extra.MaxLength = 10;
+                this.columncod_conImpr.ReadOnly = true;
+                this.columncod_conImpr.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6867,6 +6962,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncod_Gremision;
             
+            private global::System.Data.DataColumn columnDet_Cot;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ps_GeneraDTpagoDataTable() {
@@ -6982,6 +7079,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Det_CotColumn {
+                get {
+                    return this.columnDet_Cot;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7017,7 +7122,7 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ps_GeneraDTpagoRow Addps_GeneraDTpagoRow(string cod_orden, string Cod_concep, string concepto, double Unidades_entregadas, string Unidad, double descuento, double Sub_total, double monto, bool flg_entregado, string cod_Gremision) {
+            public ps_GeneraDTpagoRow Addps_GeneraDTpagoRow(string cod_orden, string Cod_concep, string concepto, double Unidades_entregadas, string Unidad, double descuento, double Sub_total, double monto, bool flg_entregado, string cod_Gremision, string Det_Cot) {
                 ps_GeneraDTpagoRow rowps_GeneraDTpagoRow = ((ps_GeneraDTpagoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cod_orden,
@@ -7029,7 +7134,8 @@ namespace AQCobranza {
                         Sub_total,
                         monto,
                         flg_entregado,
-                        cod_Gremision};
+                        cod_Gremision,
+                        Det_Cot};
                 rowps_GeneraDTpagoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowps_GeneraDTpagoRow);
                 return rowps_GeneraDTpagoRow;
@@ -7062,6 +7168,7 @@ namespace AQCobranza {
                 this.columnmonto = base.Columns["monto"];
                 this.columnflg_entregado = base.Columns["flg_entregado"];
                 this.columncod_Gremision = base.Columns["cod_Gremision"];
+                this.columnDet_Cot = base.Columns["Det_Cot"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7087,6 +7194,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnflg_entregado);
                 this.columncod_Gremision = new global::System.Data.DataColumn("cod_Gremision", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_Gremision);
+                this.columnDet_Cot = new global::System.Data.DataColumn("Det_Cot", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDet_Cot);
                 this.columncod_orden.AllowDBNull = false;
                 this.columncod_orden.MaxLength = 10;
                 this.columnCod_concep.AllowDBNull = false;
@@ -7096,6 +7205,8 @@ namespace AQCobranza {
                 this.columnSub_total.ReadOnly = true;
                 this.columnflg_entregado.DefaultValue = ((bool)(true));
                 this.columncod_Gremision.MaxLength = 20;
+                this.columnDet_Cot.AllowDBNull = false;
+                this.columnDet_Cot.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9856,6 +9967,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columnUnidades_entregadas;
             
+            private global::System.Data.DataColumn columncod_conImpr;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public View_Guia_remisionDataTable() {
@@ -10131,6 +10244,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_conImprColumn {
+                get {
+                    return this.columncod_conImpr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10196,7 +10317,8 @@ namespace AQCobranza {
                         string T_RUC, 
                         string T_placa, 
                         string cod_orden, 
-                        double Unidades_entregadas) {
+                        double Unidades_entregadas, 
+                        string cod_conImpr) {
                 View_Guia_remisionRow rowView_Guia_remisionRow = ((View_Guia_remisionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Det_Cot,
@@ -10228,7 +10350,8 @@ namespace AQCobranza {
                         T_RUC,
                         T_placa,
                         cod_orden,
-                        Unidades_entregadas};
+                        Unidades_entregadas,
+                        cod_conImpr};
                 rowView_Guia_remisionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowView_Guia_remisionRow);
                 return rowView_Guia_remisionRow;
@@ -10281,6 +10404,7 @@ namespace AQCobranza {
                 this.columnT_placa = base.Columns["T_placa"];
                 this.columncod_orden = base.Columns["cod_orden"];
                 this.columnUnidades_entregadas = base.Columns["Unidades_entregadas"];
+                this.columncod_conImpr = base.Columns["cod_conImpr"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10346,6 +10470,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columncod_orden);
                 this.columnUnidades_entregadas = new global::System.Data.DataColumn("Unidades_entregadas", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnidades_entregadas);
+                this.columncod_conImpr = new global::System.Data.DataColumn("cod_conImpr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_conImpr);
                 this.columnDet_Cot.AllowDBNull = false;
                 this.columnDet_Cot.MaxLength = 10;
                 this.columnNombre.MaxLength = 150;
@@ -10374,6 +10500,7 @@ namespace AQCobranza {
                 this.columnT_RUC.MaxLength = 15;
                 this.columnT_placa.MaxLength = 15;
                 this.columncod_orden.MaxLength = 10;
+                this.columncod_conImpr.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10916,6 +11043,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncomprobante_impr;
             
+            private global::System.Data.DataColumn columncod_orden;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public View_ComprobanteDataTable() {
@@ -11127,6 +11256,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_ordenColumn {
+                get {
+                    return this.columncod_orden;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -11184,7 +11321,8 @@ namespace AQCobranza {
                         string Acabados, 
                         string Impresion, 
                         string medida, 
-                        string comprobante_impr) {
+                        string comprobante_impr, 
+                        string cod_orden) {
                 View_ComprobanteRow rowView_ComprobanteRow = ((View_ComprobanteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         comprobante,
@@ -11208,7 +11346,8 @@ namespace AQCobranza {
                         Acabados,
                         Impresion,
                         medida,
-                        comprobante_impr};
+                        comprobante_impr,
+                        cod_orden};
                 rowView_ComprobanteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowView_ComprobanteRow);
                 return rowView_ComprobanteRow;
@@ -11253,6 +11392,7 @@ namespace AQCobranza {
                 this.columnImpresion = base.Columns["Impresion"];
                 this.columnmedida = base.Columns["medida"];
                 this.columncomprobante_impr = base.Columns["comprobante_impr"];
+                this.columncod_orden = base.Columns["cod_orden"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11302,6 +11442,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnmedida);
                 this.columncomprobante_impr = new global::System.Data.DataColumn("comprobante_impr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncomprobante_impr);
+                this.columncod_orden = new global::System.Data.DataColumn("cod_orden", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_orden);
                 this.columncomprobante.AllowDBNull = false;
                 this.columncomprobante.ReadOnly = true;
                 this.columncomprobante.MaxLength = 20;
@@ -11322,6 +11464,7 @@ namespace AQCobranza {
                 this.columnmedida.MaxLength = 150;
                 this.columncomprobante_impr.ReadOnly = true;
                 this.columncomprobante_impr.MaxLength = 6;
+                this.columncod_orden.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13853,6 +13996,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_extra {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Conceptos_Buscar.cod_extraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_extra\' de la tabla \'ps_Conceptos_Buscar\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Conceptos_Buscar.cod_extraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsconceptoNull() {
                 return this.IsNull(this.tableps_Conceptos_Buscar.conceptoColumn);
             }
@@ -13885,6 +14044,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcostoxunidadNull() {
                 this[this.tableps_Conceptos_Buscar.costoxunidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_extraNull() {
+                return this.IsNull(this.tableps_Conceptos_Buscar.cod_extraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_extraNull() {
+                this[this.tableps_Conceptos_Buscar.cod_extraColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15170,6 +15341,89 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Dir_cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Cotizacion_Buscar.Dir_clienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Dir_cliente\' de la tabla \'ps_Cotizacion_Buscar\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.Dir_clienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_extra {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Cotizacion_Buscar.cod_extraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_extra\' de la tabla \'ps_Cotizacion_Buscar\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.cod_extraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int D_validez {
+                get {
+                    try {
+                        return ((int)(this[this.tableps_Cotizacion_Buscar.D_validezColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'D_validez\' de la tabla \'ps_Cotizacion_Buscar\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.D_validezColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_conImpr {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Cotizacion_Buscar.cod_conImprColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_conImpr\' de la tabla \'ps_Cotizacion_Buscar\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.cod_conImprColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double costo_unit_cot {
+                get {
+                    try {
+                        return ((double)(this[this.tableps_Cotizacion_Buscar.costo_unit_cotColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'costo_unit_cot\' de la tabla \'ps_Cotizacion_Buscar\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.costo_unit_cotColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Header_cotizaRow Header_cotizaRow {
                 get {
                     return ((Header_cotizaRow)(this.GetParentRow(this.Table.ParentRelations["Header_cotiza_ps_Cotizacion_Buscar"])));
@@ -15574,6 +15828,66 @@ namespace AQCobranza {
             public void Setg_fondoNull() {
                 this[this.tableps_Cotizacion_Buscar.g_fondoColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDir_clienteNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.Dir_clienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDir_clienteNull() {
+                this[this.tableps_Cotizacion_Buscar.Dir_clienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_extraNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.cod_extraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_extraNull() {
+                this[this.tableps_Cotizacion_Buscar.cod_extraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsD_validezNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.D_validezColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetD_validezNull() {
+                this[this.tableps_Cotizacion_Buscar.D_validezColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_conImprNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.cod_conImprColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_conImprNull() {
+                this[this.tableps_Cotizacion_Buscar.cod_conImprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscosto_unit_cotNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.costo_unit_cotColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcosto_unit_cotNull() {
+                this[this.tableps_Cotizacion_Buscar.costo_unit_cotColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -15904,6 +16218,17 @@ namespace AQCobranza {
                 }
                 set {
                     this[this.tableps_GeneraDTpago.cod_GremisionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Det_Cot {
+                get {
+                    return ((string)(this[this.tableps_GeneraDTpago.Det_CotColumn]));
+                }
+                set {
+                    this[this.tableps_GeneraDTpago.Det_CotColumn] = value;
                 }
             }
             
@@ -17535,6 +17860,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_conImpr {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_Guia_remision.cod_conImprColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_conImpr\' de la tabla \'View_Guia_remision\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_Guia_remision.cod_conImprColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableView_Guia_remision.NombreColumn);
             }
@@ -17807,6 +18148,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetUnidades_entregadasNull() {
                 this[this.tableView_Guia_remision.Unidades_entregadasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_conImprNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_conImprColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_conImprNull() {
+                this[this.tableView_Guia_remision.cod_conImprColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -18381,6 +18734,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_orden {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_Comprobante.cod_ordenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_orden\' de la tabla \'View_Comprobante\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_Comprobante.cod_ordenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsfechaNull() {
                 return this.IsNull(this.tableView_Comprobante.fechaColumn);
             }
@@ -18617,6 +18986,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcomprobante_imprNull() {
                 this[this.tableView_Comprobante.comprobante_imprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_ordenNull() {
+                return this.IsNull(this.tableView_Comprobante.cod_ordenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_ordenNull() {
+                this[this.tableView_Comprobante.cod_ordenColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -23733,6 +24114,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             tableMapping.ColumnMappings.Add("concepto", "concepto");
             tableMapping.ColumnMappings.Add("Observaciones", "Observaciones");
             tableMapping.ColumnMappings.Add("costoxunidad", "costoxunidad");
+            tableMapping.ColumnMappings.Add("cod_extra", "cod_extra");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -25192,6 +25574,11 @@ FROM            Usuarios";
             tableMapping.ColumnMappings.Add("g_Encabezado", "g_Encabezado");
             tableMapping.ColumnMappings.Add("g_piepag", "g_piepag");
             tableMapping.ColumnMappings.Add("g_fondo", "g_fondo");
+            tableMapping.ColumnMappings.Add("Dir_cliente", "Dir_cliente");
+            tableMapping.ColumnMappings.Add("cod_extra", "cod_extra");
+            tableMapping.ColumnMappings.Add("D_validez", "D_validez");
+            tableMapping.ColumnMappings.Add("cod_conImpr", "cod_conImpr");
+            tableMapping.ColumnMappings.Add("costo_unit_cot", "costo_unit_cot");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -25914,6 +26301,7 @@ FROM            Usuarios";
             tableMapping.ColumnMappings.Add("monto", "monto");
             tableMapping.ColumnMappings.Add("flg_entregado", "flg_entregado");
             tableMapping.ColumnMappings.Add("cod_Gremision", "cod_Gremision");
+            tableMapping.ColumnMappings.Add("Det_Cot", "Det_Cot");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -28618,6 +29006,7 @@ FROM            (SELECT        ISNULL(monto, 0.0) AS ingreso, 0.0 AS egreso
             tableMapping.ColumnMappings.Add("T_placa", "T_placa");
             tableMapping.ColumnMappings.Add("cod_orden", "cod_orden");
             tableMapping.ColumnMappings.Add("Unidades_entregadas", "Unidades_entregadas");
+            tableMapping.ColumnMappings.Add("cod_conImpr", "cod_conImpr");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -28634,10 +29023,38 @@ FROM            (SELECT        ISNULL(monto, 0.0) AS ingreso, 0.0 AS egreso
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Det_Cot, Nombre, Apellidos, Cod_concep, cod_unidad, concepto, Material, Acabados, Impresion, medida, UnidadesXentregar, numero, Unidad, monto, 
-                         flag_entregado, cod_Acabados, cod_impresion, cod_material, Unidades, cod_Gremision, fecha, Destinatario, Domicilio, Ruc_DNI, Transportista, T_domicilio, T_RUC, 
-                         T_placa, cod_orden, Unidades_entregadas
-FROM            View_Guia_remision
+            this._commandCollection[0].CommandText = @"SELECT  Det_Cot ,
+        Nombre ,
+        Apellidos ,
+        Cod_concep ,
+        cod_unidad ,
+        concepto ,
+        Material ,
+        Acabados ,
+        Impresion ,
+        medida ,
+        UnidadesXentregar ,
+        numero ,
+        Unidad ,
+        costo_unit_cot AS monto ,
+        flag_entregado ,
+        cod_Acabados ,
+        cod_impresion ,
+        cod_material ,
+        Unidades ,
+        cod_Gremision ,
+        fecha ,
+        Destinatario ,
+        Domicilio ,
+        Ruc_DNI ,
+        Transportista ,
+        T_domicilio ,
+        T_RUC ,
+        T_placa ,
+        cod_orden ,
+        Unidades_entregadas ,
+        cod_conImpr
+FROM    View_Guia_remision
 WHERE        (cod_Gremision = ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_Gremision", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_Gremision", global::System.Data.DataRowVersion.Current, false, null));
@@ -29000,6 +29417,7 @@ WHERE        Header_Gremision.Ruc_DNI = Cliente.Ruc_DNI";
             tableMapping.ColumnMappings.Add("Impresion", "Impresion");
             tableMapping.ColumnMappings.Add("medida", "medida");
             tableMapping.ColumnMappings.Add("comprobante_impr", "comprobante_impr");
+            tableMapping.ColumnMappings.Add("cod_orden", "cod_orden");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -29017,9 +29435,9 @@ WHERE        Header_Gremision.Ruc_DNI = Cliente.Ruc_DNI";
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        comprobante_impr, fecha, monto_sinigv, igv, monto_total, cod_Gremision, Ruc_DNI, Domicilio, Nombre, Apellidos, Unidades_entregadas, pre_unid, importe, Unidad, 
-                         numero, Cod_concep, concepto, Material, Acabados, Impresion, medida, comprobante
+                         numero, Cod_concep, concepto, Material, Acabados, Impresion, medida, comprobante, cod_orden
 FROM            View_Comprobante
-WHERE        (comprobante LIKE '%'+?+'%')";
+WHERE        (comprobante LIKE '%' + ? + '%')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("comprobante", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comprobante", global::System.Data.DataRowVersion.Current, false, null));
         }

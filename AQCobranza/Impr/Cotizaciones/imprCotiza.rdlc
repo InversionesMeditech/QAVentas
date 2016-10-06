@@ -804,14 +804,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="medida">
+                    <Textbox Name="costo_unit_cot">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!monto.Value</Value>
+                              <Value>=Fields!costo_unit_cot.Value</Value>
                               <Style>
                                 <Format>'S/.'0.00;('S/.'0.00)</Format>
                                 <rd:FormatSymbolCulture>es-PE</rd:FormatSymbolCulture>
@@ -823,7 +823,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>medida</rd:DefaultName>
+                      <rd:DefaultName>costo_unit_cot</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -837,8 +837,10 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>es-PE</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1472,8 +1474,8 @@
         <Value>=First(Fields!g_firma.Value, "DataSet1")</Value>
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>6.91669cm</Top>
-        <Left>1.04479cm</Left>
+        <Top>7.95739cm</Top>
+        <Left>1.18024cm</Left>
         <Height>0.9532cm</Height>
         <Width>3.71709cm</Width>
         <ZIndex>5</ZIndex>
@@ -1484,8 +1486,8 @@
         </Style>
       </Image>
       <Line Name="Line1">
-        <Top>7.97572cm</Top>
-        <Left>0.22142cm</Left>
+        <Top>9.01642cm</Top>
+        <Left>0.35687cm</Left>
         <Height>0cm</Height>
         <Width>5.25576cm</Width>
         <ZIndex>6</ZIndex>
@@ -1510,8 +1512,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>gerente1</rd:DefaultName>
-        <Top>8.1521cm</Top>
-        <Left>0.51247cm</Left>
+        <Top>9.1928cm</Top>
+        <Left>0.64792cm</Left>
         <Height>0.75875cm</Height>
         <Width>4.11396cm</Width>
         <ZIndex>7</ZIndex>
@@ -1525,8 +1527,171 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Más I.G.V 18%</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>- Los precios pueden variar si el cliente entrega archivos que no coinciden con el material presupuestado.</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>- De acuerdo a las normas Internatcionales y Nacionales de demasía industrial la cantidad puede variar en un +- 3%</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>-la factura se generará por la cantidad producida al mismo costo unitario.</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>5.85832cm</Top>
+        <Left>0.47718cm</Left>
+        <Height>1.04979cm</Height>
+        <Width>9.24688cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Forma de Pago. 15 Días / 30 Días y CONTRA ENTREGA</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>7.181cm</Top>
+        <Left>0.47718cm</Left>
+        <Height>0.33542cm</Height>
+        <Width>5.30735cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="D_validez">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="- Dias de Validez :" + CStr(Max(Fields!D_validez.Value, "DataSet1"))</Value>
+                <Style>
+                  <FontSize>5pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>D_validez</rd:DefaultName>
+        <Top>6.90811cm</Top>
+        <Left>0.47718cm</Left>
+        <Height>0.33542cm</Height>
+        <Width>3.87583cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>3.50821in</Height>
+    <Height>3.98738in</Height>
     <Style />
   </Body>
   <Width>6.09067in</Width>
@@ -1675,7 +1840,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.3043cm</Height>
+      <Height>2.30431cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1993,10 +2158,30 @@
           <DataField>g_fondo</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
         </Field>
+        <Field Name="Dir_cliente">
+          <DataField>Dir_cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cod_extra">
+          <DataField>cod_extra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="D_validez">
+          <DataField>D_validez</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cod_conImpr">
+          <DataField>cod_conImpr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="costo_unit_cot">
+          <DataField>costo_unit_cot</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSAQCobranza</rd:DataSetName>
-        <rd:SchemaPath>E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\DSAQCobranza.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\SERVIDOR GIT\QAVentas\AQCobranza\DSAQCobranza.xsd</rd:SchemaPath>
         <rd:TableName>ps_Cotizacion_Buscar</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

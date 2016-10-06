@@ -7,3 +7,8 @@ E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\bin\Release\AQCbrEntidades.pdb
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.dll
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.pdb
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrEntidades\obj\Release\AQCbrEntidades.csprojResolveAssemblyReference.cache
+E:\SERVIDOR GIT\QAVentas\AQCbrEntidades\bin\Release\AQCbrEntidades.dll
+E:\SERVIDOR GIT\QAVentas\AQCbrEntidades\bin\Release\AQCbrEntidades.pdb
+E:\SERVIDOR GIT\QAVentas\AQCbrEntidades\obj\Release\AQCbrEntidades.csprojResolveAssemblyReference.cache
+E:\SERVIDOR GIT\QAVentas\AQCbrEntidades\obj\Release\AQCbrEntidades.dll
+E:\SERVIDOR GIT\QAVentas\AQCbrEntidades\obj\Release\AQCbrEntidades.pdb

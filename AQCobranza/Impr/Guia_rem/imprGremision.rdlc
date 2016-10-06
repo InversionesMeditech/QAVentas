@@ -154,14 +154,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Cod_concep">
+                    <Textbox Name="cod_conImpr">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Cod_concep.Value</Value>
+                              <Value>=Fields!cod_conImpr.Value</Value>
                               <Style>
                                 <FontSize>5pt</FontSize>
                               </Style>
@@ -170,7 +170,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Cod_concep</rd:DefaultName>
+                      <rd:DefaultName>cod_conImpr</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>White</Color>
@@ -202,6 +202,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -854,10 +855,14 @@
           <DataField>Unidades_entregadas</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
+        <Field Name="cod_conImpr">
+          <DataField>cod_conImpr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSAQCobranza</rd:DataSetName>
-        <rd:SchemaPath>E:\DESARROLLO SOFTWARES\AQCobranza\AQCobranza\DSAQCobranza.xsd</rd:SchemaPath>
+        <rd:SchemaPath>E:\SERVIDOR GIT\QAVentas\AQCobranza\DSAQCobranza.xsd</rd:SchemaPath>
         <rd:TableName>View_Guia_remision</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

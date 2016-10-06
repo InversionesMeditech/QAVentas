@@ -53,8 +53,9 @@ namespace AQCobranza
         {
             if (txtCod_cotz.Text == "")
             {
-                lstHDcotiza = objdao.Registrar_HD_Cotiza(txtDNI.Text, txtFecha.DateTime, txtUsuario.Text,chEstado.Checked);
+                lstHDcotiza = objdao.Registrar_HD_Cotiza(txtDNI.Text, txtFecha.DateTime, txtUsuario.Text, chEstado.Checked,Convert.ToInt16(txtd_validez.Text));
                 txtCod_cotz.Text = Convert.ToString(lstHDcotiza[0].Cod_Cot).Trim();
+                txtd_validez.Text = lstHDcotiza[0].d_validez.Trim();
                 chEstado.Checked = Convert.ToBoolean(lstHDcotiza[0].estado);
                 if (txtCod_cotz.Text != "")
                 {
@@ -112,6 +113,7 @@ namespace AQCobranza
                 txtUsuario.Text = lstHDcotiza[0].cod_usuario.Trim();
                 txtFecha.DateTime = Convert.ToDateTime(lstHDcotiza[0].Fecha);
                 chEstado.Checked = Convert.ToBoolean(lstHDcotiza[0].estado);
+                txtd_validez.Text = lstHDcotiza[0].d_validez;
                 buscar_cotizacion();
             }
             else
@@ -189,7 +191,7 @@ namespace AQCobranza
             {
                 try
                 {
-                    objdao.Actualizar_HD_Cotiza(txtBCotiza.Text, txtFecha.DateTime, chEstado.Checked);
+                    objdao.Actualizar_HD_Cotiza(txtBCotiza.Text, txtFecha.DateTime, chEstado.Checked,Convert.ToInt16(txtd_validez.Text));
                     msg.M_correcto("Se registro Correctamente");
                 }
                 catch

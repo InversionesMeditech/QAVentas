@@ -13,5 +13,6 @@ namespace AQCbrEntidades
         public DateTime Fecha { get; set; }
         public string cod_usuario { get; set; }
         public bool estado { get; set; }
+        public string d_validez { get; set; }
     }
 }

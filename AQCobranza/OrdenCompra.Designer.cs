@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenCompra));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDet_Cot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconcepto = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,8 +81,8 @@
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDet_Cot1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconcepto2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colmonto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsub_total2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.coldescuento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCod_Cot3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUnidades_Cotizadas = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -144,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.view_DT_GenOrdCompraGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_DT_GenOrdCompraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).BeginInit();
             this.popupContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -214,10 +215,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GCHcotiza.DataSource = this.wvOrdComprHeadercotizaBindingSource;
-            gridLevelNode1.LevelTemplate = this.gridView2;
-            gridLevelNode1.RelationName = "Header_cotiza_ps_Cotizacion_Buscar";
+            gridLevelNode2.LevelTemplate = this.gridView2;
+            gridLevelNode2.RelationName = "Header_cotiza_ps_Cotizacion_Buscar";
             this.GCHcotiza.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.GCHcotiza.Location = new System.Drawing.Point(5, 55);
             this.GCHcotiza.MainView = this.gridView1;
             this.GCHcotiza.Name = "GCHcotiza";
@@ -641,6 +642,8 @@
             this.view_DT_GenOrdCompraGridControl.Location = new System.Drawing.Point(2, 23);
             this.view_DT_GenOrdCompraGridControl.MainView = this.gridView6;
             this.view_DT_GenOrdCompraGridControl.Name = "view_DT_GenOrdCompraGridControl";
+            this.view_DT_GenOrdCompraGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit2});
             this.view_DT_GenOrdCompraGridControl.Size = new System.Drawing.Size(667, 277);
             this.view_DT_GenOrdCompraGridControl.TabIndex = 0;
             this.view_DT_GenOrdCompraGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -656,7 +659,6 @@
             this.gridView6.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDet_Cot1,
             this.colconcepto2,
-            this.colmonto,
             this.colsub_total2,
             this.coldescuento,
             this.colCod_Cot3,
@@ -681,20 +683,10 @@
             this.colconcepto2.VisibleIndex = 0;
             this.colconcepto2.Width = 203;
             // 
-            // colmonto
-            // 
-            this.colmonto.Caption = "Monto Total";
-            this.colmonto.FieldName = "monto";
-            this.colmonto.Image = ((System.Drawing.Image)(resources.GetObject("colmonto.Image")));
-            this.colmonto.Name = "colmonto";
-            this.colmonto.OptionsColumn.AllowEdit = false;
-            this.colmonto.Visible = true;
-            this.colmonto.VisibleIndex = 5;
-            this.colmonto.Width = 93;
-            // 
             // colsub_total2
             // 
             this.colsub_total2.Caption = "Sub Total";
+            this.colsub_total2.ColumnEdit = this.repositoryItemTextEdit2;
             this.colsub_total2.FieldName = "sub_total";
             this.colsub_total2.Image = ((System.Drawing.Image)(resources.GetObject("colsub_total2.Image")));
             this.colsub_total2.Name = "colsub_total2";
@@ -703,15 +695,22 @@
             this.colsub_total2.VisibleIndex = 3;
             this.colsub_total2.Width = 85;
             // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Mask.EditMask = "c";
+            this.repositoryItemTextEdit2.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit2.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            // 
             // coldescuento
             // 
             this.coldescuento.Caption = "Descuento";
+            this.coldescuento.ColumnEdit = this.repositoryItemTextEdit2;
             this.coldescuento.FieldName = "descuento";
             this.coldescuento.Image = ((System.Drawing.Image)(resources.GetObject("coldescuento.Image")));
             this.coldescuento.Name = "coldescuento";
             this.coldescuento.OptionsColumn.AllowEdit = false;
-            this.coldescuento.Visible = true;
-            this.coldescuento.VisibleIndex = 4;
             this.coldescuento.Width = 85;
             // 
             // colCod_Cot3
@@ -1012,6 +1011,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.view_DT_GenOrdCompraGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.view_DT_GenOrdCompraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).EndInit();
             this.popupContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -1098,7 +1098,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
         private DevExpress.XtraGrid.Columns.GridColumn colDet_Cot1;
         private DevExpress.XtraGrid.Columns.GridColumn colconcepto2;
-        private DevExpress.XtraGrid.Columns.GridColumn colmonto;
         private DevExpress.XtraGrid.Columns.GridColumn colsub_total2;
         private DevExpress.XtraGrid.Columns.GridColumn coldescuento;
         private DevExpress.XtraGrid.Columns.GridColumn colCod_Cot3;
@@ -1113,5 +1112,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFecha;
         private DevExpress.XtraGrid.Columns.GridColumn colcod_usuario;
         private DSAQCobranzaTableAdapters.Header_GremisionTableAdapter header_GremisionTableAdapter1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
     }
 }

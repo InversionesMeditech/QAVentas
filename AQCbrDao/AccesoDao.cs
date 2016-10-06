@@ -162,7 +162,7 @@ namespace AQCbrDao
             cnn.Close();
             return lstConceptos;
         }
-        public bool Actualizar_Conceptos(string _Cod_concepto, string _concepto, string _observaciones, double _costoxunidad)
+        public bool Actualizar_Conceptos(string _Cod_concepto, string _concepto, string _observaciones, double _costoxunidad,string _cod_extra)
         {
             bool rpt = false;
             try
@@ -170,11 +170,12 @@ namespace AQCbrDao
                 if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
                 OdbcCommand cmd = new OdbcCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "{ CALL ps_Conceptos_Actualizar(?,?,?,?) }";
+                cmd.CommandText = "{ CALL ps_Conceptos_Actualizar(?,?,?,?,?) }";
                 cmd.Parameters.AddWithValue("@0", _Cod_concepto);
                 cmd.Parameters.AddWithValue("@1", _concepto);
                 cmd.Parameters.AddWithValue("@2", _observaciones);
                 cmd.Parameters.AddWithValue("@3", _costoxunidad);
+                cmd.Parameters.AddWithValue("@4", _cod_extra);
                 cmd.Connection = cnn;
                 cmd.CommandTimeout = 3600;
                 cmd.ExecuteReader();
@@ -189,16 +190,17 @@ namespace AQCbrDao
         }
         /**************************************************/
         /*******************CONTIZACION*******************/
-        public List<E_Header_cotiza> Registrar_HD_Cotiza(string _ruc_dni, DateTime _fecha, string _cod_usuario,bool _estado)
+        public List<E_Header_cotiza> Registrar_HD_Cotiza(string _ruc_dni, DateTime _fecha, string _cod_usuario,bool _estado, int _d_validez)
         {
             if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
             OdbcCommand cmd = new OdbcCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "{ CALL ps_Hcotiza_Insertar(?,?,?,?) }";
+            cmd.CommandText = "{ CALL ps_Hcotiza_Insertar(?,?,?,?,?) }";
             cmd.Parameters.AddWithValue("@0", _ruc_dni);
             cmd.Parameters.AddWithValue("@1", _fecha);
             cmd.Parameters.AddWithValue("@2", _cod_usuario);
             cmd.Parameters.AddWithValue("@3", _estado);
+            cmd.Parameters.AddWithValue("@4", _d_validez);
             cmd.Connection = cnn;
             cmd.CommandTimeout = 3600;
             OdbcDataReader dr = cmd.ExecuteReader();
@@ -211,6 +213,7 @@ namespace AQCbrDao
                 objHDcotiza.Fecha = Convert.ToDateTime(dr.GetValue(2));
                 objHDcotiza.cod_usuario = Convert.ToString(dr.GetValue(3));
                 objHDcotiza.estado = Convert.ToBoolean(dr.GetValue(4));
+                objHDcotiza.d_validez = Convert.ToString(dr.GetValue(5));
                 lstHDCotiza.Add(objHDcotiza);
             }
             dr.Close();
@@ -236,7 +239,6 @@ namespace AQCbrDao
                 cmd.Parameters.AddWithValue("@8", _codacabado);
                 cmd.Parameters.AddWithValue("@9", _medida);
                 cmd.Parameters.AddWithValue("@10", _umedida);
-
                 cmd.Connection = cnn;
                 cmd.CommandTimeout = 3600;
                 cmd.ExecuteReader();
@@ -266,6 +268,7 @@ namespace AQCbrDao
                 objHDcotiza.Fecha = Convert.ToDateTime(dr.GetValue(2));
                 objHDcotiza.cod_usuario = Convert.ToString(dr.GetValue(3));
                 objHDcotiza.estado = Convert.ToBoolean(dr.GetValue(4));
+                objHDcotiza.d_validez = Convert.ToString(dr.GetValue(5));
                 lstHDCotiza.Add(objHDcotiza);
             }
             dr.Close();
@@ -292,7 +295,7 @@ namespace AQCbrDao
 
             }
         }
-        public void Actualizar_HD_Cotiza(string _Cod_Cot,DateTime _fecha, bool _estado)
+        public void Actualizar_HD_Cotiza(string _Cod_Cot,DateTime _fecha, bool _estado, int _d_validez)
         {
 
             try
@@ -300,10 +303,11 @@ namespace AQCbrDao
                 if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
                 OdbcCommand cmd = new OdbcCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "{ CALL ps_Hcotiza_Actualizar(?,?,?) }";
+                cmd.CommandText = "{ CALL ps_Hcotiza_Actualizar(?,?,?,?) }";
                 cmd.Parameters.AddWithValue("@0", _Cod_Cot);
                 cmd.Parameters.AddWithValue("@1", _fecha);
                 cmd.Parameters.AddWithValue("@2", _estado);
+                cmd.Parameters.AddWithValue("@3", _d_validez);
                 cmd.Connection = cnn;
                 cmd.CommandTimeout = 3600;
                 cmd.ExecuteReader();
@@ -635,17 +639,18 @@ namespace AQCbrDao
                 cnn.Close();
                        return lstHpago;
         }
-        public void Registrar_Dpago(string _Cod_concep,DateTime _fecha,double _descuento , double _monto, string _comprobante)
+        public void Registrar_Dpago(string _Cod_concep, DateTime _fecha, double _descuento, double _monto, string _comprobante, string _Det_Cot)
         {
             if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
             OdbcCommand cmd = new OdbcCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "{ CALL ps_DPago_insertar(?,?,?,?,?) }";
+            cmd.CommandText = "{ CALL ps_DPago_insertar(?,?,?,?,?,?) }";
             cmd.Parameters.AddWithValue("@0", _Cod_concep);
             cmd.Parameters.AddWithValue("@1", _fecha);
             cmd.Parameters.AddWithValue("@2", _descuento);
             cmd.Parameters.AddWithValue("@3", _monto);
             cmd.Parameters.AddWithValue("@4", _comprobante);
+            cmd.Parameters.AddWithValue("@5", _Det_Cot);
             cmd.Connection = cnn;
             cmd.CommandTimeout = 3600;
             cmd.ExecuteReader();

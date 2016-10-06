@@ -43,7 +43,7 @@ namespace AQCobranza
             txtObserva.Text = "";
             txtCodigo.Text = "";
             txtCxUnidad.Text = "0";
-            txtCodigo.Enabled = true;
+            txtcodExtra.Text = "";
         }
         /*****/
         private void Conceptos_Load(object sender, EventArgs e)
@@ -56,15 +56,7 @@ namespace AQCobranza
             string _cod_concepto;
             if (txtConcepto.Text != "")
             {
-                if (txtCodigo.Text == "")
-                {
-                    _cod_concepto = "%";
-                }
-                else
-                {
-                    _cod_concepto = txtCodigo.Text;
-                }
-                rtp = objdao.Registrar_Conceptos(txtConcepto.Text, txtObserva.Text, Convert.ToDouble(txtCxUnidad.Text), _cod_concepto);
+               rtp = objdao.Registrar_Conceptos(txtConcepto.Text, txtObserva.Text, Convert.ToDouble(txtCxUnidad.Text), txtcodExtra.Text);
                 if (rtp)
                 {
                     MessageBox.Show("Se Registro Correctamente", "Mesaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -85,7 +77,7 @@ namespace AQCobranza
         {
             if (txtConcepto.Text != "" || txtCodigo.Text != "")
             {
-                rtp = objdao.Actualizar_Conceptos(txtCodigo.Text, txtConcepto.Text, txtObserva.Text,Convert.ToDouble(txtCxUnidad.Text));
+                rtp = objdao.Actualizar_Conceptos(txtCodigo.Text, txtConcepto.Text, txtObserva.Text,Convert.ToDouble(txtCxUnidad.Text),txtcodExtra.Text);
                 if (rtp)
                 {
                     MessageBox.Show("Se Actualizo Correctamente", "Mesaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,9 +121,10 @@ namespace AQCobranza
          {
              txtCodigo.Enabled = false;
              txtCodigo.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[0].Value).Trim();
-             txtConcepto.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[1].Value).Trim();
-             txtObserva.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[2].Value).Trim();
-             txtCxUnidad.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[3].Value).Trim();
+             txtcodExtra.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[1].Value).Trim();
+             txtConcepto.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[2].Value).Trim();
+             txtObserva.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[3].Value).Trim();
+             txtCxUnidad.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[4].Value).Trim();
          }
 
          private void btnNuevo_Click(object sender, EventArgs e)

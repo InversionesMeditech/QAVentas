@@ -220,6 +220,9 @@
         o0kTt2ty3Fwb+DPAI/wHzMXK+POy4V0AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="cod_extra.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="costoxunidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

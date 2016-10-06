@@ -29,8 +29,7 @@ namespace AQCobranza
         private void Caja_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dSAQCobranza.View_Guia_remision_busqueda' Puede moverla o quitarla según sea necesario.
-            this.view_Guia_remision_busquedaTableAdapter.Fill(this.dSAQCobranza.View_Guia_remision_busqueda);
-          
+            this.view_Guia_remision_busquedaTableAdapter.Fill(this.dSAQCobranza.View_Guia_remision_busqueda);      
             this.documento_pagoTableAdapter.Fill(this.dSAQCobranza.Documento_pago);
             txtcod_usuario.Text = usuario;
             //txtTpago.Text = "FAC";
@@ -98,7 +97,7 @@ namespace AQCobranza
                         {
                             string fmt = "000000.##";
                             int intValue;
-                            string _Cod_concep,_comprobante;
+                            string _Cod_concep, _comprobante, _Det_Cot;
                             DateTime _fecha;
                             double _descuento ,  _monto;
                             _comprobante = txtTpago.Text.Trim()+txtSerie.Text.Trim()+"-"+txtComprobante.Text.Trim();
@@ -111,7 +110,8 @@ namespace AQCobranza
                                 _monto = Convert.ToDouble(gridView2.GetRowCellValue(i, "Sub_total"));
                                 _descuento = Convert.ToDouble(gridView2.GetRowCellValue(i, "descuento"));
                                 _Cod_concep = Convert.ToString(gridView2.GetRowCellValue(i, "Cod_concep"));
-                                objDao.Registrar_Dpago(_Cod_concep, _fecha, _descuento, _monto, _comprobante);
+                                _Det_Cot = Convert.ToString(gridView2.GetRowCellValue(i, "Det_Cot"));
+                                objDao.Registrar_Dpago(_Cod_concep, _fecha, _descuento, _monto, _comprobante, _Det_Cot);
                             }
                
 
@@ -152,8 +152,8 @@ namespace AQCobranza
             ps_GeneraDTpagoGridControl.Enabled = true;
             btnRegistrar.Enabled = true;
             txtcod_orden.Text = "";
-            txtcod_usuario.Text = "";
-            txtComprobante.Text = "";
+            //txtcod_usuario.Text = "";
+            //txtComprobante.Text = "";
             txtFecha.Text = "";
             txtigv.Text = "";
             txtmonto.Text = "";
@@ -161,6 +161,7 @@ namespace AQCobranza
             txtRuc_DNI.Text = "";
             btnImprimir.Enabled = false;
             simpleButton3.Enabled = false;
+            this.view_Guia_remision_busquedaTableAdapter.Fill(this.dSAQCobranza.View_Guia_remision_busqueda);    
             this.documento_pagoTableAdapter.Fill(this.dSAQCobranza.Documento_pago);
         }
 
@@ -270,6 +271,11 @@ namespace AQCobranza
                 }
                
             }
+        }
+
+        private void txtcod_usuario_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
 
    

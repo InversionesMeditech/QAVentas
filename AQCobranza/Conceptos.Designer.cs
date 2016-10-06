@@ -43,20 +43,23 @@
             this.txtCxUnidad = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.gwConceptos = new System.Windows.Forms.DataGridView();
-            this.codconcepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conceptoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costoxunidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.psConceptosBuscarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSAQCobranzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.txtConcepto = new DevExpress.XtraEditors.TextEdit();
             this.txtObserva = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtcodExtra = new DevExpress.XtraEditors.TextEdit();
+            this.dSAQCobranzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
             this.ps_Conceptos_BuscarTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.ps_Conceptos_BuscarTableAdapter();
+            this.codconcepDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cod_extra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conceptoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoxunidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -69,11 +72,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCxUnidad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gwConceptos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConcepto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObserva.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodExtra.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -90,13 +94,13 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(2, 33);
+            this.splitContainerControl1.Location = new System.Drawing.Point(2, 39);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.groupControl3);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(744, 427);
+            this.splitContainerControl1.Size = new System.Drawing.Size(744, 421);
             this.splitContainerControl1.SplitterPosition = 196;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -112,7 +116,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(196, 427);
+            this.groupControl3.Size = new System.Drawing.Size(196, 421);
             this.groupControl3.TabIndex = 0;
             // 
             // btnNuevo
@@ -180,6 +184,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.txtcodExtra);
+            this.groupControl2.Controls.Add(this.labelControl5);
             this.groupControl2.Controls.Add(this.txtCxUnidad);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.gwConceptos);
@@ -191,14 +197,14 @@
             this.groupControl2.Controls.Add(this.txtObserva);
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(526, 427);
+            this.groupControl2.Size = new System.Drawing.Size(526, 421);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Datos del Concepto";
             // 
             // txtCxUnidad
             // 
             this.txtCxUnidad.EditValue = "0";
-            this.txtCxUnidad.Location = new System.Drawing.Point(166, 129);
+            this.txtCxUnidad.Location = new System.Drawing.Point(166, 147);
             this.txtCxUnidad.Name = "txtCxUnidad";
             this.txtCxUnidad.Properties.Mask.EditMask = "c";
             this.txtCxUnidad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -208,7 +214,7 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(24, 128);
+            this.labelControl4.Location = new System.Drawing.Point(24, 146);
             this.labelControl4.LookAndFeel.SkinName = "Office 2013";
             this.labelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.labelControl4.Name = "labelControl4";
@@ -227,17 +233,114 @@
             this.gwConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gwConceptos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codconcepDataGridViewTextBoxColumn,
+            this.cod_extra,
             this.conceptoDataGridViewTextBoxColumn,
             this.observacionesDataGridViewTextBoxColumn,
             this.costoxunidad});
             this.gwConceptos.DataSource = this.psConceptosBuscarBindingSource;
-            this.gwConceptos.Location = new System.Drawing.Point(16, 157);
+            this.gwConceptos.Location = new System.Drawing.Point(16, 185);
             this.gwConceptos.Name = "gwConceptos";
             this.gwConceptos.ReadOnly = true;
-            this.gwConceptos.Size = new System.Drawing.Size(503, 260);
+            this.gwConceptos.Size = new System.Drawing.Size(503, 226);
             this.gwConceptos.TabIndex = 9;
             this.gwConceptos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gwConceptos_CellClick);
             this.gwConceptos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gwConceptos_CellContentClick);
+            // 
+            // psConceptosBuscarBindingSource
+            // 
+            this.psConceptosBuscarBindingSource.DataMember = "ps_Conceptos_Buscar";
+            this.psConceptosBuscarBindingSource.DataSource = this.dSAQCobranzaBindingSource;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Location = new System.Drawing.Point(24, 101);
+            this.labelControl3.LookAndFeel.SkinName = "Office 2013";
+            this.labelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(89, 13);
+            this.labelControl3.TabIndex = 8;
+            this.labelControl3.Text = "Observaciones :";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Location = new System.Drawing.Point(24, 75);
+            this.labelControl2.LookAndFeel.SkinName = "Office 2013";
+            this.labelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(56, 13);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "Concepto:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Location = new System.Drawing.Point(24, 27);
+            this.labelControl1.LookAndFeel.SkinName = "Office 2013";
+            this.labelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(110, 13);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Código Automatico:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(166, 26);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.Mask.EditMask = "aaaaaaaaaa";
+            this.txtCodigo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtCodigo.Size = new System.Drawing.Size(185, 20);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // txtConcepto
+            // 
+            this.txtConcepto.Location = new System.Drawing.Point(166, 72);
+            this.txtConcepto.Name = "txtConcepto";
+            this.txtConcepto.Size = new System.Drawing.Size(346, 20);
+            this.txtConcepto.TabIndex = 2;
+            // 
+            // txtObserva
+            // 
+            this.txtObserva.Location = new System.Drawing.Point(166, 98);
+            this.txtObserva.Name = "txtObserva";
+            this.txtObserva.Size = new System.Drawing.Size(346, 43);
+            this.txtObserva.TabIndex = 3;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl5.Location = new System.Drawing.Point(26, 52);
+            this.labelControl5.LookAndFeel.SkinName = "Office 2013";
+            this.labelControl5.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(88, 13);
+            this.labelControl5.TabIndex = 12;
+            this.labelControl5.Text = "Código Externo:";
+            // 
+            // txtcodExtra
+            // 
+            this.txtcodExtra.Location = new System.Drawing.Point(166, 49);
+            this.txtcodExtra.Name = "txtcodExtra";
+            this.txtcodExtra.Properties.Mask.EditMask = "aaaaaaaaaa";
+            this.txtcodExtra.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtcodExtra.Size = new System.Drawing.Size(185, 20);
+            this.txtcodExtra.TabIndex = 13;
+            // 
+            // dSAQCobranzaBindingSource
+            // 
+            this.dSAQCobranzaBindingSource.DataSource = this.dSAQCobranza;
+            this.dSAQCobranzaBindingSource.Position = 0;
+            // 
+            // dSAQCobranza
+            // 
+            this.dSAQCobranza.DataSetName = "DSAQCobranza";
+            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ps_Conceptos_BuscarTableAdapter
+            // 
+            this.ps_Conceptos_BuscarTableAdapter.ClearBeforeFill = true;
             // 
             // codconcepDataGridViewTextBoxColumn
             // 
@@ -245,6 +348,13 @@
             this.codconcepDataGridViewTextBoxColumn.HeaderText = "Código";
             this.codconcepDataGridViewTextBoxColumn.Name = "codconcepDataGridViewTextBoxColumn";
             this.codconcepDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cod_extra
+            // 
+            this.cod_extra.DataPropertyName = "cod_extra";
+            this.cod_extra.HeaderText = "Cod. Extra";
+            this.cod_extra.Name = "cod_extra";
+            this.cod_extra.ReadOnly = true;
             // 
             // conceptoDataGridViewTextBoxColumn
             // 
@@ -267,82 +377,6 @@
             this.costoxunidad.HeaderText = "Costo x Unidad";
             this.costoxunidad.Name = "costoxunidad";
             this.costoxunidad.ReadOnly = true;
-            // 
-            // psConceptosBuscarBindingSource
-            // 
-            this.psConceptosBuscarBindingSource.DataMember = "ps_Conceptos_Buscar";
-            this.psConceptosBuscarBindingSource.DataSource = this.dSAQCobranzaBindingSource;
-            // 
-            // dSAQCobranzaBindingSource
-            // 
-            this.dSAQCobranzaBindingSource.DataSource = this.dSAQCobranza;
-            this.dSAQCobranzaBindingSource.Position = 0;
-            // 
-            // dSAQCobranza
-            // 
-            this.dSAQCobranza.DataSetName = "DSAQCobranza";
-            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(24, 83);
-            this.labelControl3.LookAndFeel.SkinName = "Office 2013";
-            this.labelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(89, 13);
-            this.labelControl3.TabIndex = 8;
-            this.labelControl3.Text = "Observaciones :";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Location = new System.Drawing.Point(24, 57);
-            this.labelControl2.LookAndFeel.SkinName = "Office 2013";
-            this.labelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 13);
-            this.labelControl2.TabIndex = 7;
-            this.labelControl2.Text = "Concepto:";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(24, 27);
-            this.labelControl1.LookAndFeel.SkinName = "Office 2013";
-            this.labelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(41, 13);
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Código:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(166, 26);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Properties.Mask.EditMask = "aaaaaaaaaa";
-            this.txtCodigo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.txtCodigo.Size = new System.Drawing.Size(185, 20);
-            this.txtCodigo.TabIndex = 1;
-            // 
-            // txtConcepto
-            // 
-            this.txtConcepto.Location = new System.Drawing.Point(166, 54);
-            this.txtConcepto.Name = "txtConcepto";
-            this.txtConcepto.Size = new System.Drawing.Size(346, 20);
-            this.txtConcepto.TabIndex = 2;
-            // 
-            // txtObserva
-            // 
-            this.txtObserva.Location = new System.Drawing.Point(166, 80);
-            this.txtObserva.Name = "txtObserva";
-            this.txtObserva.Size = new System.Drawing.Size(346, 43);
-            this.txtObserva.TabIndex = 3;
-            // 
-            // ps_Conceptos_BuscarTableAdapter
-            // 
-            this.ps_Conceptos_BuscarTableAdapter.ClearBeforeFill = true;
             // 
             // Conceptos
             // 
@@ -369,11 +403,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCxUnidad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gwConceptos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConcepto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObserva.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcodExtra.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,7 +438,10 @@
         private DevExpress.XtraEditors.TextEdit txtCxUnidad;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.MemoEdit txtObserva;
+        private DevExpress.XtraEditors.TextEdit txtcodExtra;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.DataGridViewTextBoxColumn codconcepDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod_extra;
         private System.Windows.Forms.DataGridViewTextBoxColumn conceptoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costoxunidad;

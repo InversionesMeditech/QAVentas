@@ -51,13 +51,14 @@
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.txtd_validez = new DevExpress.XtraEditors.TextEdit();
             this.chEstado = new System.Windows.Forms.CheckBox();
             this.btnImprimir = new DevExpress.XtraEditors.SimpleButton();
-            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CDNI = new DevExpress.XtraEditors.PopupContainerControl();
             this.searchControl3 = new DevExpress.XtraEditors.SearchControl();
             this.clienteGridControl = new DevExpress.XtraGrid.GridControl();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colRuc_DNI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -152,12 +153,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBCotiza.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtd_validez.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDNI)).BeginInit();
             this.CDNI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDNI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).BeginInit();
@@ -401,9 +402,10 @@
             // groupControl2
             // 
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.labelControl15);
+            this.groupControl2.Controls.Add(this.txtd_validez);
             this.groupControl2.Controls.Add(this.chEstado);
             this.groupControl2.Controls.Add(this.btnImprimir);
-            this.groupControl2.Controls.Add(this.fotoPictureBox);
             this.groupControl2.Controls.Add(this.CDNI);
             this.groupControl2.Controls.Add(this.txtDNI);
             this.groupControl2.Controls.Add(this.popupContainerControl1);
@@ -422,6 +424,26 @@
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Datos del Cliente";
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl15.Location = new System.Drawing.Point(285, 71);
+            this.labelControl15.LookAndFeel.SkinName = "Office 2013";
+            this.labelControl15.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(87, 13);
+            this.labelControl15.TabIndex = 34;
+            this.labelControl15.Text = "Días de validez:";
+            // 
+            // txtd_validez
+            // 
+            this.txtd_validez.Location = new System.Drawing.Point(378, 67);
+            this.txtd_validez.Name = "txtd_validez";
+            this.txtd_validez.Properties.Mask.EditMask = "00";
+            this.txtd_validez.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtd_validez.Size = new System.Drawing.Size(37, 20);
+            this.txtd_validez.TabIndex = 33;
+            // 
             // chEstado
             // 
             this.chEstado.AutoSize = true;
@@ -436,27 +458,12 @@
             // btnImprimir
             // 
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(397, 101);
+            this.btnImprimir.Location = new System.Drawing.Point(294, 103);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(121, 36);
             this.btnImprimir.TabIndex = 31;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // fotoPictureBox
-            // 
-            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "foto", true));
-            this.fotoPictureBox.Location = new System.Drawing.Point(285, 38);
-            this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(100, 101);
-            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotoPictureBox.TabIndex = 15;
-            this.fotoPictureBox.TabStop = false;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.dSAQCobranza;
             // 
             // CDNI
             // 
@@ -493,6 +500,11 @@
             this.clienteGridControl.TabIndex = 0;
             this.clienteGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dSAQCobranza;
             // 
             // gridView3
             // 
@@ -1287,12 +1299,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtd_validez.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CDNI)).EndInit();
             this.CDNI.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchControl3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDNI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).EndInit();
@@ -1403,7 +1415,6 @@
         private DevExpress.XtraEditors.SpinEdit txtUnidad;
         private DevExpress.XtraGrid.Columns.GridColumn colUnidad;
         private DevExpress.XtraGrid.Columns.GridColumn colSub_total;
-        private System.Windows.Forms.PictureBox fotoPictureBox;
         private DevExpress.XtraEditors.SimpleButton btnQuitar;
         private DevExpress.XtraGrid.Columns.GridColumn cod_det;
         private DevExpress.XtraEditors.LabelControl lblcot_eliminar;
@@ -1436,5 +1447,7 @@
         private DevExpress.XtraEditors.SimpleButton btnImprimir;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private System.Windows.Forms.CheckBox chEstado;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.TextEdit txtd_validez;
     }
 }

@@ -17,6 +17,10 @@
 }
 
 namespace AQCobranza.DSAQCobranzaTableAdapters {
+    partial class ps_Cotizacion_BuscarTableAdapter
+    {
+    }
+
     partial class CChica_Ingreso_VWTableAdapter
     {
     }

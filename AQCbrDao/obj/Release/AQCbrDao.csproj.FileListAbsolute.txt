@@ -12,3 +12,10 @@ E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\bin\Release\AQCbrEntidades.pdb
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.dll
 E:\DESARROLLO SOFTWARES\AQCobranza\AQCbrDao\obj\Release\AQCbrDao.pdb
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\bin\Release\AQCbrDao.dll
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\bin\Release\AQCbrDao.pdb
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\bin\Release\AQCbrEntidades.dll
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\bin\Release\AQCbrEntidades.pdb
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.dll
+E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.pdb

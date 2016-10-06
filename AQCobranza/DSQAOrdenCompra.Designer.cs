@@ -1023,11 +1023,11 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columnRuc_DNI;
             
-            private global::System.Data.DataColumn columnFecha;
-            
             private global::System.Data.DataColumn columncod_usuario;
             
             private global::System.Data.DataColumn columnestado;
+            
+            private global::System.Data.DataColumn columnFecha;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1080,14 +1080,6 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
-                get {
-                    return this.columnFecha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn cod_usuarioColumn {
                 get {
                     return this.columncod_usuario;
@@ -1099,6 +1091,14 @@ namespace AQCobranza {
             public global::System.Data.DataColumn estadoColumn {
                 get {
                     return this.columnestado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
                 }
             }
             
@@ -1139,14 +1139,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public wv_OrdCompr_Header_cotizaRow Addwv_OrdCompr_Header_cotizaRow(string Cod_Cot, string Ruc_DNI, System.DateTime Fecha, string cod_usuario, bool estado) {
+            public wv_OrdCompr_Header_cotizaRow Addwv_OrdCompr_Header_cotizaRow(string Cod_Cot, string Ruc_DNI, string cod_usuario, bool estado, string Fecha) {
                 wv_OrdCompr_Header_cotizaRow rowwv_OrdCompr_Header_cotizaRow = ((wv_OrdCompr_Header_cotizaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod_Cot,
                         Ruc_DNI,
-                        Fecha,
                         cod_usuario,
-                        estado};
+                        estado,
+                        Fecha};
                 rowwv_OrdCompr_Header_cotizaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowwv_OrdCompr_Header_cotizaRow);
                 return rowwv_OrdCompr_Header_cotizaRow;
@@ -1178,9 +1178,9 @@ namespace AQCobranza {
             internal void InitVars() {
                 this.columnCod_Cot = base.Columns["Cod_Cot"];
                 this.columnRuc_DNI = base.Columns["Ruc_DNI"];
-                this.columnFecha = base.Columns["Fecha"];
                 this.columncod_usuario = base.Columns["cod_usuario"];
                 this.columnestado = base.Columns["estado"];
+                this.columnFecha = base.Columns["Fecha"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1190,12 +1190,12 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnCod_Cot);
                 this.columnRuc_DNI = new global::System.Data.DataColumn("Ruc_DNI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRuc_DNI);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha);
                 this.columncod_usuario = new global::System.Data.DataColumn("cod_usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_usuario);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Cot}, true));
                 this.columnCod_Cot.AllowDBNull = false;
@@ -1203,6 +1203,7 @@ namespace AQCobranza {
                 this.columnCod_Cot.MaxLength = 50;
                 this.columnRuc_DNI.MaxLength = 10;
                 this.columncod_usuario.MaxLength = 20;
+                this.columnFecha.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1691,23 +1692,6 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Fecha {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'wv_OrdCompr_Header_cotiza\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string cod_usuario {
                 get {
                     try {
@@ -1742,6 +1726,23 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Fecha {
+                get {
+                    try {
+                        return ((string)(this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'wv_OrdCompr_Header_cotiza\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRuc_DNINull() {
                 return this.IsNull(this.tablewv_OrdCompr_Header_cotiza.Ruc_DNIColumn);
             }
@@ -1750,18 +1751,6 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRuc_DNINull() {
                 this[this.tablewv_OrdCompr_Header_cotiza.Ruc_DNIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaNull() {
-                return this.IsNull(this.tablewv_OrdCompr_Header_cotiza.FechaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaNull() {
-                this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1786,6 +1775,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetestadoNull() {
                 this[this.tablewv_OrdCompr_Header_cotiza.estadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tablewv_OrdCompr_Header_cotiza.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2040,15 +2041,27 @@ namespace AQCobranza.DSQAOrdenCompraTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        [View_Cotización].Det_Cot, [View_Cotización].concepto, MAX([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) 
-                         AS Unidades_Cotizadas, [View_Cotización].monto, [View_Cotización].sub_total, [View_Cotización].descuento, [View_Cotización].Cod_Cot, 
-                         SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) AS Unidades_Solicitadas
-FROM            { oj [View_Cotización] LEFT OUTER JOIN
+            this._commandCollection[0].CommandText = @"SELECT  [View_Cotización].Det_Cot ,
+        [View_Cotización].concepto ,
+        MAX([View_Cotización].Unidades)
+        - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) AS Unidades_Cotizadas ,
+        [View_Cotización].costo_unit_cot AS monto ,
+        [View_Cotización].sub_total ,
+        [View_Cotización].descuento ,
+        [View_Cotización].Cod_Cot ,
+        MAX([View_Cotización].Unidades)
+        - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) AS Unidades_Solicitadas
+FROM    { OJ [View_Cotización] LEFT OUTER JOIN
                          Det_Ord_Compra ON [View_Cotización].Det_Cot = Det_Ord_Compra.Det_Cot }
-WHERE        ([View_Cotización].Cod_Cot = ?)
-GROUP BY [View_Cotización].Det_Cot, [View_Cotización].concepto, [View_Cotización].monto, [View_Cotización].sub_total, [View_Cotización].descuento, 
-                         [View_Cotización].Cod_Cot
-HAVING        (MAX([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) > 0)";
+WHERE   ( [View_Cotización].Cod_Cot =?)
+GROUP BY [View_Cotización].Det_Cot ,
+        [View_Cotización].concepto ,
+        [View_Cotización].costo_unit_cot ,
+        [View_Cotización].sub_total ,
+        [View_Cotización].descuento ,
+        [View_Cotización].Cod_Cot
+HAVING  ( MAX([View_Cotización].Unidades)
+          - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) > 0 )";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Cod_Cot", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cod_Cot", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -2570,9 +2583,9 @@ HAVING        (MAX([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unid
             tableMapping.DataSetTable = "wv_OrdCompr_Header_cotiza";
             tableMapping.ColumnMappings.Add("Cod_Cot", "Cod_Cot");
             tableMapping.ColumnMappings.Add("Ruc_DNI", "Ruc_DNI");
-            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
             tableMapping.ColumnMappings.Add("cod_usuario", "cod_usuario");
             tableMapping.ColumnMappings.Add("estado", "estado");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2630,18 +2643,14 @@ HAVING        (MAX([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unid
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT  Cod_Cot ,
-        Ruc_DNI ,
-        Fecha ,
-        cod_usuario ,
-        estado
-FROM    Header_cotiza
-WHERE   estado = 1
-AND Cod_Cot NOT IN ( SELECT  [View_Cotización].Cod_Cot 
-FROM    { OJ [View_Cotización] LEFT OUTER JOIN
-Det_Ord_Compra ON [View_Cotización].Det_Cot = Det_Ord_Compra.Det_Cot }
-GROUP BY [View_Cotización].Cod_Cot
-HAVING  ( MAX([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) <=0 ))";
+            this._commandCollection[0].CommandText = @"SELECT        Cod_Cot, Ruc_DNI, Fecha, cod_usuario, estado
+FROM            Header_cotiza
+WHERE        (estado = 1) AND (Cod_Cot NOT IN
+                             (SELECT        [View_Cotización].Cod_Cot
+                               FROM            { oj [View_Cotización] LEFT OUTER JOIN
+                                                         Det_Ord_Compra ON [View_Cotización].Det_Cot = Det_Ord_Compra.Det_Cot }
+                               GROUP BY [View_Cotización].Cod_Cot
+                               HAVING         (SUM([View_Cotización].Unidades) - SUM(ISNULL(Det_Ord_Compra.Unidades_Solicitadas, 0)) <= 0)))";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
