@@ -834,14 +834,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QA-Ventas.exe" size="1425408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QA-Ventas.exe" size="1426432">
       <assemblyIdentity name="QA-Ventas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t4KOMfpo05fMspSpc7VmbxZqVy9t4LhJaIV5OsdRflw=</dsig:DigestValue>
+        <dsig:DigestValue>LC7I6L1OaOlzb8fDbJZXcnp/iBqUUV5Rx55D9X4UdQk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

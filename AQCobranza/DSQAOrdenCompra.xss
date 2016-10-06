@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:View_DT_GenOrdCompra" ZOrder="3" X="118" Y="56" Height="229" Width="290" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="24" SplitterPosition="178" />
     <Shape ID="DesignTable:Det_Ord_Compra" ZOrder="2" X="450" Y="108" Height="75" Width="243" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="24" OldDataTableHeight="102" SplitterPosition="24" />
-    <Shape ID="DesignTable:wv_OrdCompr_Header_cotiza" ZOrder="1" X="478" Y="157" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="121" />
+    <Shape ID="DesignTable:wv_OrdCompr_Header_cotiza" ZOrder="1" X="439" Y="225" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="121" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

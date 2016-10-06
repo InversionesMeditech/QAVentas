@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenCompra));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDet_Cot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconcepto = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -215,10 +215,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GCHcotiza.DataSource = this.wvOrdComprHeadercotizaBindingSource;
-            gridLevelNode2.LevelTemplate = this.gridView2;
-            gridLevelNode2.RelationName = "Header_cotiza_ps_Cotizacion_Buscar";
+            gridLevelNode1.LevelTemplate = this.gridView2;
+            gridLevelNode1.RelationName = "Header_cotiza_ps_Cotizacion_Buscar";
             this.GCHcotiza.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.GCHcotiza.Location = new System.Drawing.Point(5, 55);
             this.GCHcotiza.MainView = this.gridView1;
             this.GCHcotiza.Name = "GCHcotiza";
@@ -884,9 +884,7 @@
             this.txtFecha.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtFecha.Properties.EditFormat.FormatString = "";
             this.txtFecha.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtFecha.Properties.Mask.EditMask = "";
-            this.txtFecha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtFecha.Size = new System.Drawing.Size(152, 20);
+            this.txtFecha.Size = new System.Drawing.Size(110, 20);
             this.txtFecha.TabIndex = 17;
             // 
             // ps_Cotizacion_BuscarTableAdapter

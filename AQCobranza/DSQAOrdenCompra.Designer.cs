@@ -1139,7 +1139,7 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public wv_OrdCompr_Header_cotizaRow Addwv_OrdCompr_Header_cotizaRow(string Cod_Cot, string Ruc_DNI, string cod_usuario, bool estado, string Fecha) {
+            public wv_OrdCompr_Header_cotizaRow Addwv_OrdCompr_Header_cotizaRow(string Cod_Cot, string Ruc_DNI, string cod_usuario, bool estado, System.DateTime Fecha) {
                 wv_OrdCompr_Header_cotizaRow rowwv_OrdCompr_Header_cotizaRow = ((wv_OrdCompr_Header_cotizaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cod_Cot,
@@ -1194,7 +1194,7 @@ namespace AQCobranza {
                 base.Columns.Add(this.columncod_usuario);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCod_Cot}, true));
@@ -1203,7 +1203,6 @@ namespace AQCobranza {
                 this.columnCod_Cot.MaxLength = 50;
                 this.columnRuc_DNI.MaxLength = 10;
                 this.columncod_usuario.MaxLength = 20;
-                this.columnFecha.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1726,10 +1725,10 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Fecha {
+            public System.DateTime Fecha {
                 get {
                     try {
-                        return ((string)(this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn]));
+                        return ((global::System.DateTime)(this[this.tablewv_OrdCompr_Header_cotiza.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'wv_OrdCompr_Header_cotiza\' es DBNull." +

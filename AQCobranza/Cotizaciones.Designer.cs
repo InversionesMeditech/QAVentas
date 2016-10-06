@@ -282,6 +282,7 @@
             // 
             // gridView5
             // 
+            this.gridView5.ActiveFilterString = "[Fecha] >= LocalDateTimeThisWeek() And [Fecha] < LocalDateTimeTomorrow()";
             this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCod_Cot,
             this.colRuc_DNI1,
@@ -290,6 +291,7 @@
             this.gridView5.GridControl = this.GCCotiza;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
             this.gridView5.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colcod_usuario, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 

@@ -36,6 +36,8 @@
             this.btnAnular = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.pccOrdenPago = new DevExpress.XtraEditors.PopupContainerControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.CGordenPago = new DevExpress.XtraGrid.GridControl();
@@ -51,8 +53,6 @@
             this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colApellidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSerie = new DevExpress.XtraEditors.TextEdit();
             this.documentopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -116,6 +116,8 @@
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pccOrdenPago)).BeginInit();
             this.pccOrdenPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -125,8 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerie.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentopagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
@@ -181,9 +181,9 @@
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.btnAnular);
+            this.groupControl3.Controls.Add(this.pccOrdenPago);
             this.groupControl3.Controls.Add(this.simpleButton2);
             this.groupControl3.Controls.Add(this.btnRegistrar);
-            this.groupControl3.Controls.Add(this.pccOrdenPago);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
@@ -219,142 +219,6 @@
             this.btnRegistrar.TabIndex = 0;
             this.btnRegistrar.Text = "COBRAR";
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // pccOrdenPago
-            // 
-            this.pccOrdenPago.Controls.Add(this.groupControl5);
-            this.pccOrdenPago.Location = new System.Drawing.Point(10, 248);
-            this.pccOrdenPago.Name = "pccOrdenPago";
-            this.pccOrdenPago.Size = new System.Drawing.Size(661, 191);
-            this.pccOrdenPago.TabIndex = 54;
-            // 
-            // groupControl5
-            // 
-            this.groupControl5.Controls.Add(this.CGordenPago);
-            this.groupControl5.Controls.Add(this.searchControl1);
-            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl5.Location = new System.Drawing.Point(0, 0);
-            this.groupControl5.LookAndFeel.SkinName = "Office 2013";
-            this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(661, 191);
-            this.groupControl5.TabIndex = 0;
-            // 
-            // CGordenPago
-            // 
-            this.CGordenPago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CGordenPago.DataSource = this.viewGuiaremisionbusquedaBindingSource;
-            this.CGordenPago.Location = new System.Drawing.Point(3, 43);
-            this.CGordenPago.MainView = this.gridView1;
-            this.CGordenPago.Name = "CGordenPago";
-            this.CGordenPago.Size = new System.Drawing.Size(653, 143);
-            this.CGordenPago.TabIndex = 1;
-            this.CGordenPago.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.CGordenPago.Click += new System.EventHandler(this.CGordenPago_Click_1);
-            // 
-            // viewGuiaremisionbusquedaBindingSource
-            // 
-            this.viewGuiaremisionbusquedaBindingSource.DataMember = "View_Guia_remision_busqueda";
-            this.viewGuiaremisionbusquedaBindingSource.DataSource = this.dSAQCobranza;
-            // 
-            // dSAQCobranza
-            // 
-            this.dSAQCobranza.DataSetName = "DSAQCobranza";
-            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView1
-            // 
-            this.gridView1.ActiveFilterString = "IsOutlookIntervalEarlierThisWeek([fecha]) Or IsOutlookIntervalToday([fecha])";
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colcod_Gremision,
-            this.colfecha,
-            this.colDestinatario,
-            this.colDomicilio,
-            this.colRuc_DNI,
-            this.colcod_orden,
-            this.colNombre,
-            this.colApellidos});
-            this.gridView1.GridControl = this.CGordenPago;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // colcod_Gremision
-            // 
-            this.colcod_Gremision.Caption = "Guía de Remisión";
-            this.colcod_Gremision.FieldName = "cod_Gremision";
-            this.colcod_Gremision.Name = "colcod_Gremision";
-            this.colcod_Gremision.Visible = true;
-            this.colcod_Gremision.VisibleIndex = 0;
-            // 
-            // colfecha
-            // 
-            this.colfecha.Caption = "Fecha";
-            this.colfecha.FieldName = "fecha";
-            this.colfecha.Name = "colfecha";
-            this.colfecha.Visible = true;
-            this.colfecha.VisibleIndex = 1;
-            // 
-            // colDestinatario
-            // 
-            this.colDestinatario.Caption = "Destinatario";
-            this.colDestinatario.FieldName = "Destinatario";
-            this.colDestinatario.Name = "colDestinatario";
-            this.colDestinatario.Visible = true;
-            this.colDestinatario.VisibleIndex = 2;
-            // 
-            // colDomicilio
-            // 
-            this.colDomicilio.FieldName = "Domicilio";
-            this.colDomicilio.Name = "colDomicilio";
-            this.colDomicilio.Visible = true;
-            this.colDomicilio.VisibleIndex = 3;
-            // 
-            // colRuc_DNI
-            // 
-            this.colRuc_DNI.Caption = "RUC/DNI";
-            this.colRuc_DNI.FieldName = "Ruc_DNI";
-            this.colRuc_DNI.Name = "colRuc_DNI";
-            this.colRuc_DNI.Visible = true;
-            this.colRuc_DNI.VisibleIndex = 4;
-            // 
-            // colcod_orden
-            // 
-            this.colcod_orden.Caption = "Código Orden";
-            this.colcod_orden.FieldName = "cod_orden";
-            this.colcod_orden.Name = "colcod_orden";
-            this.colcod_orden.Visible = true;
-            this.colcod_orden.VisibleIndex = 5;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FieldName = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Visible = true;
-            this.colNombre.VisibleIndex = 6;
-            // 
-            // colApellidos
-            // 
-            this.colApellidos.FieldName = "Apellidos";
-            this.colApellidos.Name = "colApellidos";
-            this.colApellidos.Visible = true;
-            this.colApellidos.VisibleIndex = 7;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.Client = this.CGordenPago;
-            this.searchControl1.Location = new System.Drawing.Point(5, 17);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.searchControl1.Properties.Client = this.CGordenPago;
-            this.searchControl1.Size = new System.Drawing.Size(169, 20);
-            this.searchControl1.TabIndex = 0;
             // 
             // groupControl2
             // 
@@ -402,6 +266,151 @@
             this.simpleButton3.TabIndex = 60;
             this.simpleButton3.Text = "Imprimir Rápido";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // pccOrdenPago
+            // 
+            this.pccOrdenPago.Controls.Add(this.groupControl5);
+            this.pccOrdenPago.Location = new System.Drawing.Point(36, 52);
+            this.pccOrdenPago.Name = "pccOrdenPago";
+            this.pccOrdenPago.Size = new System.Drawing.Size(718, 343);
+            this.pccOrdenPago.TabIndex = 54;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Controls.Add(this.CGordenPago);
+            this.groupControl5.Controls.Add(this.searchControl1);
+            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl5.Location = new System.Drawing.Point(0, 0);
+            this.groupControl5.LookAndFeel.SkinName = "Office 2013";
+            this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(718, 343);
+            this.groupControl5.TabIndex = 0;
+            // 
+            // CGordenPago
+            // 
+            this.CGordenPago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CGordenPago.DataSource = this.viewGuiaremisionbusquedaBindingSource;
+            this.CGordenPago.Location = new System.Drawing.Point(3, 43);
+            this.CGordenPago.MainView = this.gridView1;
+            this.CGordenPago.Name = "CGordenPago";
+            this.CGordenPago.Size = new System.Drawing.Size(710, 295);
+            this.CGordenPago.TabIndex = 1;
+            this.CGordenPago.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.CGordenPago.Click += new System.EventHandler(this.CGordenPago_Click_1);
+            // 
+            // viewGuiaremisionbusquedaBindingSource
+            // 
+            this.viewGuiaremisionbusquedaBindingSource.DataMember = "View_Guia_remision_busqueda";
+            this.viewGuiaremisionbusquedaBindingSource.DataSource = this.dSAQCobranza;
+            // 
+            // dSAQCobranza
+            // 
+            this.dSAQCobranza.DataSetName = "DSAQCobranza";
+            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView1
+            // 
+            this.gridView1.ActiveFilterString = "[fecha] >= LocalDateTimeThisWeek() And [fecha] < LocalDateTimeTomorrow()";
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colcod_Gremision,
+            this.colfecha,
+            this.colDestinatario,
+            this.colDomicilio,
+            this.colRuc_DNI,
+            this.colcod_orden,
+            this.colNombre,
+            this.colApellidos});
+            this.gridView1.GridControl = this.CGordenPago;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colfecha, DevExpress.Data.ColumnSortOrder.Descending)});
+            // 
+            // colcod_Gremision
+            // 
+            this.colcod_Gremision.Caption = "Guía de Remisión";
+            this.colcod_Gremision.FieldName = "cod_Gremision";
+            this.colcod_Gremision.Name = "colcod_Gremision";
+            this.colcod_Gremision.Visible = true;
+            this.colcod_Gremision.VisibleIndex = 0;
+            this.colcod_Gremision.Width = 101;
+            // 
+            // colfecha
+            // 
+            this.colfecha.Caption = "Fecha";
+            this.colfecha.FieldName = "fecha";
+            this.colfecha.Name = "colfecha";
+            this.colfecha.Visible = true;
+            this.colfecha.VisibleIndex = 1;
+            this.colfecha.Width = 83;
+            // 
+            // colDestinatario
+            // 
+            this.colDestinatario.Caption = "Destinatario";
+            this.colDestinatario.FieldName = "Destinatario";
+            this.colDestinatario.Name = "colDestinatario";
+            this.colDestinatario.Visible = true;
+            this.colDestinatario.VisibleIndex = 2;
+            this.colDestinatario.Width = 83;
+            // 
+            // colDomicilio
+            // 
+            this.colDomicilio.FieldName = "Domicilio";
+            this.colDomicilio.Name = "colDomicilio";
+            this.colDomicilio.Visible = true;
+            this.colDomicilio.VisibleIndex = 3;
+            this.colDomicilio.Width = 83;
+            // 
+            // colRuc_DNI
+            // 
+            this.colRuc_DNI.Caption = "RUC/DNI";
+            this.colRuc_DNI.FieldName = "Ruc_DNI";
+            this.colRuc_DNI.Name = "colRuc_DNI";
+            this.colRuc_DNI.Visible = true;
+            this.colRuc_DNI.VisibleIndex = 4;
+            this.colRuc_DNI.Width = 83;
+            // 
+            // colcod_orden
+            // 
+            this.colcod_orden.Caption = "Código Orden";
+            this.colcod_orden.FieldName = "cod_orden";
+            this.colcod_orden.Name = "colcod_orden";
+            this.colcod_orden.Visible = true;
+            this.colcod_orden.VisibleIndex = 5;
+            this.colcod_orden.Width = 83;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FieldName = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Visible = true;
+            this.colNombre.VisibleIndex = 6;
+            this.colNombre.Width = 83;
+            // 
+            // colApellidos
+            // 
+            this.colApellidos.FieldName = "Apellidos";
+            this.colApellidos.Name = "colApellidos";
+            this.colApellidos.Visible = true;
+            this.colApellidos.VisibleIndex = 7;
+            this.colApellidos.Width = 96;
+            // 
+            // searchControl1
+            // 
+            this.searchControl1.Client = this.CGordenPago;
+            this.searchControl1.Location = new System.Drawing.Point(5, 17);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl1.Properties.Client = this.CGordenPago;
+            this.searchControl1.Size = new System.Drawing.Size(169, 20);
+            this.searchControl1.TabIndex = 0;
             // 
             // label1
             // 
@@ -963,6 +972,9 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pccOrdenPago)).EndInit();
             this.pccOrdenPago.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -972,9 +984,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerie.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentopagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
