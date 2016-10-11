@@ -17,6 +17,7 @@ namespace AQCobranza
     public partial class Cliente : DevExpress.XtraEditors.XtraForm
     {
         AccesoDao objdao = new AccesoDao();
+        Mensajes Msg = new Mensajes();
         List<E_Cliente> lstCliente = new List<E_Cliente>();
         public Cliente()
         {
@@ -32,6 +33,8 @@ namespace AQCobranza
                     this.Validate();
                     this.clienteBindingSource.EndEdit();
                     this.tableAdapterManager.UpdateAll(this.dSAQCobranza);
+                    ruc_DNITextEdit.Enabled = false;
+                    Msg.M_correcto("Se Registro Correctamente");
                 }
                 catch (Exception ex)
                 {
@@ -47,6 +50,7 @@ namespace AQCobranza
         private void txtdni_MouseClick(object sender, MouseEventArgs e)
         {
             this.clienteTableAdapter.Fill(this.dSAQCobranza.Cliente);
+            ruc_DNITextEdit.Enabled = false;
         }
 
         private void fotoPictureBox_Click(object sender, EventArgs e)
@@ -76,6 +80,16 @@ namespace AQCobranza
                     MessageBox.Show("Error " + ex.Message);
                 }
             }
+        }
+
+        private void GCcliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            ruc_DNITextEdit.Enabled = true;
         }
 
 

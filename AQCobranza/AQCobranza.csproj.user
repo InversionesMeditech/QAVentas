@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>publicar\</PublishUrlHistory>
+    <PublishUrlHistory>E:\SERVIDOR GIT\QAVentas\Publish\|E:\SERVIDOR GIT\QAVentas\|publicar\</PublishUrlHistory>
     <InstallUrlHistory>http://192.168.1.15/Instalar/|http://localhost/Instalar/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>http://192.168.1.15/Actualizar/|http://localhost/Actualizar/|http://localhost/Actualiza/|http://localhost/AQCobranza/</UpdateUrlHistory>

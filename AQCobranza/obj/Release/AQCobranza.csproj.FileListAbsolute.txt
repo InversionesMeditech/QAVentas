@@ -1,8 +1,3 @@
-E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe.config
-E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe.manifest
-E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.application
-E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe
-E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.pdb
 E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\AQCbrDao.dll
 E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\AQCbrEntidades.dll
 E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\AQCbrDao.pdb
@@ -34,9 +29,14 @@ E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\AQCobranza.Properties.Resources.
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\AQCobranza.Unidad_Medida.resources
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\AQCobranza.Usuario.resources
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\AQCobranza.csproj.GenerateResource.Cache
-E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.exe.licenses
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\RdlCompile.cache
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\RdlCompile.compiled
+E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe.config
+E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe.manifest
+E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.application
+E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.exe
+E:\SERVIDOR GIT\QAVentas\AQCobranza\bin\Release\QA-Ventas.pdb
+E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.exe.licenses
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.TrustInfo.xml
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.exe.manifest
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.application

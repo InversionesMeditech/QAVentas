@@ -4352,6 +4352,10 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncom_correo;
             
+            private global::System.Data.DataColumn columncom_anexo;
+            
+            private global::System.Data.DataColumn columncom_cel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ClienteDataTable() {
@@ -4459,6 +4463,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn com_anexoColumn {
+                get {
+                    return this.columncom_anexo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn com_celColumn {
+                get {
+                    return this.columncom_cel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4494,7 +4514,7 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ClienteRow AddClienteRow(string Ruc_DNI, string Nombre, string Apellidos, string Direccion, string Observaciones, byte[] foto, string Comprador, string com_telefono, string com_correo) {
+            public ClienteRow AddClienteRow(string Ruc_DNI, string Nombre, string Apellidos, string Direccion, string Observaciones, byte[] foto, string Comprador, string com_telefono, string com_correo, string com_anexo, string com_cel) {
                 ClienteRow rowClienteRow = ((ClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Ruc_DNI,
@@ -4505,7 +4525,9 @@ namespace AQCobranza {
                         foto,
                         Comprador,
                         com_telefono,
-                        com_correo};
+                        com_correo,
+                        com_anexo,
+                        com_cel};
                 rowClienteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClienteRow);
                 return rowClienteRow;
@@ -4544,6 +4566,8 @@ namespace AQCobranza {
                 this.columnComprador = base.Columns["Comprador"];
                 this.columncom_telefono = base.Columns["com_telefono"];
                 this.columncom_correo = base.Columns["com_correo"];
+                this.columncom_anexo = base.Columns["com_anexo"];
+                this.columncom_cel = base.Columns["com_cel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4567,6 +4591,10 @@ namespace AQCobranza {
                 base.Columns.Add(this.columncom_telefono);
                 this.columncom_correo = new global::System.Data.DataColumn("com_correo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncom_correo);
+                this.columncom_anexo = new global::System.Data.DataColumn("com_anexo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncom_anexo);
+                this.columncom_cel = new global::System.Data.DataColumn("com_cel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncom_cel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRuc_DNI}, true));
                 this.columnRuc_DNI.AllowDBNull = false;
@@ -4577,8 +4605,10 @@ namespace AQCobranza {
                 this.columnDireccion.MaxLength = 150;
                 this.columnObservaciones.MaxLength = 2147483647;
                 this.columnComprador.MaxLength = 150;
-                this.columncom_telefono.MaxLength = 15;
+                this.columncom_telefono.MaxLength = 20;
                 this.columncom_correo.MaxLength = 150;
+                this.columncom_anexo.MaxLength = 10;
+                this.columncom_cel.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13824,6 +13854,38 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string com_anexo {
+                get {
+                    try {
+                        return ((string)(this[this.tableCliente.com_anexoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'com_anexo\' de la tabla \'Cliente\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCliente.com_anexoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string com_cel {
+                get {
+                    try {
+                        return ((string)(this[this.tableCliente.com_celColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'com_cel\' de la tabla \'Cliente\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCliente.com_celColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableCliente.NombreColumn);
             }
@@ -13916,6 +13978,30 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcom_correoNull() {
                 this[this.tableCliente.com_correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscom_anexoNull() {
+                return this.IsNull(this.tableCliente.com_anexoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcom_anexoNull() {
+                this[this.tableCliente.com_anexoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscom_celNull() {
+                return this.IsNull(this.tableCliente.com_celColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcom_celNull() {
+                this[this.tableCliente.com_celColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -23553,10 +23639,12 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             tableMapping.ColumnMappings.Add("Comprador", "Comprador");
             tableMapping.ColumnMappings.Add("com_telefono", "com_telefono");
             tableMapping.ColumnMappings.Add("com_correo", "com_correo");
+            tableMapping.ColumnMappings.Add("com_anexo", "com_anexo");
+            tableMapping.ColumnMappings.Add("com_cel", "com_cel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Cliente] WHERE (([Ruc_DNI] = ?) AND ((? = 1 AND [Nombre] IS NULL) OR ([Nombre] = ?)) AND ((? = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [Comprador] IS NULL) OR ([Comprador] = ?)) AND ((? = 1 AND [com_telefono] IS NULL) OR ([com_telefono] = ?)) AND ((? = 1 AND [com_correo] IS NULL) OR ([com_correo] = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Cliente] WHERE (([Ruc_DNI] = ?) AND ((? = 1 AND [Nombre] IS NULL) OR ([Nombre] = ?)) AND ((? = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [Comprador] IS NULL) OR ([Comprador] = ?)) AND ((? = 1 AND [com_telefono] IS NULL) OR ([com_telefono] = ?)) AND ((? = 1 AND [com_correo] IS NULL) OR ([com_correo] = ?)) AND ((? = 1 AND [com_anexo] IS NULL) OR ([com_anexo] = ?)) AND ((? = 1 AND [com_cel] IS NULL) OR ([com_cel] = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Ruc_DNI", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ruc_DNI", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Nombre", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Original, true, null));
@@ -23571,11 +23659,15 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_telefono", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_correo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_correo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_anexo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_anexo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_cel", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_cel", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Cliente] ([Ruc_DNI], [Nombre], [Apellidos], [Direccion], [Observacio" +
-                "nes], [foto], [Comprador], [com_telefono], [com_correo]) VALUES (?, ?, ?, ?, ?, " +
-                "?, ?, ?, ?)";
+                "nes], [foto], [Comprador], [com_telefono], [com_correo], [com_anexo], [com_cel])" +
+                " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Ruc_DNI", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ruc_DNI", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Nombre", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
@@ -23586,9 +23678,11 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Comprador", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Comprador", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_telefono", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_correo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_anexo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_cel", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Cliente] SET [Ruc_DNI] = ?, [Nombre] = ?, [Apellidos] = ?, [Direccion] = ?, [Observaciones] = ?, [foto] = ?, [Comprador] = ?, [com_telefono] = ?, [com_correo] = ? WHERE (([Ruc_DNI] = ?) AND ((? = 1 AND [Nombre] IS NULL) OR ([Nombre] = ?)) AND ((? = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [Comprador] IS NULL) OR ([Comprador] = ?)) AND ((? = 1 AND [com_telefono] IS NULL) OR ([com_telefono] = ?)) AND ((? = 1 AND [com_correo] IS NULL) OR ([com_correo] = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Cliente] SET [Ruc_DNI] = ?, [Nombre] = ?, [Apellidos] = ?, [Direccion] = ?, [Observaciones] = ?, [foto] = ?, [Comprador] = ?, [com_telefono] = ?, [com_correo] = ?, [com_anexo] = ?, [com_cel] = ? WHERE (([Ruc_DNI] = ?) AND ((? = 1 AND [Nombre] IS NULL) OR ([Nombre] = ?)) AND ((? = 1 AND [Apellidos] IS NULL) OR ([Apellidos] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [Comprador] IS NULL) OR ([Comprador] = ?)) AND ((? = 1 AND [com_telefono] IS NULL) OR ([com_telefono] = ?)) AND ((? = 1 AND [com_correo] IS NULL) OR ([com_correo] = ?)) AND ((? = 1 AND [com_anexo] IS NULL) OR ([com_anexo] = ?)) AND ((? = 1 AND [com_cel] IS NULL) OR ([com_cel] = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Ruc_DNI", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ruc_DNI", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Nombre", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Current, false, null));
@@ -23599,6 +23693,8 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Comprador", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Comprador", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_telefono", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_correo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_anexo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("com_cel", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Ruc_DNI", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ruc_DNI", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Nombre", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Nombre", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nombre", global::System.Data.DataRowVersion.Original, false, null));
@@ -23612,6 +23708,10 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_telefono", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_correo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_correo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_correo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_anexo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_anexo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_anexo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_com_cel", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_com_cel", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "com_cel", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23628,7 +23728,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Ruc_DNI, Nombre, Apellidos, Direccion, Observaciones, foto, Comprad" +
-                "or, com_telefono, com_correo\r\nFROM            Cliente";
+                "or, com_telefono, com_correo, com_anexo, com_cel\r\nFROM            Cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -23689,7 +23789,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Ruc_DNI, string Original_Nombre, string Original_Apellidos, string Original_Direccion, string Original_Comprador, string Original_com_telefono, string Original_com_correo) {
+        public virtual int Delete(string Original_Ruc_DNI, string Original_Nombre, string Original_Apellidos, string Original_Direccion, string Original_Comprador, string Original_com_telefono, string Original_com_correo, string Original_com_anexo, string Original_com_cel) {
             if ((Original_Ruc_DNI == null)) {
                 throw new global::System.ArgumentNullException("Original_Ruc_DNI");
             }
@@ -23744,6 +23844,22 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_com_correo));
             }
+            if ((Original_com_anexo == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_com_anexo));
+            }
+            if ((Original_com_cel == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_com_cel));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23764,7 +23880,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Ruc_DNI, string Nombre, string Apellidos, string Direccion, string Observaciones, byte[] foto, string Comprador, string com_telefono, string com_correo) {
+        public virtual int Insert(string Ruc_DNI, string Nombre, string Apellidos, string Direccion, string Observaciones, byte[] foto, string Comprador, string com_telefono, string com_correo, string com_anexo, string com_cel) {
             if ((Ruc_DNI == null)) {
                 throw new global::System.ArgumentNullException("Ruc_DNI");
             }
@@ -23819,6 +23935,18 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(com_correo));
             }
+            if ((com_anexo == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(com_anexo));
+            }
+            if ((com_cel == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(com_cel));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23849,13 +23977,17 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
                     string Comprador, 
                     string com_telefono, 
                     string com_correo, 
+                    string com_anexo, 
+                    string com_cel, 
                     string Original_Ruc_DNI, 
                     string Original_Nombre, 
                     string Original_Apellidos, 
                     string Original_Direccion, 
                     string Original_Comprador, 
                     string Original_com_telefono, 
-                    string Original_com_correo) {
+                    string Original_com_correo, 
+                    string Original_com_anexo, 
+                    string Original_com_cel) {
             if ((Ruc_DNI == null)) {
                 throw new global::System.ArgumentNullException("Ruc_DNI");
             }
@@ -23910,59 +24042,87 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(com_correo));
             }
+            if ((com_anexo == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(com_anexo));
+            }
+            if ((com_cel == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(com_cel));
+            }
             if ((Original_Ruc_DNI == null)) {
                 throw new global::System.ArgumentNullException("Original_Ruc_DNI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Ruc_DNI));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Ruc_DNI));
             }
             if ((Original_Nombre == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_Apellidos == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Apellidos));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Nombre));
             }
-            if ((Original_Direccion == null)) {
+            if ((Original_Apellidos == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Direccion));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Apellidos));
             }
-            if ((Original_Comprador == null)) {
+            if ((Original_Direccion == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Comprador));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Direccion));
             }
-            if ((Original_com_telefono == null)) {
+            if ((Original_Comprador == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_com_telefono));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Comprador));
             }
-            if ((Original_com_correo == null)) {
+            if ((Original_com_telefono == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_com_correo));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_com_telefono));
+            }
+            if ((Original_com_correo == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_com_correo));
+            }
+            if ((Original_com_anexo == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_com_anexo));
+            }
+            if ((Original_com_cel == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_com_cel));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -23984,8 +24144,27 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, string Apellidos, string Direccion, string Observaciones, byte[] foto, string Comprador, string com_telefono, string com_correo, string Original_Ruc_DNI, string Original_Nombre, string Original_Apellidos, string Original_Direccion, string Original_Comprador, string Original_com_telefono, string Original_com_correo) {
-            return this.Update(Original_Ruc_DNI, Nombre, Apellidos, Direccion, Observaciones, foto, Comprador, com_telefono, com_correo, Original_Ruc_DNI, Original_Nombre, Original_Apellidos, Original_Direccion, Original_Comprador, Original_com_telefono, Original_com_correo);
+        public virtual int Update(
+                    string Nombre, 
+                    string Apellidos, 
+                    string Direccion, 
+                    string Observaciones, 
+                    byte[] foto, 
+                    string Comprador, 
+                    string com_telefono, 
+                    string com_correo, 
+                    string com_anexo, 
+                    string com_cel, 
+                    string Original_Ruc_DNI, 
+                    string Original_Nombre, 
+                    string Original_Apellidos, 
+                    string Original_Direccion, 
+                    string Original_Comprador, 
+                    string Original_com_telefono, 
+                    string Original_com_correo, 
+                    string Original_com_anexo, 
+                    string Original_com_cel) {
+            return this.Update(Original_Ruc_DNI, Nombre, Apellidos, Direccion, Observaciones, foto, Comprador, com_telefono, com_correo, com_anexo, com_cel, Original_Ruc_DNI, Original_Nombre, Original_Apellidos, Original_Direccion, Original_Comprador, Original_com_telefono, Original_com_correo, Original_com_anexo, Original_com_cel);
         }
     }
     

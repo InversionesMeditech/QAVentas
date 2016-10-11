@@ -38,6 +38,11 @@
             System.Windows.Forms.Label compradorLabel;
             System.Windows.Forms.Label com_telefonoLabel;
             System.Windows.Forms.Label com_correoLabel;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label label5;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -59,6 +64,8 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.com_celTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.com_anexoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.com_correoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.com_telefonoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.compradorTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -81,6 +88,11 @@
             compradorLabel = new System.Windows.Forms.Label();
             com_telefonoLabel = new System.Windows.Forms.Label();
             com_correoLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -100,6 +112,8 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.com_celTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.com_anexoTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.com_correoTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.com_telefonoTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compradorTextEdit.Properties)).BeginInit();
@@ -187,21 +201,71 @@
             // 
             com_telefonoLabel.AutoSize = true;
             com_telefonoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            com_telefonoLabel.Location = new System.Drawing.Point(7, 54);
+            com_telefonoLabel.Location = new System.Drawing.Point(5, 54);
             com_telefonoLabel.Name = "com_telefonoLabel";
-            com_telefonoLabel.Size = new System.Drawing.Size(59, 13);
+            com_telefonoLabel.Size = new System.Drawing.Size(82, 13);
             com_telefonoLabel.TabIndex = 2;
-            com_telefonoLabel.Text = "Telefono:";
+            com_telefonoLabel.Text = "Telefono Fijo:";
             // 
             // com_correoLabel
             // 
             com_correoLabel.AutoSize = true;
             com_correoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            com_correoLabel.Location = new System.Drawing.Point(7, 83);
+            com_correoLabel.Location = new System.Drawing.Point(5, 129);
             com_correoLabel.Name = "com_correoLabel";
             com_correoLabel.Size = new System.Drawing.Size(48, 13);
             com_correoLabel.TabIndex = 4;
             com_correoLabel.Text = "Correo:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            label1.Location = new System.Drawing.Point(5, 80);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(46, 13);
+            label1.TabIndex = 10;
+            label1.Text = "Anexo:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            label2.Location = new System.Drawing.Point(5, 106);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(52, 13);
+            label2.TabIndex = 11;
+            label2.Text = "Celular :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label3.Location = new System.Drawing.Point(252, 54);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(112, 13);
+            label3.TabIndex = 12;
+            label3.Text = "Ejem:(51)01-1234567";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label4.Location = new System.Drawing.Point(250, 106);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(112, 13);
+            label4.TabIndex = 13;
+            label4.Text = "Ejem:(51)123-456789";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            label5.Location = new System.Drawing.Point(240, 80);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(58, 13);
+            label5.TabIndex = 14;
+            label5.Text = "Ejem:1234";
             // 
             // splitContainerControl1
             // 
@@ -212,7 +276,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(812, 356);
+            this.splitContainerControl1.Size = new System.Drawing.Size(812, 349);
             this.splitContainerControl1.SplitterPosition = 188;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -226,7 +290,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(188, 356);
+            this.groupControl3.Size = new System.Drawing.Size(188, 349);
             this.groupControl3.TabIndex = 0;
             // 
             // groupBox1
@@ -271,6 +335,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(100, 36);
             this.bindingNavigatorAddNewItem.Text = "NUEVO";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // clienteBindingSource
             // 
@@ -334,6 +399,7 @@
             this.GCcliente.TabIndex = 0;
             this.GCcliente.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.GCcliente.Click += new System.EventHandler(this.GCcliente_Click);
             // 
             // gridView1
             // 
@@ -411,13 +477,20 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(619, 356);
+            this.groupControl2.Size = new System.Drawing.Size(619, 349);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Datos del Cliente";
             // 
             // groupControl4
             // 
             this.groupControl4.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl4.CaptionImage")));
+            this.groupControl4.Controls.Add(label5);
+            this.groupControl4.Controls.Add(label4);
+            this.groupControl4.Controls.Add(label3);
+            this.groupControl4.Controls.Add(label2);
+            this.groupControl4.Controls.Add(label1);
+            this.groupControl4.Controls.Add(this.com_celTextEdit);
+            this.groupControl4.Controls.Add(this.com_anexoTextEdit);
             this.groupControl4.Controls.Add(com_correoLabel);
             this.groupControl4.Controls.Add(this.com_correoTextEdit);
             this.groupControl4.Controls.Add(com_telefonoLabel);
@@ -426,16 +499,33 @@
             this.groupControl4.Controls.Add(this.compradorTextEdit);
             this.groupControl4.Location = new System.Drawing.Point(22, 167);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(352, 120);
+            this.groupControl4.Size = new System.Drawing.Size(367, 158);
             this.groupControl4.TabIndex = 23;
             this.groupControl4.Text = "Representante";
+            // 
+            // com_celTextEdit
+            // 
+            this.com_celTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.clienteBindingSource, "com_cel", true));
+            this.com_celTextEdit.Location = new System.Drawing.Point(134, 103);
+            this.com_celTextEdit.Name = "com_celTextEdit";
+            this.com_celTextEdit.Properties.Mask.EditMask = "(00)000-000000";
+            this.com_celTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.com_celTextEdit.Size = new System.Drawing.Size(114, 20);
+            this.com_celTextEdit.TabIndex = 9;
+            // 
+            // com_anexoTextEdit
+            // 
+            this.com_anexoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.clienteBindingSource, "com_anexo", true));
+            this.com_anexoTextEdit.Location = new System.Drawing.Point(134, 77);
+            this.com_anexoTextEdit.Name = "com_anexoTextEdit";
+            this.com_anexoTextEdit.Size = new System.Drawing.Size(100, 20);
+            this.com_anexoTextEdit.TabIndex = 7;
             // 
             // com_correoTextEdit
             // 
             this.com_correoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.clienteBindingSource, "com_correo", true));
-            this.com_correoTextEdit.Location = new System.Drawing.Point(134, 80);
+            this.com_correoTextEdit.Location = new System.Drawing.Point(134, 129);
             this.com_correoTextEdit.Name = "com_correoTextEdit";
-            this.com_correoTextEdit.Properties.Mask.EditMask = ".+";
             this.com_correoTextEdit.Size = new System.Drawing.Size(213, 20);
             this.com_correoTextEdit.TabIndex = 5;
             // 
@@ -444,9 +534,7 @@
             this.com_telefonoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.clienteBindingSource, "com_telefono", true));
             this.com_telefonoTextEdit.Location = new System.Drawing.Point(134, 51);
             this.com_telefonoTextEdit.Name = "com_telefonoTextEdit";
-            this.com_telefonoTextEdit.Properties.Mask.EditMask = "000-000000";
-            this.com_telefonoTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.com_telefonoTextEdit.Size = new System.Drawing.Size(119, 20);
+            this.com_telefonoTextEdit.Size = new System.Drawing.Size(114, 20);
             this.com_telefonoTextEdit.TabIndex = 3;
             // 
             // compradorTextEdit
@@ -462,7 +550,7 @@
             this.fotoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clienteBindingSource, "foto", true));
             this.fotoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("fotoPictureBox.Image")));
-            this.fotoPictureBox.Location = new System.Drawing.Point(380, 24);
+            this.fotoPictureBox.Location = new System.Drawing.Point(399, 29);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(210, 223);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -473,6 +561,7 @@
             // ruc_DNITextEdit
             // 
             this.ruc_DNITextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.clienteBindingSource, "Ruc_DNI", true));
+            this.ruc_DNITextEdit.Enabled = false;
             this.ruc_DNITextEdit.Location = new System.Drawing.Point(156, 24);
             this.ruc_DNITextEdit.Name = "ruc_DNITextEdit";
             this.ruc_DNITextEdit.Size = new System.Drawing.Size(131, 20);
@@ -517,7 +606,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(816, 397);
+            this.groupControl1.Size = new System.Drawing.Size(816, 390);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Cliente";
             // 
@@ -542,6 +631,7 @@
             this.tableAdapterManager.Header_PagoTableAdapter = null;
             this.tableAdapterManager.ImpresionesTableAdapter = null;
             this.tableAdapterManager.MaterialTableAdapter = null;
+            this.tableAdapterManager.Orden_de_CompraTableAdapter = null;
             this.tableAdapterManager.Unidad_MedidaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
@@ -554,7 +644,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 397);
+            this.ClientSize = new System.Drawing.Size(816, 390);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Office 2013";
             this.Name = "Cliente";
@@ -584,6 +674,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.com_celTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.com_anexoTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.com_correoTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.com_telefonoTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compradorTextEdit.Properties)).EndInit();
@@ -634,5 +726,7 @@
         private DevExpress.XtraEditors.TextEdit com_correoTextEdit;
         private DevExpress.XtraEditors.TextEdit com_telefonoTextEdit;
         private DevExpress.XtraEditors.TextEdit compradorTextEdit;
+        private DevExpress.XtraEditors.TextEdit com_celTextEdit;
+        private DevExpress.XtraEditors.TextEdit com_anexoTextEdit;
     }
 }
