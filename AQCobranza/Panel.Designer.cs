@@ -50,6 +50,8 @@
             this.barCaja_banco = new DevExpress.XtraBars.BarButtonItem();
             this.barCajaChica = new DevExpress.XtraBars.BarButtonItem();
             this.barBancos = new DevExpress.XtraBars.BarButtonItem();
+            this.barCompro = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbCotizacion = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbOrdenCompra = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,7 +72,7 @@
             this.eRP_empresaTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.ERP_empresaTableAdapter();
             this.tableAdapterManager = new AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.barCompro = new DevExpress.XtraBars.BarButtonItem();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -105,9 +107,10 @@
             this.barCaja_banco,
             this.barCajaChica,
             this.barBancos,
-            this.barCompro});
+            this.barCompro,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 37;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -285,6 +288,24 @@
             this.barBancos.Name = "barBancos";
             this.barBancos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBancos_ItemClick);
             // 
+            // barCompro
+            // 
+            this.barCompro.Caption = "Configurar Comprobantes";
+            this.barCompro.Glyph = ((System.Drawing.Image)(resources.GetObject("barCompro.Glyph")));
+            this.barCompro.Id = 36;
+            this.barCompro.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barCompro.LargeGlyph")));
+            this.barCompro.Name = "barCompro";
+            this.barCompro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barCompro_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Ayuda";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 37;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -318,8 +339,10 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
+            this.ribbonPageGroup1.Text = "AYUDA";
             // 
             // ribbonPage3
             // 
@@ -456,15 +479,6 @@
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
             // 
-            // barCompro
-            // 
-            this.barCompro.Caption = "Configurar Comprobantes";
-            this.barCompro.Glyph = ((System.Drawing.Image)(resources.GetObject("barCompro.Glyph")));
-            this.barCompro.Id = 36;
-            this.barCompro.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barCompro.LargeGlyph")));
-            this.barCompro.Name = "barCompro";
-            this.barCompro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barCompro_ItemClick);
-            // 
             // Panel
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -481,6 +495,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Panel_FormClosing);
             this.Load += new System.EventHandler(this.Panel_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Panel_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Panel_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
@@ -535,6 +551,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
         private DevExpress.XtraBars.BarButtonItem barCompro;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

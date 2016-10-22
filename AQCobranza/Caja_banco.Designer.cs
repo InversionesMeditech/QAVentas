@@ -366,6 +366,7 @@
             // cbCliente
             // 
             this.cbCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.header_PagoBindingSource, "Ruc_DNI", true));
+            this.cbCliente.Enabled = false;
             this.cbCliente.Location = new System.Drawing.Point(145, 183);
             this.cbCliente.Name = "cbCliente";
             this.cbCliente.Size = new System.Drawing.Size(121, 20);
@@ -461,6 +462,7 @@
             // txtMonto
             // 
             this.txtMonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.header_PagoBindingSource, "monto_total", true));
+            this.txtMonto.Enabled = false;
             this.txtMonto.Location = new System.Drawing.Point(145, 131);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Properties.Mask.EditMask = "c";

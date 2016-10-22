@@ -46,6 +46,8 @@
             this.diferencia_Egresos_VWBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.egresoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.txtfecha = new DevExpress.XtraEditors.DateEdit();
@@ -78,8 +80,6 @@
             this.tableAdapterManager = new AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager();
             this.cChica_IngresoTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.CChica_IngresoTableAdapter();
             this.diferencia_Egresos_VWTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.Diferencia_Egresos_VWTableAdapter();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -126,9 +126,9 @@
             label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             label9.Location = new System.Drawing.Point(10, 31);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(50, 13);
+            label9.Size = new System.Drawing.Size(46, 13);
             label9.TabIndex = 30;
-            label9.Text = "Cuenta:";
+            label9.Text = "Monto:";
             // 
             // label4
             // 
@@ -293,6 +293,26 @@
             this.groupControl2.Size = new System.Drawing.Size(511, 554);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Egresos Caja Chica";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(332, 114);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 18);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Saldo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(330, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 25);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "S/.";
             // 
             // progressBarControl1
             // 
@@ -609,26 +629,6 @@
             // diferencia_Egresos_VWTableAdapter
             // 
             this.diferencia_Egresos_VWTableAdapter.ClearBeforeFill = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(330, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 25);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "S/.";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(332, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 18);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Saldo:";
             // 
             // CajaChica
             // 

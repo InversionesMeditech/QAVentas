@@ -429,6 +429,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QAVentas.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\saveto_32x32.png" />
   </ItemGroup>
   <ItemGroup>
