@@ -19,3 +19,10 @@ E:\SERVIDOR GIT\QAVentas\AQCbrDao\bin\Release\AQCbrEntidades.pdb
 E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
 E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.dll
 E:\SERVIDOR GIT\QAVentas\AQCbrDao\obj\Release\AQCbrDao.pdb
+D:\Servidor\Git\QAVentas\AQCbrDao\bin\Release\AQCbrDao.dll
+D:\Servidor\Git\QAVentas\AQCbrDao\bin\Release\AQCbrDao.pdb
+D:\Servidor\Git\QAVentas\AQCbrDao\bin\Release\AQCbrEntidades.dll
+D:\Servidor\Git\QAVentas\AQCbrDao\bin\Release\AQCbrEntidades.pdb
+D:\Servidor\Git\QAVentas\AQCbrDao\obj\Release\AQCbrDao.csprojResolveAssemblyReference.cache
+D:\Servidor\Git\QAVentas\AQCbrDao\obj\Release\AQCbrDao.dll
+D:\Servidor\Git\QAVentas\AQCbrDao\obj\Release\AQCbrDao.pdb
