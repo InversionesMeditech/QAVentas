@@ -335,6 +335,27 @@ namespace AQCobranza
                 chForm.Show();
             }
         }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("QAVentas.chm");
+        }
+
+        private void Panel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.F1))
+            {
+                System.Diagnostics.Process.Start("QAVentas.chm");
+            }
+        }
+
+        private void Panel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                System.Diagnostics.Process.Start("QAVentas.chm");
+            }
+        }
     }
 
 }
