@@ -419,6 +419,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(27, 17);
             this.txtUsuario.Text = "????";
+            this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
             // 
             // txtEmpresa
             // 

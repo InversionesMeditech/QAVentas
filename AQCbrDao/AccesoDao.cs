@@ -600,14 +600,15 @@ namespace AQCbrDao
             double _monto_total,
             string _cod_usuario,
             int _Tipo_doc,
-            string _cod_orden
+            string _cod_orden,
+            int _dias_pago
             )
         {
             
                 if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
                 OdbcCommand cmd = new OdbcCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "{ CALL ps_HPago_Insertar(?,?,?,?,?,?,?,?,?) }";
+                cmd.CommandText = "{ CALL ps_HPago_Insertar(?,?,?,?,?,?,?,?,?,?) }";
                 cmd.Parameters.AddWithValue("@0", _comprobante);
                 cmd.Parameters.AddWithValue("@1", _fecha);
                 cmd.Parameters.AddWithValue("@2", _Ruc_DNI);
@@ -617,6 +618,7 @@ namespace AQCbrDao
                 cmd.Parameters.AddWithValue("@6", _cod_usuario);
                 cmd.Parameters.AddWithValue("@7", _Tipo_doc);
                 cmd.Parameters.AddWithValue("@8", _cod_orden);
+                cmd.Parameters.AddWithValue("@9", _dias_pago);
                 cmd.Connection = cnn;
                 cmd.CommandTimeout = 3600;
                 OdbcDataReader dr = cmd.ExecuteReader();
@@ -633,6 +635,7 @@ namespace AQCbrDao
                     objHpago.cod_usuario = Convert.ToString(dr.GetValue(6));
                     objHpago.tipo_doc = Convert.ToInt16(dr.GetValue(7));
                     objHpago.cod_orden = Convert.ToString(dr.GetValue(8));
+                    objHpago.dias_venc = Convert.ToInt16(dr.GetValue(9));
                    
                 }
                 dr.Close();

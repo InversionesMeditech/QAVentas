@@ -43,3 +43,4 @@ E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\RdlCompile.compiled
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.TrustInfo.xml
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.exe.manifest
 E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\QA-Ventas.application
+E:\SERVIDOR GIT\QAVentas\AQCobranza\obj\Release\AQCobranza.dashboard.resources

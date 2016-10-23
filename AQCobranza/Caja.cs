@@ -102,7 +102,7 @@ namespace AQCobranza
                             double _descuento ,  _monto;
                             _comprobante = txtTpago.Text.Trim()+txtSerie.Text.Trim()+"-"+txtComprobante.Text.Trim();
                             lstHpago = objDao.Registrar_Hpago(_comprobante, txtFecha.DateTime, txtRuc_DNI.Text, Convert.ToDouble(txtmonto.Text), Convert.ToDouble(txtigv.Text),
-                                                 Convert.ToDouble(txtmonto_total.Text), txtcod_usuario.Text, Convert.ToInt16(cbTpago.SelectedValue), txtcod_orden.Text);
+                                                 Convert.ToDouble(txtmonto_total.Text), txtcod_usuario.Text, Convert.ToInt16(cbTpago.SelectedValue), txtcod_orden.Text,Convert.ToInt16(txtDias_venc.Text));
                            
                             for (int i = 0; i < gridView2.RowCount; i++)
                             {
