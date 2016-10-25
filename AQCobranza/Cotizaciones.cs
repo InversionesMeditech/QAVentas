@@ -41,8 +41,7 @@ namespace AQCobranza
         private void Cotizaciones_Load(object sender, EventArgs e)
         {
             Panel frmPanel = new Panel();
-            txtUsuario.Text = usuario;
-                        
+            txtUsuario.Text = usuario;                       
             this.unidad_MedidaTableAdapter.Fill(this.dSAQCobranza.Unidad_Medida);
             this.impresionesTableAdapter.Fill(this.dSAQCobranza.Impresiones);
             this.acabadosTableAdapter.Fill(this.dSAQCobranza.Acabados);

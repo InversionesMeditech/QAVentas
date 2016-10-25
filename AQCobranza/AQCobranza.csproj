@@ -95,6 +95,7 @@
     <Reference Include="DevExpress.Printing.v15.1.Core" />
     <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Xpf.Core.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.1" />
     <Reference Include="DevExpress.Sparkline.v15.1.Core" />
@@ -108,7 +109,9 @@
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -189,6 +192,12 @@
     <Compile Include="CuadreCaja.Designer.cs">
       <DependentUpon>CuadreCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSAQCobranza.cs">
       <DependentUpon>DSAQCobranza.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -197,6 +206,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSAQCobranza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSAQDashboard.cs">
+      <DependentUpon>DSAQDashboard.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSAQDashboard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSAQDashboard.xsd</DependentUpon>
     </Compile>
     <Compile Include="DSQAOrdenCompra.cs">
       <DependentUpon>DSQAOrdenCompra.xsd</DependentUpon>
@@ -331,6 +349,11 @@
     <EmbeddedResource Include="CuadreCaja.resx">
       <DependentUpon>CuadreCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\FacturasPagadas.rdlc" />
+    <EmbeddedResource Include="Dashboard\facVencidos.rdlc" />
     <EmbeddedResource Include="Empresa.resx">
       <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +418,17 @@
     </None>
     <None Include="DSAQCobranza.xss">
       <DependentUpon>DSAQCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DSAQDashboard.xsc">
+      <DependentUpon>DSAQDashboard.xsd</DependentUpon>
+    </None>
+    <None Include="DSAQDashboard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSAQDashboard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSAQDashboard.xss">
+      <DependentUpon>DSAQDashboard.xsd</DependentUpon>
     </None>
     <None Include="DSQAOrdenCompra.xsc">
       <DependentUpon>DSQAOrdenCompra.xsd</DependentUpon>

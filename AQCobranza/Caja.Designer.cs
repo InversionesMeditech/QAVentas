@@ -34,10 +34,6 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnAnular = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.pccOrdenPago = new DevExpress.XtraEditors.PopupContainerControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.CGordenPago = new DevExpress.XtraGrid.GridControl();
@@ -53,6 +49,12 @@
             this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colApellidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtDias_venc = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSerie = new DevExpress.XtraEditors.TextEdit();
             this.documentopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -116,8 +118,6 @@
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pccOrdenPago)).BeginInit();
             this.pccOrdenPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -127,6 +127,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDias_venc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerie.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentopagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
@@ -199,73 +202,6 @@
             this.btnAnular.TabIndex = 56;
             this.btnAnular.Text = "ANULAR";
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(10, 59);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(119, 34);
-            this.simpleButton2.TabIndex = 55;
-            this.simpleButton2.Text = "Nuevo";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
-            this.btnRegistrar.Location = new System.Drawing.Point(10, 20);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(119, 34);
-            this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "COBRAR";
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
-            this.groupControl2.Controls.Add(this.simpleButton3);
-            this.groupControl2.Controls.Add(this.label1);
-            this.groupControl2.Controls.Add(this.txtSerie);
-            this.groupControl2.Controls.Add(this.groupControl6);
-            this.groupControl2.Controls.Add(this.btnCalcular);
-            this.groupControl2.Controls.Add(this.txtcod_orden);
-            this.groupControl2.Controls.Add(this.txtTpago);
-            this.groupControl2.Controls.Add(this.cbTpago);
-            this.groupControl2.Controls.Add(this.labelControl9);
-            this.groupControl2.Controls.Add(this.labelControl8);
-            this.groupControl2.Controls.Add(this.labelControl7);
-            this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.labelControl4);
-            this.groupControl2.Controls.Add(this.labelControl3);
-            this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.txtcod_usuario);
-            this.groupControl2.Controls.Add(this.txtmonto_total);
-            this.groupControl2.Controls.Add(this.txtigv);
-            this.groupControl2.Controls.Add(this.txtmonto);
-            this.groupControl2.Controls.Add(this.txtRuc_DNI);
-            this.groupControl2.Controls.Add(this.labelControl1);
-            this.groupControl2.Controls.Add(this.txtComprobante);
-            this.groupControl2.Controls.Add(this.btnImprimir);
-            this.groupControl2.Controls.Add(this.groupControl4);
-            this.groupControl2.Controls.Add(this.txtFecha);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(880, 437);
-            this.groupControl2.TabIndex = 0;
-            this.groupControl2.Text = "Datos del Comprobante";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Enabled = false;
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(252, 170);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(180, 36);
-            this.simpleButton3.TabIndex = 60;
-            this.simpleButton3.Text = "Imprimir Rápido";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // pccOrdenPago
             // 
@@ -411,6 +347,94 @@
             this.searchControl1.Properties.Client = this.CGordenPago;
             this.searchControl1.Size = new System.Drawing.Size(169, 20);
             this.searchControl1.TabIndex = 0;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(10, 59);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(119, 34);
+            this.simpleButton2.TabIndex = 55;
+            this.simpleButton2.Text = "Nuevo";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
+            this.btnRegistrar.Location = new System.Drawing.Point(10, 20);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(119, 34);
+            this.btnRegistrar.TabIndex = 0;
+            this.btnRegistrar.Text = "COBRAR";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.txtDias_venc);
+            this.groupControl2.Controls.Add(this.labelControl10);
+            this.groupControl2.Controls.Add(this.simpleButton3);
+            this.groupControl2.Controls.Add(this.label1);
+            this.groupControl2.Controls.Add(this.txtSerie);
+            this.groupControl2.Controls.Add(this.groupControl6);
+            this.groupControl2.Controls.Add(this.btnCalcular);
+            this.groupControl2.Controls.Add(this.txtcod_orden);
+            this.groupControl2.Controls.Add(this.txtTpago);
+            this.groupControl2.Controls.Add(this.cbTpago);
+            this.groupControl2.Controls.Add(this.labelControl9);
+            this.groupControl2.Controls.Add(this.labelControl8);
+            this.groupControl2.Controls.Add(this.labelControl7);
+            this.groupControl2.Controls.Add(this.labelControl6);
+            this.groupControl2.Controls.Add(this.labelControl5);
+            this.groupControl2.Controls.Add(this.labelControl4);
+            this.groupControl2.Controls.Add(this.labelControl3);
+            this.groupControl2.Controls.Add(this.labelControl2);
+            this.groupControl2.Controls.Add(this.txtcod_usuario);
+            this.groupControl2.Controls.Add(this.txtmonto_total);
+            this.groupControl2.Controls.Add(this.txtigv);
+            this.groupControl2.Controls.Add(this.txtmonto);
+            this.groupControl2.Controls.Add(this.txtRuc_DNI);
+            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Controls.Add(this.txtComprobante);
+            this.groupControl2.Controls.Add(this.btnImprimir);
+            this.groupControl2.Controls.Add(this.groupControl4);
+            this.groupControl2.Controls.Add(this.txtFecha);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(880, 437);
+            this.groupControl2.TabIndex = 0;
+            this.groupControl2.Text = "Datos del Comprobante";
+            // 
+            // txtDias_venc
+            // 
+            this.txtDias_venc.Location = new System.Drawing.Point(148, 171);
+            this.txtDias_venc.Name = "txtDias_venc";
+            this.txtDias_venc.Properties.Mask.BeepOnError = true;
+            this.txtDias_venc.Properties.Mask.EditMask = "d";
+            this.txtDias_venc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDias_venc.Size = new System.Drawing.Size(55, 20);
+            this.txtDias_venc.TabIndex = 62;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl10.Location = new System.Drawing.Point(30, 173);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(117, 13);
+            this.labelControl10.TabIndex = 61;
+            this.labelControl10.Text = "Dias de Vencimiento:";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Enabled = false;
+            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(252, 170);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(180, 36);
+            this.simpleButton3.TabIndex = 60;
+            this.simpleButton3.Text = "Imprimir Rápido";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // label1
             // 
@@ -972,9 +996,6 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pccOrdenPago)).EndInit();
             this.pccOrdenPago.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -984,6 +1005,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDias_venc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerie.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentopagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
@@ -1097,5 +1122,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn Det_Cot;
+        private DevExpress.XtraEditors.TextEdit txtDias_venc;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }

@@ -17,5 +17,6 @@ namespace AQCbrEntidades
         public string cod_usuario { get; set; }
         public int tipo_doc { get; set; }
         public string cod_orden{ get; set; }
+        public int dias_venc { get; set; }
     }
 }

@@ -245,6 +245,12 @@ namespace AQCobranza
                
             txtEmpresa.Text = "Copyright©" + DateTime.Today.Year + "  DIDISAC Todo los derechos reservados";
             PermisosUsuario();
+            if (this.Controls.Find("dashboard", true).Count() == 0)
+            {
+                dashboard chForm = new dashboard();
+                chForm.MdiParent = this;
+                chForm.Show();
+            }
         }
 
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -355,6 +361,11 @@ namespace AQCobranza
             {
                 System.Diagnostics.Process.Start("QAVentas.chm");
             }
+        }
+
+        private void txtUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
