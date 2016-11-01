@@ -343,6 +343,7 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "AYUDA";
+            this.ribbonPageGroup1.Visible = false;
             // 
             // ribbonPage3
             // 

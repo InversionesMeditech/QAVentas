@@ -202,7 +202,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -390,8 +389,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>8.65625cm</Top>
-        <Left>1.62834cm</Left>
+        <Top>7.96833cm</Top>
+        <Left>1.62836cm</Left>
         <Height>0.90896cm</Height>
         <Width>18.33097cm</Width>
         <Style>
@@ -418,7 +417,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cod_Gremision</rd:DefaultName>
-        <Top>4.13949cm</Top>
+        <Top>3.92754cm</Top>
         <Left>14.86641cm</Left>
         <Height>0.65292cm</Height>
         <Width>5.09292cm</Width>
@@ -452,7 +451,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>fecha</rd:DefaultName>
-        <Top>3.92754cm</Top>
+        <Top>3.60976cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -486,7 +485,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Destinatario</rd:DefaultName>
-        <Top>4.43053cm</Top>
+        <Top>4.11275cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -520,7 +519,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Domicilio</rd:DefaultName>
-        <Top>4.93351cm</Top>
+        <Top>4.61573cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -554,7 +553,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Ruc_DNI</rd:DefaultName>
-        <Top>5.40122cm</Top>
+        <Top>5.08344cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -588,7 +587,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Transportista</rd:DefaultName>
-        <Top>5.86893cm</Top>
+        <Top>5.55115cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -622,7 +621,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Domicilio1</rd:DefaultName>
-        <Top>6.4072cm</Top>
+        <Top>6.08942cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>9.08813cm</Width>
@@ -656,7 +655,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>T_RUC</rd:DefaultName>
-        <Top>6.95261cm</Top>
+        <Top>6.63483cm</Top>
         <Left>3.53342cm</Left>
         <Height>0.46771cm</Height>
         <Width>3.47896cm</Width>
@@ -688,7 +687,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>T_placa</rd:DefaultName>
-        <Top>6.8997cm</Top>
+        <Top>6.58192cm</Top>
         <Left>8.22002cm</Left>
         <Height>0.52062cm</Height>
         <Width>3.135cm</Width>
@@ -703,8 +702,41 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="cod_orden">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!cod_orden.Value, "DataSet1")</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>0.00;(0.00)</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>cod_orden</rd:DefaultName>
+        <Top>2.74849cm</Top>
+        <Left>9.15141cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.60243cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>9.56521cm</Height>
+    <Height>8.87729cm</Height>
     <Style />
   </Body>
   <Width>20.4125cm</Width>
