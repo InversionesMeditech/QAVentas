@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>E:\SERVIDOR GIT\QAVentas\Publish\</PublishUrl>
+    <PublishUrl>D:\DiDiSystem\publicar\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -30,8 +30,8 @@
     <MinimumRequiredVersion>1.0.0.3</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationVersion>1.0.0.21</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -463,9 +463,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="QAVentas.chm">
+    <Resource Include="QAVentas.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
     <None Include="Resources\saveto_32x32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -749,6 +749,16 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+    <PublishFile Include="DevExpress.Mvvm.v15.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
     <PublishFile Include="DevExpress.Office.v15.1.Core">
       <Visible>False</Visible>
       <Group>
@@ -820,6 +830,16 @@
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="DevExpress.Utils.v15.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpf.Core.v15.1">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -1015,7 +1035,7 @@
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
+      <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
