@@ -1201,7 +1201,7 @@ namespace AQCobranza {
                 this.columnCod_Cot.AllowDBNull = false;
                 this.columnCod_Cot.Unique = true;
                 this.columnCod_Cot.MaxLength = 50;
-                this.columnRuc_DNI.MaxLength = 10;
+                this.columnRuc_DNI.MaxLength = 13;
                 this.columncod_usuario.MaxLength = 20;
             }
             

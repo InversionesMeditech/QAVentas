@@ -192,7 +192,7 @@ WHERE        (estado = 1) AND (Cod_Cot NOT IN
   <xs:element name="DSQAOrdenCompra" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSQAOrdenCompra" msprop:Generator_UserDSName="DSQAOrdenCompra">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="View_DT_GenOrdCompra" msprop:Generator_TableClassName="View_DT_GenOrdCompraDataTable" msprop:Generator_TableVarName="tableView_DT_GenOrdCompra" msprop:Generator_RowChangedName="View_DT_GenOrdCompraRowChanged" msprop:Generator_TablePropName="View_DT_GenOrdCompra" msprop:Generator_RowDeletingName="View_DT_GenOrdCompraRowDeleting" msprop:Generator_RowChangingName="View_DT_GenOrdCompraRowChanging" msprop:Generator_RowEvHandlerName="View_DT_GenOrdCompraRowChangeEventHandler" msprop:Generator_RowDeletedName="View_DT_GenOrdCompraRowDeleted" msprop:Generator_RowClassName="View_DT_GenOrdCompraRow" msprop:Generator_UserTableName="View_DT_GenOrdCompra" msprop:Generator_RowEvArgName="View_DT_GenOrdCompraRowChangeEvent">
+        <xs:element name="View_DT_GenOrdCompra" msprop:Generator_TableClassName="View_DT_GenOrdCompraDataTable" msprop:Generator_TableVarName="tableView_DT_GenOrdCompra" msprop:Generator_TablePropName="View_DT_GenOrdCompra" msprop:Generator_RowDeletingName="View_DT_GenOrdCompraRowDeleting" msprop:Generator_RowChangingName="View_DT_GenOrdCompraRowChanging" msprop:Generator_RowEvHandlerName="View_DT_GenOrdCompraRowChangeEventHandler" msprop:Generator_RowDeletedName="View_DT_GenOrdCompraRowDeleted" msprop:Generator_UserTableName="View_DT_GenOrdCompra" msprop:Generator_RowChangedName="View_DT_GenOrdCompraRowChanged" msprop:Generator_RowEvArgName="View_DT_GenOrdCompraRowChangeEvent" msprop:Generator_RowClassName="View_DT_GenOrdCompraRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Det_Cot" msprop:Generator_ColumnVarNameInTable="columnDet_Cot" msprop:Generator_ColumnPropNameInRow="Det_Cot" msprop:Generator_ColumnPropNameInTable="Det_CotColumn" msprop:Generator_UserColumnName="Det_Cot">
@@ -224,7 +224,7 @@ WHERE        (estado = 1) AND (Cod_Cot NOT IN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Det_Ord_Compra" msprop:Generator_TableClassName="Det_Ord_CompraDataTable" msprop:Generator_TableVarName="tableDet_Ord_Compra" msprop:Generator_TablePropName="Det_Ord_Compra" msprop:Generator_RowDeletingName="Det_Ord_CompraRowDeleting" msprop:Generator_RowChangingName="Det_Ord_CompraRowChanging" msprop:Generator_RowEvHandlerName="Det_Ord_CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="Det_Ord_CompraRowDeleted" msprop:Generator_UserTableName="Det_Ord_Compra" msprop:Generator_RowChangedName="Det_Ord_CompraRowChanged" msprop:Generator_RowEvArgName="Det_Ord_CompraRowChangeEvent" msprop:Generator_RowClassName="Det_Ord_CompraRow">
+        <xs:element name="Det_Ord_Compra" msprop:Generator_TableClassName="Det_Ord_CompraDataTable" msprop:Generator_TableVarName="tableDet_Ord_Compra" msprop:Generator_RowChangedName="Det_Ord_CompraRowChanged" msprop:Generator_TablePropName="Det_Ord_Compra" msprop:Generator_RowDeletingName="Det_Ord_CompraRowDeleting" msprop:Generator_RowChangingName="Det_Ord_CompraRowChanging" msprop:Generator_RowEvHandlerName="Det_Ord_CompraRowChangeEventHandler" msprop:Generator_RowDeletedName="Det_Ord_CompraRowDeleted" msprop:Generator_RowClassName="Det_Ord_CompraRow" msprop:Generator_UserTableName="Det_Ord_Compra" msprop:Generator_RowEvArgName="Det_Ord_CompraRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Det_ordCompra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDet_ordCompra" msprop:Generator_ColumnPropNameInRow="Det_ordCompra" msprop:Generator_ColumnPropNameInTable="Det_ordCompraColumn" msprop:Generator_UserColumnName="Det_ordCompra" type="xs:int" />
@@ -246,7 +246,7 @@ WHERE        (estado = 1) AND (Cod_Cot NOT IN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="wv_OrdCompr_Header_cotiza" msprop:Generator_TableClassName="wv_OrdCompr_Header_cotizaDataTable" msprop:Generator_TableVarName="tablewv_OrdCompr_Header_cotiza" msprop:Generator_RowChangedName="wv_OrdCompr_Header_cotizaRowChanged" msprop:Generator_TablePropName="wv_OrdCompr_Header_cotiza" msprop:Generator_RowDeletingName="wv_OrdCompr_Header_cotizaRowDeleting" msprop:Generator_RowChangingName="wv_OrdCompr_Header_cotizaRowChanging" msprop:Generator_RowEvHandlerName="wv_OrdCompr_Header_cotizaRowChangeEventHandler" msprop:Generator_RowDeletedName="wv_OrdCompr_Header_cotizaRowDeleted" msprop:Generator_RowClassName="wv_OrdCompr_Header_cotizaRow" msprop:Generator_UserTableName="wv_OrdCompr_Header_cotiza" msprop:Generator_RowEvArgName="wv_OrdCompr_Header_cotizaRowChangeEvent">
+        <xs:element name="wv_OrdCompr_Header_cotiza" msprop:Generator_TableClassName="wv_OrdCompr_Header_cotizaDataTable" msprop:Generator_TableVarName="tablewv_OrdCompr_Header_cotiza" msprop:Generator_TablePropName="wv_OrdCompr_Header_cotiza" msprop:Generator_RowDeletingName="wv_OrdCompr_Header_cotizaRowDeleting" msprop:Generator_RowChangingName="wv_OrdCompr_Header_cotizaRowChanging" msprop:Generator_RowEvHandlerName="wv_OrdCompr_Header_cotizaRowChangeEventHandler" msprop:Generator_RowDeletedName="wv_OrdCompr_Header_cotizaRowDeleted" msprop:Generator_UserTableName="wv_OrdCompr_Header_cotiza" msprop:Generator_RowChangedName="wv_OrdCompr_Header_cotizaRowChanged" msprop:Generator_RowEvArgName="wv_OrdCompr_Header_cotizaRowChangeEvent" msprop:Generator_RowClassName="wv_OrdCompr_Header_cotizaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cod_Cot" msprop:Generator_ColumnVarNameInTable="columnCod_Cot" msprop:Generator_ColumnPropNameInRow="Cod_Cot" msprop:Generator_ColumnPropNameInTable="Cod_CotColumn" msprop:Generator_UserColumnName="Cod_Cot">
@@ -259,7 +259,7 @@ WHERE        (estado = 1) AND (Cod_Cot NOT IN
               <xs:element name="Ruc_DNI" msprop:Generator_ColumnVarNameInTable="columnRuc_DNI" msprop:Generator_ColumnPropNameInRow="Ruc_DNI" msprop:Generator_ColumnPropNameInTable="Ruc_DNIColumn" msprop:Generator_UserColumnName="Ruc_DNI" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="13" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
