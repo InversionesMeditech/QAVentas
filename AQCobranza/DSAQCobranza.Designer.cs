@@ -4599,7 +4599,7 @@ namespace AQCobranza {
                                 this.columnRuc_DNI}, true));
                 this.columnRuc_DNI.AllowDBNull = false;
                 this.columnRuc_DNI.Unique = true;
-                this.columnRuc_DNI.MaxLength = 10;
+                this.columnRuc_DNI.MaxLength = 13;
                 this.columnNombre.MaxLength = 150;
                 this.columnApellidos.MaxLength = 150;
                 this.columnDireccion.MaxLength = 150;
