@@ -188,6 +188,37 @@ namespace AQCbrDao
             }
             return rpt;
         }
+       public void Eliminar_concepto(string _cod_concepto)
+        {
+            if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
+            OdbcCommand cmd = new OdbcCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "{ CALL ps_Concepto_Eliminar(?) }";
+            cmd.Parameters.AddWithValue("@1", _cod_concepto);
+            cmd.Connection = cnn;
+            cmd.CommandTimeout = 3600;
+            cmd.ExecuteReader();
+            cnn.Close();
+       }
+       public int buscar_Conceptos_exter(string _concepto_exter)
+       {
+           if (cnn.State == ConnectionState.Closed) { conexion_bd(); }
+           OdbcCommand cmd = new OdbcCommand();
+           cmd.CommandType = CommandType.StoredProcedure;
+           cmd.CommandText = "{ CALL ps_Concepto_BuscarExterno(?) }";
+           cmd.Parameters.AddWithValue("@0", _concepto_exter);
+           cmd.Connection = cnn;
+           cmd.CommandTimeout = 3600;
+           OdbcDataReader dr = cmd.ExecuteReader();
+           int existe = 0;
+           while (dr.Read())
+           {
+                   existe = Convert.ToInt16(dr.GetValue(0));
+           }
+           dr.Close();
+           cnn.Close();
+           return existe;
+       }
         /**************************************************/
         /*******************CONTIZACION*******************/
         public List<E_Header_cotiza> Registrar_HD_Cotiza(string _ruc_dni, DateTime _fecha, string _cod_usuario,bool _estado, int _d_validez)

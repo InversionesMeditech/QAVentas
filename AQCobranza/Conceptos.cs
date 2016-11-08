@@ -16,6 +16,7 @@ namespace AQCobranza
     public partial class Conceptos : DevExpress.XtraEditors.XtraForm
     {
         AccesoDao objdao = new AccesoDao();
+        Mensajes msg = new Mensajes();
 
         List<E_Conceptos> lstConceptos = new List<E_Conceptos>();
         bool rtp = false;
@@ -23,8 +24,6 @@ namespace AQCobranza
         {
             InitializeComponent();
         }
-
-
         /*FUNCIONES Y METODOS*/
         private void Cargar_Conceptos(string _concepto)
         {
@@ -50,34 +49,42 @@ namespace AQCobranza
         {
             Cargar_Conceptos("%");
         }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string _cod_concepto;
-            if (txtConcepto.Text != "")
+            int existe;
+            existe = objdao.buscar_Conceptos_exter(txtcodExtra.Text.Trim());
+            if (existe == 0 || txtcodExtra.Text == "")
             {
-               rtp = objdao.Registrar_Conceptos(txtConcepto.Text, txtObserva.Text, Convert.ToDouble(txtCxUnidad.Text), txtcodExtra.Text);
-                if (rtp)
+
+                if (txtConcepto.Text != "")
                 {
-                    MessageBox.Show("Se Registro Correctamente", "Mesaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();      
+                    rtp = objdao.Registrar_Conceptos(txtConcepto.Text, txtObserva.Text, Convert.ToDouble(txtCxUnidad.Text), txtcodExtra.Text);
+                    if (rtp)
+                    {
+                        msg.M_correcto("Se Registro Correctamente");
+                        Limpiar();
+                    }
+                    else
+                    {
+                        msg.M_error("Error al Registrar, Verifique los datos");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al Registrar, Verifique los datos", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    msg.M_error("Debe Ingresar el Concepto");
                 }
+                Cargar_Conceptos("%");
             }
             else
             {
-                MessageBox.Show("Debe Ingresar el Concepto", "Mensaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                msg.M_error("El codigo Externo ya esta siendo utilizado, si decea Actualizar hacer click en el botón (ACTUALIZAR)");
             }
-            Cargar_Conceptos("%");
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (txtConcepto.Text != "" || txtCodigo.Text != "")
             {
-                rtp = objdao.Actualizar_Conceptos(txtCodigo.Text, txtConcepto.Text, txtObserva.Text,Convert.ToDouble(txtCxUnidad.Text),txtcodExtra.Text);
+                rtp = objdao.Actualizar_Conceptos(txtCodigo.Text, txtConcepto.Text, txtObserva.Text, Convert.ToDouble(txtCxUnidad.Text), txtcodExtra.Text);
                 if (rtp)
                 {
                     MessageBox.Show("Se Actualizo Correctamente", "Mesaje del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -98,48 +105,70 @@ namespace AQCobranza
         {
             if (txtbus_concep.Text == "")
             {
-                 Cargar_Conceptos("%");
+                Cargar_Conceptos("%");
             }
             else
             {
-                Cargar_Conceptos(txtbus_concep.Text+"%");
+                Cargar_Conceptos(txtbus_concep.Text + "%");
             }
-           
+
         }
-         private void txtbus_concep_KeyPress(object sender, KeyPressEventArgs e)
-         {
-             if (txtbus_concep.Text == "")
-             {
-                 Cargar_Conceptos("%");
-             }
-             else
-             {
-                 Cargar_Conceptos("%"+txtbus_concep.Text + "%");
-             }
-         }
-         private void gwConceptos_CellClick(object sender, DataGridViewCellEventArgs e)
-         {
-             txtCodigo.Enabled = false;
-             txtCodigo.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[0].Value).Trim();
-             txtcodExtra.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[1].Value).Trim();
-             txtConcepto.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[2].Value).Trim();
-             txtObserva.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[3].Value).Trim();
-             txtCxUnidad.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[4].Value).Trim();
-         }
+        private void txtbus_concep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtbus_concep.Text == "")
+            {
+                Cargar_Conceptos("%");
+            }
+            else
+            {
+                Cargar_Conceptos("%" + txtbus_concep.Text + "%");
+            }
+        }
+        private void gwConceptos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Enabled = false;
+            txtCodigo.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[0].Value).Trim();
+            txtcodExtra.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[1].Value).Trim();
+            txtConcepto.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[2].Value).Trim();
+            txtObserva.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[3].Value).Trim();
+            txtCxUnidad.Text = Convert.ToString(gwConceptos.CurrentRow.Cells[4].Value).Trim();
+        }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+        private void gwConceptos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-         private void btnNuevo_Click(object sender, EventArgs e)
-         {
-             Limpiar();
-         }
+        }
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCodigo.Text == "")
+                {
+                    msg.M_error("Selecciona un Concepto para Eliminar");
+                }
+                else
+                {
+                    if (msg.M_eliminar("el Concepto \n(" + txtConcepto.Text+" )"))
+                    {
+                        objdao.Eliminar_concepto(txtCodigo.Text);
+                        Cargar_Conceptos("%");
+                        msg.M_correcto("Se Eliminó Correctamente");
+                    }
+                }
 
-         private void gwConceptos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-         {
+            }
+            catch (Exception ex)
+            {
+                msg.M_error("Error al Eliminar, Verifique que el Concepto No está siendo utilizado ");
+            }
+        }
 
-         }
 
-   
 
-   
+
 
 
 
