@@ -38,6 +38,8 @@ namespace AQCobranza
 
         private void CajaChica_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dSCaja.Concepto_egreso' Puede moverla o quitarla según sea necesario.
+            this.concepto_egresoTableAdapter.Fill(this.dSCaja.Concepto_egreso);
             cargar();
             txtfecha.DateTime = DateTime.Now;
         }
@@ -53,7 +55,7 @@ namespace AQCobranza
             {
                 if (Convert.ToDouble(lbldiferencia.Text) >= Convert.ToDouble(txtmonto.Text))
                 {
-                    this.cChica_EgresoTableAdapter.Insert(txtfecha.Text, txtMotivo.Text, txtDescr.Text, Convert.ToDouble(txtmonto.Text));
+                    this.cChica_EgresoTableAdapter.Insert(txtfecha.Text, txtMotivo.Text, txtDescr.Text, Convert.ToDouble(txtmonto.Text),Convert.ToInt32(CBEgreso.SelectedValue));
                     cargar();
                     msg.M_correcto("Se Registro Correctamente");
                 }
@@ -105,7 +107,7 @@ namespace AQCobranza
         {
             try
             {
-                this.cChica_IngresoTableAdapter.Insert(txtfecha.Text, "Manual", Convert.ToDouble(txtMonto_ingr.Text), 0);
+                this.cChica_IngresoTableAdapter.Insert(txtfecha.Text, "Manual", Convert.ToDouble(txtMonto_ingr.Text), 0,txtIngrDescrip.Text);
                 cargar();
                 msg.M_correcto("Se Registro Correctamente");
             }

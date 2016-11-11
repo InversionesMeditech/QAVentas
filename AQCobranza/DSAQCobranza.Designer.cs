@@ -8628,6 +8628,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncod_deposito;
             
+            private global::System.Data.DataColumn columnDescripcion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CChica_IngresoDataTable() {
@@ -8703,6 +8705,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DescripcionColumn {
+                get {
+                    return this.columnDescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8738,14 +8748,15 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CChica_IngresoRow AddCChica_IngresoRow(string fecha, string tipo_ingreso, double monto, int cod_deposito) {
+            public CChica_IngresoRow AddCChica_IngresoRow(string fecha, string tipo_ingreso, double monto, int cod_deposito, string Descripcion) {
                 CChica_IngresoRow rowCChica_IngresoRow = ((CChica_IngresoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         fecha,
                         tipo_ingreso,
                         monto,
-                        cod_deposito};
+                        cod_deposito,
+                        Descripcion};
                 rowCChica_IngresoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCChica_IngresoRow);
                 return rowCChica_IngresoRow;
@@ -8780,6 +8791,7 @@ namespace AQCobranza {
                 this.columntipo_ingreso = base.Columns["tipo_ingreso"];
                 this.columnmonto = base.Columns["monto"];
                 this.columncod_deposito = base.Columns["cod_deposito"];
+                this.columnDescripcion = base.Columns["Descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8795,6 +8807,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnmonto);
                 this.columncod_deposito = new global::System.Data.DataColumn("cod_deposito", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_deposito);
+                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_ingr_Chica}, true));
                 this.columncod_ingr_Chica.AutoIncrement = true;
@@ -8806,6 +8820,7 @@ namespace AQCobranza {
                 this.columnfecha.AllowDBNull = false;
                 this.columnfecha.MaxLength = 10;
                 this.columntipo_ingreso.MaxLength = 10;
+                this.columnDescripcion.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9348,6 +9363,8 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columnmonto;
             
+            private global::System.Data.DataColumn columncod_concEgreso;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CChica_EgresoDataTable() {
@@ -9423,6 +9440,14 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_concEgresoColumn {
+                get {
+                    return this.columncod_concEgreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -9458,14 +9483,15 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public CChica_EgresoRow AddCChica_EgresoRow(string fecha, string motivo, string descripcion, double monto) {
+            public CChica_EgresoRow AddCChica_EgresoRow(string fecha, string motivo, string descripcion, double monto, int cod_concEgreso) {
                 CChica_EgresoRow rowCChica_EgresoRow = ((CChica_EgresoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         fecha,
                         motivo,
                         descripcion,
-                        monto};
+                        monto,
+                        cod_concEgreso};
                 rowCChica_EgresoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCChica_EgresoRow);
                 return rowCChica_EgresoRow;
@@ -9500,6 +9526,7 @@ namespace AQCobranza {
                 this.columnmotivo = base.Columns["motivo"];
                 this.columndescripcion = base.Columns["descripcion"];
                 this.columnmonto = base.Columns["monto"];
+                this.columncod_concEgreso = base.Columns["cod_concEgreso"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9515,6 +9542,8 @@ namespace AQCobranza {
                 base.Columns.Add(this.columndescripcion);
                 this.columnmonto = new global::System.Data.DataColumn("monto", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmonto);
+                this.columncod_concEgreso = new global::System.Data.DataColumn("cod_concEgreso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_concEgreso);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_egre_Chica}, true));
                 this.columncod_egre_Chica.AutoIncrement = true;
@@ -9993,11 +10022,13 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columnT_placa;
             
-            private global::System.Data.DataColumn columncod_orden;
-            
             private global::System.Data.DataColumn columnUnidades_entregadas;
             
             private global::System.Data.DataColumn columncod_conImpr;
+            
+            private global::System.Data.DataColumn columnCod_Gremin_impr;
+            
+            private global::System.Data.DataColumn columncod_orden_empresa;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -10258,14 +10289,6 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cod_ordenColumn {
-                get {
-                    return this.columncod_orden;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Unidades_entregadasColumn {
                 get {
                     return this.columnUnidades_entregadas;
@@ -10277,6 +10300,22 @@ namespace AQCobranza {
             public global::System.Data.DataColumn cod_conImprColumn {
                 get {
                     return this.columncod_conImpr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_Gremin_imprColumn {
+                get {
+                    return this.columnCod_Gremin_impr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_orden_empresaColumn {
+                get {
+                    return this.columncod_orden_empresa;
                 }
             }
             
@@ -10346,9 +10385,10 @@ namespace AQCobranza {
                         string T_domicilio, 
                         string T_RUC, 
                         string T_placa, 
-                        string cod_orden, 
                         double Unidades_entregadas, 
-                        string cod_conImpr) {
+                        string cod_conImpr, 
+                        string Cod_Gremin_impr, 
+                        string cod_orden_empresa) {
                 View_Guia_remisionRow rowView_Guia_remisionRow = ((View_Guia_remisionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Det_Cot,
@@ -10379,9 +10419,10 @@ namespace AQCobranza {
                         T_domicilio,
                         T_RUC,
                         T_placa,
-                        cod_orden,
                         Unidades_entregadas,
-                        cod_conImpr};
+                        cod_conImpr,
+                        Cod_Gremin_impr,
+                        cod_orden_empresa};
                 rowView_Guia_remisionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowView_Guia_remisionRow);
                 return rowView_Guia_remisionRow;
@@ -10432,9 +10473,10 @@ namespace AQCobranza {
                 this.columnT_domicilio = base.Columns["T_domicilio"];
                 this.columnT_RUC = base.Columns["T_RUC"];
                 this.columnT_placa = base.Columns["T_placa"];
-                this.columncod_orden = base.Columns["cod_orden"];
                 this.columnUnidades_entregadas = base.Columns["Unidades_entregadas"];
                 this.columncod_conImpr = base.Columns["cod_conImpr"];
+                this.columnCod_Gremin_impr = base.Columns["Cod_Gremin_impr"];
+                this.columncod_orden_empresa = base.Columns["cod_orden_empresa"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10496,19 +10538,18 @@ namespace AQCobranza {
                 base.Columns.Add(this.columnT_RUC);
                 this.columnT_placa = new global::System.Data.DataColumn("T_placa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnT_placa);
-                this.columncod_orden = new global::System.Data.DataColumn("cod_orden", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncod_orden);
                 this.columnUnidades_entregadas = new global::System.Data.DataColumn("Unidades_entregadas", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnidades_entregadas);
                 this.columncod_conImpr = new global::System.Data.DataColumn("cod_conImpr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncod_conImpr);
-                this.columnDet_Cot.AllowDBNull = false;
+                this.columnCod_Gremin_impr = new global::System.Data.DataColumn("Cod_Gremin_impr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Gremin_impr);
+                this.columncod_orden_empresa = new global::System.Data.DataColumn("cod_orden_empresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_orden_empresa);
                 this.columnDet_Cot.MaxLength = 10;
                 this.columnNombre.MaxLength = 150;
                 this.columnApellidos.MaxLength = 150;
-                this.columnCod_concep.AllowDBNull = false;
                 this.columnCod_concep.MaxLength = 10;
-                this.columncod_unidad.AllowDBNull = false;
                 this.columnconcepto.MaxLength = 150;
                 this.columnMaterial.MaxLength = 150;
                 this.columnAcabados.MaxLength = 200;
@@ -10517,9 +10558,6 @@ namespace AQCobranza {
                 this.columnUnidadesXentregar.ReadOnly = true;
                 this.columnUnidad.MaxLength = 50;
                 this.columnflag_entregado.AllowDBNull = false;
-                this.columncod_Acabados.AllowDBNull = false;
-                this.columncod_impresion.AllowDBNull = false;
-                this.columncod_material.AllowDBNull = false;
                 this.columncod_Gremision.MaxLength = 20;
                 this.columnfecha.MaxLength = 10;
                 this.columnDestinatario.MaxLength = 150;
@@ -10529,8 +10567,11 @@ namespace AQCobranza {
                 this.columnT_domicilio.MaxLength = 150;
                 this.columnT_RUC.MaxLength = 15;
                 this.columnT_placa.MaxLength = 15;
-                this.columncod_orden.MaxLength = 10;
                 this.columncod_conImpr.MaxLength = 10;
+                this.columnCod_Gremin_impr.ReadOnly = true;
+                this.columnCod_Gremin_impr.MaxLength = 6;
+                this.columncod_orden_empresa.ReadOnly = true;
+                this.columncod_orden_empresa.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17023,6 +17064,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableCChica_Ingreso.DescripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripcion\' de la tabla \'CChica_Ingreso\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCChica_Ingreso.DescripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Istipo_ingresoNull() {
                 return this.IsNull(this.tableCChica_Ingreso.tipo_ingresoColumn);
             }
@@ -17055,6 +17112,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcod_depositoNull() {
                 this[this.tableCChica_Ingreso.cod_depositoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDescripcionNull() {
+                return this.IsNull(this.tableCChica_Ingreso.DescripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDescripcionNull() {
+                this[this.tableCChica_Ingreso.DescripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17332,6 +17401,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_concEgreso {
+                get {
+                    try {
+                        return ((int)(this[this.tableCChica_Egreso.cod_concEgresoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_concEgreso\' de la tabla \'CChica_Egreso\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCChica_Egreso.cod_concEgresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsfechaNull() {
                 return this.IsNull(this.tableCChica_Egreso.fechaColumn);
             }
@@ -17376,6 +17461,18 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetmontoNull() {
                 this[this.tableCChica_Egreso.montoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_concEgresoNull() {
+                return this.IsNull(this.tableCChica_Egreso.cod_concEgresoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_concEgresoNull() {
+                this[this.tableCChica_Egreso.cod_concEgresoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17497,7 +17594,12 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Det_Cot {
                 get {
-                    return ((string)(this[this.tableView_Guia_remision.Det_CotColumn]));
+                    try {
+                        return ((string)(this[this.tableView_Guia_remision.Det_CotColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Det_Cot\' de la tabla \'View_Guia_remision\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.Det_CotColumn] = value;
@@ -17540,7 +17642,12 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Cod_concep {
                 get {
-                    return ((string)(this[this.tableView_Guia_remision.Cod_concepColumn]));
+                    try {
+                        return ((string)(this[this.tableView_Guia_remision.Cod_concepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cod_concep\' de la tabla \'View_Guia_remision\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.Cod_concepColumn] = value;
@@ -17551,7 +17658,12 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int cod_unidad {
                 get {
-                    return ((int)(this[this.tableView_Guia_remision.cod_unidadColumn]));
+                    try {
+                        return ((int)(this[this.tableView_Guia_remision.cod_unidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_unidad\' de la tabla \'View_Guia_remision\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.cod_unidadColumn] = value;
@@ -17718,7 +17830,13 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int cod_Acabados {
                 get {
-                    return ((int)(this[this.tableView_Guia_remision.cod_AcabadosColumn]));
+                    try {
+                        return ((int)(this[this.tableView_Guia_remision.cod_AcabadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_Acabados\' de la tabla \'View_Guia_remision\' es DBNull." +
+                                "", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.cod_AcabadosColumn] = value;
@@ -17729,7 +17847,13 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int cod_impresion {
                 get {
-                    return ((int)(this[this.tableView_Guia_remision.cod_impresionColumn]));
+                    try {
+                        return ((int)(this[this.tableView_Guia_remision.cod_impresionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_impresion\' de la tabla \'View_Guia_remision\' es DBNull" +
+                                ".", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.cod_impresionColumn] = value;
@@ -17740,7 +17864,13 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int cod_material {
                 get {
-                    return ((int)(this[this.tableView_Guia_remision.cod_materialColumn]));
+                    try {
+                        return ((int)(this[this.tableView_Guia_remision.cod_materialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_material\' de la tabla \'View_Guia_remision\' es DBNull." +
+                                "", e);
+                    }
                 }
                 set {
                     this[this.tableView_Guia_remision.cod_materialColumn] = value;
@@ -17912,22 +18042,6 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cod_orden {
-                get {
-                    try {
-                        return ((string)(this[this.tableView_Guia_remision.cod_ordenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_orden\' de la tabla \'View_Guia_remision\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_Guia_remision.cod_ordenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Unidades_entregadas {
                 get {
                     try {
@@ -17961,6 +18075,52 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Cod_Gremin_impr {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_Guia_remision.Cod_Gremin_imprColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cod_Gremin_impr\' de la tabla \'View_Guia_remision\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_Guia_remision.Cod_Gremin_imprColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cod_orden_empresa {
+                get {
+                    try {
+                        return ((string)(this[this.tableView_Guia_remision.cod_orden_empresaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cod_orden_empresa\' de la tabla \'View_Guia_remision\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableView_Guia_remision.cod_orden_empresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDet_CotNull() {
+                return this.IsNull(this.tableView_Guia_remision.Det_CotColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDet_CotNull() {
+                this[this.tableView_Guia_remision.Det_CotColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableView_Guia_remision.NombreColumn);
             }
@@ -17981,6 +18141,30 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetApellidosNull() {
                 this[this.tableView_Guia_remision.ApellidosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCod_concepNull() {
+                return this.IsNull(this.tableView_Guia_remision.Cod_concepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCod_concepNull() {
+                this[this.tableView_Guia_remision.Cod_concepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_unidadNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_unidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_unidadNull() {
+                this[this.tableView_Guia_remision.cod_unidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18089,6 +18273,42 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetmontoNull() {
                 this[this.tableView_Guia_remision.montoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_AcabadosNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_AcabadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_AcabadosNull() {
+                this[this.tableView_Guia_remision.cod_AcabadosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_impresionNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_impresionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_impresionNull() {
+                this[this.tableView_Guia_remision.cod_impresionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_materialNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_materialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_materialNull() {
+                this[this.tableView_Guia_remision.cod_materialColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18213,18 +18433,6 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscod_ordenNull() {
-                return this.IsNull(this.tableView_Guia_remision.cod_ordenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcod_ordenNull() {
-                this[this.tableView_Guia_remision.cod_ordenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsUnidades_entregadasNull() {
                 return this.IsNull(this.tableView_Guia_remision.Unidades_entregadasColumn);
             }
@@ -18245,6 +18453,30 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcod_conImprNull() {
                 this[this.tableView_Guia_remision.cod_conImprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCod_Gremin_imprNull() {
+                return this.IsNull(this.tableView_Guia_remision.Cod_Gremin_imprColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCod_Gremin_imprNull() {
+                this[this.tableView_Guia_remision.Cod_Gremin_imprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_orden_empresaNull() {
+                return this.IsNull(this.tableView_Guia_remision.cod_orden_empresaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_orden_empresaNull() {
+                this[this.tableView_Guia_remision.cod_orden_empresaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -27969,6 +28201,7 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             tableMapping.ColumnMappings.Add("tipo_ingreso", "tipo_ingreso");
             tableMapping.ColumnMappings.Add("monto", "monto");
             tableMapping.ColumnMappings.Add("cod_deposito", "cod_deposito");
+            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -27977,21 +28210,23 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_ingr_Chica", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_ingr_Chica", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [CChica_Ingreso] ([fecha], [tipo_ingreso], [monto], [cod_deposito]) V" +
-                "ALUES (?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [CChica_Ingreso] ([fecha], [tipo_ingreso], [monto], [cod_deposito], [" +
+                "Descripcion]) VALUES (?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("tipo_ingreso", global::System.Data.Odbc.OdbcType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tipo_ingreso", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_deposito", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_deposito", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Descripcion", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Descripcion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [CChica_Ingreso] SET [fecha] = ?, [tipo_ingreso] = ?, [monto] = ?, [cod_deposito] = ? WHERE (([cod_ingr_Chica] = ?) AND ([fecha] = ?) AND ((? = 1 AND [tipo_ingreso] IS NULL) OR ([tipo_ingreso] = ?)) AND ((? = 1 AND [monto] IS NULL) OR ([monto] = ?)) AND ((? = 1 AND [cod_deposito] IS NULL) OR ([cod_deposito] = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [CChica_Ingreso] SET [fecha] = ?, [tipo_ingreso] = ?, [monto] = ?, [cod_deposito] = ?, [Descripcion] = ? WHERE (([cod_ingr_Chica] = ?) AND ([fecha] = ?) AND ((? = 1 AND [tipo_ingreso] IS NULL) OR ([tipo_ingreso] = ?)) AND ((? = 1 AND [monto] IS NULL) OR ([monto] = ?)) AND ((? = 1 AND [cod_deposito] IS NULL) OR ([cod_deposito] = ?)) AND ((? = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("tipo_ingreso", global::System.Data.Odbc.OdbcType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tipo_ingreso", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_deposito", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_deposito", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Descripcion", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Descripcion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_ingr_Chica", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_ingr_Chica", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_tipo_ingreso", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "tipo_ingreso", global::System.Data.DataRowVersion.Original, true, null));
@@ -28000,6 +28235,8 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_cod_deposito", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_deposito", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_deposito", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_deposito", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Descripcion", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Descripcion", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Descripcion", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Descripcion", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28015,13 +28252,13 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        cod_ingr_Chica, fecha, tipo_ingreso, monto, cod_deposito\r\nFROM     " +
-                "       CChica_Ingreso";
+            this._commandCollection[0].CommandText = "SELECT        cod_ingr_Chica, fecha, tipo_ingreso, monto, cod_deposito, Descripci" +
+                "on\r\nFROM            CChica_Ingreso";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        cod_ingr_Chica, fecha, tipo_ingreso, monto, cod_deposito\r\nFROM     " +
-                "       CChica_Ingreso\r\nWHERE        (fecha = ?)";
+            this._commandCollection[1].CommandText = "SELECT        cod_deposito, cod_ingr_Chica, fecha, monto, tipo_ingreso, Descripci" +
+                "on\r\nFROM            CChica_Ingreso\r\nWHERE        (fecha = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -28141,7 +28378,7 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string fecha, string tipo_ingreso, global::System.Nullable<double> monto, global::System.Nullable<int> cod_deposito) {
+        public virtual int Insert(string fecha, string tipo_ingreso, global::System.Nullable<double> monto, global::System.Nullable<int> cod_deposito, string Descripcion) {
             if ((fecha == null)) {
                 throw new global::System.ArgumentNullException("fecha");
             }
@@ -28166,6 +28403,12 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
+            if ((Descripcion == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Descripcion));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -28186,7 +28429,7 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string fecha, string tipo_ingreso, global::System.Nullable<double> monto, global::System.Nullable<int> cod_deposito, int Original_cod_ingr_Chica, string Original_fecha, string Original_tipo_ingreso, global::System.Nullable<double> Original_monto, global::System.Nullable<int> Original_cod_deposito) {
+        public virtual int Update(string fecha, string tipo_ingreso, global::System.Nullable<double> monto, global::System.Nullable<int> cod_deposito, string Descripcion, int Original_cod_ingr_Chica, string Original_fecha, string Original_tipo_ingreso, global::System.Nullable<double> Original_monto, global::System.Nullable<int> Original_cod_deposito, string Original_Descripcion) {
             if ((fecha == null)) {
                 throw new global::System.ArgumentNullException("fecha");
             }
@@ -28211,36 +28454,50 @@ WHERE        Bancos.cod_banco = Cuenta_bancos.cod_banco AND Cuenta_bancos.cod_cu
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_cod_ingr_Chica));
+            if ((Descripcion == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Descripcion));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_cod_ingr_Chica));
             if ((Original_fecha == null)) {
                 throw new global::System.ArgumentNullException("Original_fecha");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_fecha));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_fecha));
             }
             if ((Original_tipo_ingreso == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_tipo_ingreso));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_tipo_ingreso));
             }
             if ((Original_monto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_monto.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_monto.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_cod_deposito.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_cod_deposito.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_cod_deposito.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Descripcion == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -28577,6 +28834,7 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             tableMapping.ColumnMappings.Add("motivo", "motivo");
             tableMapping.ColumnMappings.Add("descripcion", "descripcion");
             tableMapping.ColumnMappings.Add("monto", "monto");
+            tableMapping.ColumnMappings.Add("cod_concEgreso", "cod_concEgreso");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -28585,21 +28843,23 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_egre_Chica", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_egre_Chica", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [CChica_Egreso] ([fecha], [motivo], [descripcion], [monto]) VALUES (?" +
-                ", ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [CChica_Egreso] ([fecha], [motivo], [descripcion], [monto], [cod_conc" +
+                "Egreso]) VALUES (?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("motivo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "motivo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("descripcion", global::System.Data.Odbc.OdbcType.Text, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "descripcion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_concEgreso", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_concEgreso", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [CChica_Egreso] SET [fecha] = ?, [motivo] = ?, [descripcion] = ?, [monto] = ? WHERE (([cod_egre_Chica] = ?) AND ((? = 1 AND [fecha] IS NULL) OR ([fecha] = ?)) AND ((? = 1 AND [motivo] IS NULL) OR ([motivo] = ?)) AND ((? = 1 AND [monto] IS NULL) OR ([monto] = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [CChica_Egreso] SET [fecha] = ?, [motivo] = ?, [descripcion] = ?, [monto] = ?, [cod_concEgreso] = ? WHERE (([cod_egre_Chica] = ?) AND ((? = 1 AND [fecha] IS NULL) OR ([fecha] = ?)) AND ((? = 1 AND [motivo] IS NULL) OR ([motivo] = ?)) AND ((? = 1 AND [monto] IS NULL) OR ([monto] = ?)) AND ((? = 1 AND [cod_concEgreso] IS NULL) OR ([cod_concEgreso] = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("motivo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "motivo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("descripcion", global::System.Data.Odbc.OdbcType.Text, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "descripcion", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_concEgreso", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_concEgreso", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_egre_Chica", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_egre_Chica", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_fecha", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_fecha", global::System.Data.Odbc.OdbcType.NVarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Original, false, null));
@@ -28607,6 +28867,8 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_motivo", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "motivo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_monto", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_monto", global::System.Data.Odbc.OdbcType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "monto", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_cod_concEgreso", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_concEgreso", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_concEgreso", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_concEgreso", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28622,8 +28884,8 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        cod_egre_Chica, fecha, motivo, descripcion, monto\r\nFROM            " +
-                "CChica_Egreso\r\nWHERE        (fecha = ?)";
+            this._commandCollection[0].CommandText = "SELECT        cod_egre_Chica, fecha, motivo, descripcion, monto, cod_concEgreso\r\n" +
+                "FROM            CChica_Egreso\r\nWHERE        (fecha = ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -28719,7 +28981,7 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string fecha, string motivo, string descripcion, global::System.Nullable<double> monto) {
+        public virtual int Insert(string fecha, string motivo, string descripcion, global::System.Nullable<double> monto, global::System.Nullable<int> cod_concEgreso) {
             if ((fecha == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -28744,6 +29006,12 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
+            if ((cod_concEgreso.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(cod_concEgreso.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -28764,7 +29032,7 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string fecha, string motivo, string descripcion, global::System.Nullable<double> monto, int Original_cod_egre_Chica, string Original_fecha, string Original_motivo, global::System.Nullable<double> Original_monto) {
+        public virtual int Update(string fecha, string motivo, string descripcion, global::System.Nullable<double> monto, global::System.Nullable<int> cod_concEgreso, int Original_cod_egre_Chica, string Original_fecha, string Original_motivo, global::System.Nullable<double> Original_monto, global::System.Nullable<int> Original_cod_concEgreso) {
             if ((fecha == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -28789,30 +29057,44 @@ WHERE        Cuenta_bancos.cod_banco = Bancos.cod_banco AND Cuenta_bancos.cod_cu
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_cod_egre_Chica));
-            if ((Original_fecha == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((cod_concEgreso.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(cod_concEgreso.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_fecha));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_cod_egre_Chica));
+            if ((Original_fecha == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_fecha));
             }
             if ((Original_motivo == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_motivo));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_motivo));
             }
             if ((Original_monto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_monto.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_monto.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_concEgreso.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_cod_concEgreso.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -29182,9 +29464,10 @@ FROM            (SELECT        ISNULL(monto, 0.0) AS ingreso, 0.0 AS egreso
             tableMapping.ColumnMappings.Add("T_domicilio", "T_domicilio");
             tableMapping.ColumnMappings.Add("T_RUC", "T_RUC");
             tableMapping.ColumnMappings.Add("T_placa", "T_placa");
-            tableMapping.ColumnMappings.Add("cod_orden", "cod_orden");
             tableMapping.ColumnMappings.Add("Unidades_entregadas", "Unidades_entregadas");
             tableMapping.ColumnMappings.Add("cod_conImpr", "cod_conImpr");
+            tableMapping.ColumnMappings.Add("Cod_Gremin_impr", "Cod_Gremin_impr");
+            tableMapping.ColumnMappings.Add("cod_orden_empresa", "cod_orden_empresa");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -29201,38 +29484,10 @@ FROM            (SELECT        ISNULL(monto, 0.0) AS ingreso, 0.0 AS egreso
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT  Det_Cot ,
-        Nombre ,
-        Apellidos ,
-        Cod_concep ,
-        cod_unidad ,
-        concepto ,
-        Material ,
-        Acabados ,
-        Impresion ,
-        medida ,
-        UnidadesXentregar ,
-        numero ,
-        Unidad ,
-        costo_unit_cot AS monto ,
-        flag_entregado ,
-        cod_Acabados ,
-        cod_impresion ,
-        cod_material ,
-        Unidades ,
-        cod_Gremision ,
-        fecha ,
-        Destinatario ,
-        Domicilio ,
-        Ruc_DNI ,
-        Transportista ,
-        T_domicilio ,
-        T_RUC ,
-        T_placa ,
-        cod_orden ,
-        Unidades_entregadas ,
-        cod_conImpr
-FROM    View_Guia_remision
+            this._commandCollection[0].CommandText = @"SELECT        Det_Cot, Nombre, Apellidos, Cod_concep, cod_unidad, concepto, Material, Acabados, Impresion, medida, UnidadesXentregar, numero, Unidad, 
+                         costo_unit_cot AS monto, flag_entregado, cod_Acabados, cod_impresion, cod_material, Unidades, cod_Gremision, fecha, Destinatario, Domicilio, Ruc_DNI, 
+                         Transportista, T_domicilio, T_RUC, T_placa, Unidades_entregadas, cod_conImpr, Cod_Gremin_impr, cod_orden_empresa
+FROM            View_Guia_remision
 WHERE        (cod_Gremision = ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("cod_Gremision", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_Gremision", global::System.Data.DataRowVersion.Current, false, null));

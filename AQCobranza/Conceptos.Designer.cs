@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conceptos));
+            this.psConceptosBuscarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAQCobranzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
+            this.ps_Conceptos_BuscarTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.ps_Conceptos_BuscarTableAdapter();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -40,6 +44,7 @@
             this.txtbus_concep = new DevExpress.XtraEditors.TextEdit();
             this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtcodExtra = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtCxUnidad = new DevExpress.XtraEditors.TextEdit();
@@ -50,17 +55,16 @@
             this.conceptoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costoxunidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.psConceptosBuscarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSAQCobranzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.txtConcepto = new DevExpress.XtraEditors.TextEdit();
             this.txtObserva = new DevExpress.XtraEditors.MemoEdit();
-            this.ps_Conceptos_BuscarTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.ps_Conceptos_BuscarTableAdapter();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -73,13 +77,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtcodExtra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCxUnidad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gwConceptos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConcepto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObserva.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // psConceptosBuscarBindingSource
+            // 
+            this.psConceptosBuscarBindingSource.DataMember = "ps_Conceptos_Buscar";
+            this.psConceptosBuscarBindingSource.DataSource = this.dSAQCobranzaBindingSource;
+            // 
+            // dSAQCobranzaBindingSource
+            // 
+            this.dSAQCobranzaBindingSource.DataSource = this.dSAQCobranza;
+            this.dSAQCobranzaBindingSource.Position = 0;
+            // 
+            // dSAQCobranza
+            // 
+            this.dSAQCobranza.DataSetName = "DSAQCobranza";
+            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ps_Conceptos_BuscarTableAdapter
+            // 
+            this.ps_Conceptos_BuscarTableAdapter.ClearBeforeFill = true;
             // 
             // groupControl1
             // 
@@ -108,6 +128,7 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.simpleButton2);
             this.groupControl3.Controls.Add(this.btnNuevo);
             this.groupControl3.Controls.Add(this.labelControl6);
             this.groupControl3.Controls.Add(this.btnActualizar);
@@ -202,6 +223,16 @@
             this.groupControl2.Size = new System.Drawing.Size(526, 421);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Datos del Concepto";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(264, 145);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(97, 34);
+            this.simpleButton1.TabIndex = 9;
+            this.simpleButton1.Text = "Eliminar";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtcodExtra
             // 
@@ -304,21 +335,6 @@
             this.costoxunidad.Name = "costoxunidad";
             this.costoxunidad.ReadOnly = true;
             // 
-            // psConceptosBuscarBindingSource
-            // 
-            this.psConceptosBuscarBindingSource.DataMember = "ps_Conceptos_Buscar";
-            this.psConceptosBuscarBindingSource.DataSource = this.dSAQCobranzaBindingSource;
-            // 
-            // dSAQCobranzaBindingSource
-            // 
-            this.dSAQCobranzaBindingSource.DataSource = this.dSAQCobranza;
-            this.dSAQCobranzaBindingSource.Position = 0;
-            // 
-            // dSAQCobranza
-            // 
-            this.dSAQCobranza.DataSetName = "DSAQCobranza";
-            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -376,19 +392,15 @@
             this.txtObserva.Size = new System.Drawing.Size(346, 43);
             this.txtObserva.TabIndex = 3;
             // 
-            // ps_Conceptos_BuscarTableAdapter
+            // simpleButton2
             // 
-            this.ps_Conceptos_BuscarTableAdapter.ClearBeforeFill = true;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(264, 145);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(97, 34);
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Eliminar";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(8, 225);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(181, 34);
+            this.simpleButton2.TabIndex = 9;
+            this.simpleButton2.Text = "Ingresar Conceptos Egreso";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // Conceptos
             // 
@@ -401,6 +413,9 @@
             this.Text = "Conceptos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Conceptos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -415,9 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtcodExtra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCxUnidad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gwConceptos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.psConceptosBuscarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranzaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConcepto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObserva.Properties)).EndInit();
@@ -458,6 +470,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costoxunidad;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
 
     }
 }

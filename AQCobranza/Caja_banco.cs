@@ -125,7 +125,7 @@ namespace AQCobranza
                 {
                     try
                     {
-                        this.cChica_IngresoTableAdapter.Insert(txtFecha_trans.Text, "Banco", Convert.ToDouble(txtM_ingreso.Text), Convert.ToInt16(lblidDeposito.Text));
+                        this.cChica_IngresoTableAdapter.Insert(txtFecha_trans.Text, "Banco", Convert.ToDouble(txtM_ingreso.Text), Convert.ToInt16(lblidDeposito.Text),"banco");
                         this.cChica_Ingreso_VWTableAdapter.Fill(this.dSAQCobranza.CChica_Ingreso_VW, txtFecha_trans.Text);
                         msg.M_correcto("Se Registro Correctamente");
                     }

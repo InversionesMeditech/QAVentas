@@ -34,6 +34,8 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label7;
+            System.Windows.Forms.Label label8;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CajaChica));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -46,6 +48,9 @@
             this.diferencia_Egresos_VWBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.CBEgreso = new System.Windows.Forms.ComboBox();
+            this.conceptoegresoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSCaja = new AQCobranza.DSCaja();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
@@ -76,15 +81,20 @@
             this.btnagregar = new DevExpress.XtraEditors.SimpleButton();
             this.lblidIngreso = new DevExpress.XtraEditors.LabelControl();
             this.lblingreso = new System.Windows.Forms.Label();
+            this.txtIngrDescrip = new DevExpress.XtraEditors.MemoEdit();
             this.cChica_EgresoTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.CChica_EgresoTableAdapter();
             this.tableAdapterManager = new AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager();
             this.cChica_IngresoTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.CChica_IngresoTableAdapter();
             this.diferencia_Egresos_VWTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.Diferencia_Egresos_VWTableAdapter();
+            this.concepto_egresoTableAdapter = new AQCobranza.DSCajaTableAdapters.Concepto_egresoTableAdapter();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             label9 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -96,6 +106,8 @@
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conceptoegresoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCaja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.egresoTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtfecha.Properties.CalendarTimeProperties)).BeginInit();
@@ -118,6 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cChica_IngresoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIngrDescrip.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -134,7 +147,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label4.Location = new System.Drawing.Point(158, 71);
+            label4.Location = new System.Drawing.Point(12, 114);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(75, 13);
             label4.TabIndex = 28;
@@ -144,7 +157,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label3.Location = new System.Drawing.Point(158, 31);
+            label3.Location = new System.Drawing.Point(299, 29);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(88, 13);
             label3.TabIndex = 27;
@@ -154,7 +167,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(12, 31);
+            label1.Location = new System.Drawing.Point(12, 75);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(49, 13);
             label1.TabIndex = 24;
@@ -164,11 +177,31 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(12, 71);
+            label2.Location = new System.Drawing.Point(341, 75);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(46, 13);
             label2.TabIndex = 26;
             label2.Text = "Monto:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            label7.Location = new System.Drawing.Point(12, 35);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(63, 13);
+            label7.TabIndex = 38;
+            label7.Text = "Concepto:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            label8.Location = new System.Drawing.Point(10, 67);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(75, 13);
+            label8.TabIndex = 37;
+            label8.Text = "Descripción:";
             // 
             // groupControl1
             // 
@@ -273,6 +306,8 @@
             // groupControl2
             // 
             this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.CBEgreso);
+            this.groupControl2.Controls.Add(label7);
             this.groupControl2.Controls.Add(this.label6);
             this.groupControl2.Controls.Add(this.label5);
             this.groupControl2.Controls.Add(this.progressBarControl1);
@@ -294,11 +329,32 @@
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Egresos Caja Chica";
             // 
+            // CBEgreso
+            // 
+            this.CBEgreso.DataSource = this.conceptoegresoBindingSource;
+            this.CBEgreso.DisplayMember = "Concep_Egreso";
+            this.CBEgreso.FormattingEnabled = true;
+            this.CBEgreso.Location = new System.Drawing.Point(97, 35);
+            this.CBEgreso.Name = "CBEgreso";
+            this.CBEgreso.Size = new System.Drawing.Size(185, 21);
+            this.CBEgreso.TabIndex = 39;
+            this.CBEgreso.ValueMember = "cod_concEgreso";
+            // 
+            // conceptoegresoBindingSource
+            // 
+            this.conceptoegresoBindingSource.DataMember = "Concepto_egreso";
+            this.conceptoegresoBindingSource.DataSource = this.dSCaja;
+            // 
+            // dSCaja
+            // 
+            this.dSCaja.DataSetName = "DSCaja";
+            this.dSCaja.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(332, 114);
+            this.label6.Location = new System.Drawing.Point(345, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 18);
             this.label6.TabIndex = 37;
@@ -308,7 +364,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(330, 132);
+            this.label5.Location = new System.Drawing.Point(343, 171);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 25);
             this.label5.TabIndex = 36;
@@ -316,17 +372,17 @@
             // 
             // progressBarControl1
             // 
-            this.progressBarControl1.Location = new System.Drawing.Point(5, 104);
+            this.progressBarControl1.Location = new System.Drawing.Point(8, 171);
             this.progressBarControl1.Name = "progressBarControl1";
             this.progressBarControl1.Properties.ShowTitle = true;
-            this.progressBarControl1.Size = new System.Drawing.Size(320, 53);
+            this.progressBarControl1.Size = new System.Drawing.Size(320, 24);
             this.progressBarControl1.TabIndex = 23;
             // 
             // egresoTextEdit
             // 
             this.egresoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.diferencia_Egresos_VWBindingSource, "egreso", true));
             this.egresoTextEdit.Enabled = false;
-            this.egresoTextEdit.Location = new System.Drawing.Point(348, 479);
+            this.egresoTextEdit.Location = new System.Drawing.Point(348, 519);
             this.egresoTextEdit.Name = "egresoTextEdit";
             this.egresoTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.egresoTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -340,7 +396,7 @@
             // txtfecha
             // 
             this.txtfecha.EditValue = null;
-            this.txtfecha.Location = new System.Drawing.Point(253, 31);
+            this.txtfecha.Location = new System.Drawing.Point(389, 26);
             this.txtfecha.Name = "txtfecha";
             this.txtfecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -352,7 +408,7 @@
             // 
             // txtmonto
             // 
-            this.txtmonto.Location = new System.Drawing.Point(58, 68);
+            this.txtmonto.Location = new System.Drawing.Point(389, 72);
             this.txtmonto.Name = "txtmonto";
             this.txtmonto.Properties.Mask.EditMask = "c";
             this.txtmonto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -364,7 +420,7 @@
             this.lbldiferencia.AutoSize = true;
             this.lbldiferencia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diferencia_Egresos_VWBindingSource, "diferencia", true));
             this.lbldiferencia.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldiferencia.Location = new System.Drawing.Point(371, 132);
+            this.lbldiferencia.Location = new System.Drawing.Point(384, 171);
             this.lbldiferencia.Name = "lbldiferencia";
             this.lbldiferencia.Size = new System.Drawing.Size(72, 25);
             this.lbldiferencia.TabIndex = 35;
@@ -372,9 +428,9 @@
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(58, 28);
+            this.txtMotivo.Location = new System.Drawing.Point(97, 72);
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(100, 20);
+            this.txtMotivo.Size = new System.Drawing.Size(231, 20);
             this.txtMotivo.TabIndex = 29;
             // 
             // groupControl4
@@ -383,7 +439,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.cChica_EgresoGridControl);
-            this.groupControl4.Location = new System.Drawing.Point(3, 163);
+            this.groupControl4.Location = new System.Drawing.Point(8, 201);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(503, 312);
             this.groupControl4.TabIndex = 25;
@@ -448,14 +504,15 @@
             // 
             // txtDescr
             // 
-            this.txtDescr.Location = new System.Drawing.Point(252, 64);
+            this.txtDescr.Location = new System.Drawing.Point(97, 114);
             this.txtDescr.Name = "txtDescr";
-            this.txtDescr.Size = new System.Drawing.Size(227, 34);
+            this.txtDescr.Size = new System.Drawing.Size(231, 51);
             this.txtDescr.TabIndex = 31;
             // 
             // groupControl3
             // 
             this.groupControl3.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImage")));
+            this.groupControl3.Controls.Add(label8);
             this.groupControl3.Controls.Add(this.ingresoTextEdit);
             this.groupControl3.Controls.Add(this.BntEliminar);
             this.groupControl3.Controls.Add(this.txtMonto_ingr);
@@ -464,6 +521,7 @@
             this.groupControl3.Controls.Add(this.btnagregar);
             this.groupControl3.Controls.Add(this.lblidIngreso);
             this.groupControl3.Controls.Add(this.lblingreso);
+            this.groupControl3.Controls.Add(this.txtIngrDescrip);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
@@ -475,7 +533,7 @@
             // 
             this.ingresoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.diferencia_Egresos_VWBindingSource, "ingreso", true));
             this.ingresoTextEdit.Enabled = false;
-            this.ingresoTextEdit.Location = new System.Drawing.Point(195, 58);
+            this.ingresoTextEdit.Location = new System.Drawing.Point(193, 160);
             this.ingresoTextEdit.Name = "ingresoTextEdit";
             this.ingresoTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
             this.ingresoTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -488,7 +546,7 @@
             // BntEliminar
             // 
             this.BntEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BntEliminar.Image")));
-            this.BntEliminar.Location = new System.Drawing.Point(98, 53);
+            this.BntEliminar.Location = new System.Drawing.Point(100, 160);
             this.BntEliminar.Name = "BntEliminar";
             this.BntEliminar.Size = new System.Drawing.Size(83, 35);
             this.BntEliminar.TabIndex = 11;
@@ -497,7 +555,7 @@
             // 
             // txtMonto_ingr
             // 
-            this.txtMonto_ingr.Location = new System.Drawing.Point(66, 28);
+            this.txtMonto_ingr.Location = new System.Drawing.Point(91, 28);
             this.txtMonto_ingr.Name = "txtMonto_ingr";
             this.txtMonto_ingr.Size = new System.Drawing.Size(100, 20);
             this.txtMonto_ingr.TabIndex = 32;
@@ -508,9 +566,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl5.Controls.Add(this.cChica_IngresoGridControl);
-            this.groupControl5.Location = new System.Drawing.Point(6, 94);
+            this.groupControl5.Location = new System.Drawing.Point(6, 201);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(329, 452);
+            this.groupControl5.Size = new System.Drawing.Size(329, 345);
             this.groupControl5.TabIndex = 17;
             // 
             // cChica_IngresoGridControl
@@ -522,7 +580,7 @@
             this.cChica_IngresoGridControl.Name = "cChica_IngresoGridControl";
             this.cChica_IngresoGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.cChica_IngresoGridControl.Size = new System.Drawing.Size(325, 430);
+            this.cChica_IngresoGridControl.Size = new System.Drawing.Size(325, 323);
             this.cChica_IngresoGridControl.TabIndex = 0;
             this.cChica_IngresoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -536,6 +594,7 @@
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.coltipo_ingreso,
+            this.gridColumn1,
             this.colmonto1});
             this.gridView2.GridControl = this.cChica_IngresoGridControl;
             this.gridView2.Name = "gridView2";
@@ -570,7 +629,7 @@
             // btnagregar
             // 
             this.btnagregar.Image = ((System.Drawing.Image)(resources.GetObject("btnagregar.Image")));
-            this.btnagregar.Location = new System.Drawing.Point(6, 53);
+            this.btnagregar.Location = new System.Drawing.Point(8, 160);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(86, 35);
             this.btnagregar.TabIndex = 9;
@@ -580,7 +639,7 @@
             // lblidIngreso
             // 
             this.lblidIngreso.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cChica_IngresoBindingSource, "cod_ingr_Chica", true));
-            this.lblidIngreso.Location = new System.Drawing.Point(156, 75);
+            this.lblidIngreso.Location = new System.Drawing.Point(158, 182);
             this.lblidIngreso.Name = "lblidIngreso";
             this.lblidIngreso.Size = new System.Drawing.Size(25, 13);
             this.lblidIngreso.TabIndex = 28;
@@ -590,11 +649,18 @@
             // 
             this.lblingreso.AutoSize = true;
             this.lblingreso.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diferencia_Egresos_VWBindingSource, "ingreso", true));
-            this.lblingreso.Location = new System.Drawing.Point(146, 59);
+            this.lblingreso.Location = new System.Drawing.Point(148, 166);
             this.lblingreso.Name = "lblingreso";
             this.lblingreso.Size = new System.Drawing.Size(35, 13);
             this.lblingreso.TabIndex = 35;
             this.lblingreso.Text = "label5";
+            // 
+            // txtIngrDescrip
+            // 
+            this.txtIngrDescrip.Location = new System.Drawing.Point(91, 74);
+            this.txtIngrDescrip.Name = "txtIngrDescrip";
+            this.txtIngrDescrip.Size = new System.Drawing.Size(172, 69);
+            this.txtIngrDescrip.TabIndex = 36;
             // 
             // cChica_EgresoTableAdapter
             // 
@@ -630,6 +696,18 @@
             // 
             this.diferencia_Egresos_VWTableAdapter.ClearBeforeFill = true;
             // 
+            // concepto_egresoTableAdapter
+            // 
+            this.concepto_egresoTableAdapter.ClearBeforeFill = true;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Descripción";
+            this.gridColumn1.FieldName = "Descripcion";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            // 
             // CajaChica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,6 +732,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conceptoegresoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSCaja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.egresoTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtfecha.Properties.CalendarTimeProperties)).EndInit();
@@ -677,6 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cChica_IngresoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIngrDescrip.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,5 +809,11 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private DSCaja dSCaja;
+        private System.Windows.Forms.BindingSource conceptoegresoBindingSource;
+        private DSCajaTableAdapters.Concepto_egresoTableAdapter concepto_egresoTableAdapter;
+        private System.Windows.Forms.ComboBox CBEgreso;
+        private DevExpress.XtraEditors.MemoEdit txtIngrDescrip;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

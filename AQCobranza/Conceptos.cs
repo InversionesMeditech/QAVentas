@@ -166,6 +166,15 @@ namespace AQCobranza
             }
         }
 
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            if (this.Controls.Find("Conceptos_egreso", true).Count() == 0)
+            {
+                Conceptos_egreso chForm = new Conceptos_egreso();
+                chForm.Show();
+            }
+        }
+
 
 
 
