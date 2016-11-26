@@ -26,5 +26,10 @@ namespace AQCobranza
             this.ps_Cotizacion_BuscarTableAdapter.Fill(this.DSAQCobranza.ps_Cotizacion_Buscar, txtCod_Cotiza.Text); 
             this.reportViewer1.RefreshReport();
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

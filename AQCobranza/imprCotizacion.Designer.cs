@@ -98,6 +98,7 @@
             this.groupControl1.Size = new System.Drawing.Size(783, 617);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Imprimir Cotización";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // labelControl1
             // 

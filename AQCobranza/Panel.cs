@@ -367,6 +367,16 @@ namespace AQCobranza
         {
 
         }
+
+        private void barRcaja_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.Controls.Find("reportes_caja.Reporte_caja", true).Count() == 0)
+            {
+               reportes_caja.Reporte_caja  chForm = new reportes_caja.Reporte_caja();
+                chForm.MdiParent = this;
+                chForm.Show();
+            }
+        }
     }
 
 }

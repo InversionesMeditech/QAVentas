@@ -192,6 +192,7 @@
             this.barRcaja.Id = 8;
             this.barRcaja.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barRcaja.LargeGlyph")));
             this.barRcaja.Name = "barRcaja";
+            this.barRcaja.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barRcaja_ItemClick);
             // 
             // barRdeuda
             // 
