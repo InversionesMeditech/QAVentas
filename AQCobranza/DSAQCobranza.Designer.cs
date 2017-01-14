@@ -3940,6 +3940,10 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columng_fondo;
             
+            private global::System.Data.DataColumn columng_Font_enca_color;
+            
+            private global::System.Data.DataColumn columng_Font_piepag_color;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ERP_empresaDataTable() {
@@ -4071,6 +4075,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn g_Font_enca_colorColumn {
+                get {
+                    return this.columng_Font_enca_color;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn g_Font_piepag_colorColumn {
+                get {
+                    return this.columng_Font_piepag_color;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4106,7 +4126,7 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ERP_empresaRow AddERP_empresaRow(string ruc_empresa, string Razon_Social, string Direccion, string telefono, string gerente, string ge_telefono, byte[] e_logo, byte[] g_firma, byte[] g_foto, byte[] g_Encabezado, byte[] g_piepag, byte[] g_fondo) {
+            public ERP_empresaRow AddERP_empresaRow(string ruc_empresa, string Razon_Social, string Direccion, string telefono, string gerente, string ge_telefono, byte[] e_logo, byte[] g_firma, byte[] g_foto, byte[] g_Encabezado, byte[] g_piepag, byte[] g_fondo, string g_Font_enca_color, string g_Font_piepag_color) {
                 ERP_empresaRow rowERP_empresaRow = ((ERP_empresaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ruc_empresa,
@@ -4120,7 +4140,9 @@ namespace AQCobranza {
                         g_foto,
                         g_Encabezado,
                         g_piepag,
-                        g_fondo};
+                        g_fondo,
+                        g_Font_enca_color,
+                        g_Font_piepag_color};
                 rowERP_empresaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowERP_empresaRow);
                 return rowERP_empresaRow;
@@ -4162,6 +4184,8 @@ namespace AQCobranza {
                 this.columng_Encabezado = base.Columns["g_Encabezado"];
                 this.columng_piepag = base.Columns["g_piepag"];
                 this.columng_fondo = base.Columns["g_fondo"];
+                this.columng_Font_enca_color = base.Columns["g_Font_enca_color"];
+                this.columng_Font_piepag_color = base.Columns["g_Font_piepag_color"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4191,6 +4215,10 @@ namespace AQCobranza {
                 base.Columns.Add(this.columng_piepag);
                 this.columng_fondo = new global::System.Data.DataColumn("g_fondo", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columng_fondo);
+                this.columng_Font_enca_color = new global::System.Data.DataColumn("g_Font_enca_color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columng_Font_enca_color);
+                this.columng_Font_piepag_color = new global::System.Data.DataColumn("g_Font_piepag_color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columng_Font_piepag_color);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnruc_empresa}, true));
                 this.columnruc_empresa.AllowDBNull = false;
@@ -4201,6 +4229,8 @@ namespace AQCobranza {
                 this.columntelefono.MaxLength = 16;
                 this.columngerente.MaxLength = 150;
                 this.columnge_telefono.MaxLength = 16;
+                this.columng_Font_enca_color.MaxLength = 50;
+                this.columng_Font_piepag_color.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5764,6 +5794,10 @@ namespace AQCobranza {
             
             private global::System.Data.DataColumn columncosto_unit_cot;
             
+            private global::System.Data.DataColumn columng_Font_enca_color;
+            
+            private global::System.Data.DataColumn columng_Font_piepag_color;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ps_Cotizacion_BuscarDataTable() {
@@ -6167,6 +6201,22 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn g_Font_enca_colorColumn {
+                get {
+                    return this.columng_Font_enca_color;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn g_Font_piepag_colorColumn {
+                get {
+                    return this.columng_Font_piepag_color;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6248,7 +6298,9 @@ namespace AQCobranza {
                         string cod_extra, 
                         int D_validez, 
                         string cod_conImpr, 
-                        double costo_unit_cot) {
+                        double costo_unit_cot, 
+                        string g_Font_enca_color, 
+                        string g_Font_piepag_color) {
                 ps_Cotizacion_BuscarRow rowps_Cotizacion_BuscarRow = ((ps_Cotizacion_BuscarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         num_ord,
@@ -6296,7 +6348,9 @@ namespace AQCobranza {
                         cod_extra,
                         D_validez,
                         cod_conImpr,
-                        costo_unit_cot};
+                        costo_unit_cot,
+                        g_Font_enca_color,
+                        g_Font_piepag_color};
                 if ((parentHeader_cotizaRowByHeader_cotiza_ps_Cotizacion_Buscar != null)) {
                     columnValuesArray[37] = parentHeader_cotizaRowByHeader_cotiza_ps_Cotizacion_Buscar[0];
                 }
@@ -6368,6 +6422,8 @@ namespace AQCobranza {
                 this.columnD_validez = base.Columns["D_validez"];
                 this.columncod_conImpr = base.Columns["cod_conImpr"];
                 this.columncosto_unit_cot = base.Columns["costo_unit_cot"];
+                this.columng_Font_enca_color = base.Columns["g_Font_enca_color"];
+                this.columng_Font_piepag_color = base.Columns["g_Font_piepag_color"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6465,6 +6521,10 @@ namespace AQCobranza {
                 base.Columns.Add(this.columncod_conImpr);
                 this.columncosto_unit_cot = new global::System.Data.DataColumn("costo_unit_cot", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncosto_unit_cot);
+                this.columng_Font_enca_color = new global::System.Data.DataColumn("g_Font_enca_color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columng_Font_enca_color);
+                this.columng_Font_piepag_color = new global::System.Data.DataColumn("g_Font_piepag_color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columng_Font_piepag_color);
                 this.columnnum_ord.ReadOnly = true;
                 this.columnDet_Cot.AllowDBNull = false;
                 this.columnDet_Cot.MaxLength = 10;
@@ -6503,6 +6563,8 @@ namespace AQCobranza {
                 this.columncod_extra.MaxLength = 10;
                 this.columncod_conImpr.ReadOnly = true;
                 this.columncod_conImpr.MaxLength = 10;
+                this.columng_Font_enca_color.MaxLength = 50;
+                this.columng_Font_piepag_color.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6835,10 +6897,11 @@ namespace AQCobranza {
                 this.columncod_documen.AllowDBNull = false;
                 this.columncod_documen.ReadOnly = true;
                 this.columncod_documen.Unique = true;
-                this.columnnombre.MaxLength = 10;
+                this.columnnombre.MaxLength = 20;
                 this.columnserie.MaxLength = 10;
                 this.columncorrelativ.MaxLength = 10;
                 this.columnabre.MaxLength = 4;
+                this.columnestado.DefaultValue = ((bool)(true));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13608,6 +13671,39 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string g_Font_enca_color {
+                get {
+                    try {
+                        return ((string)(this[this.tableERP_empresa.g_Font_enca_colorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'g_Font_enca_color\' de la tabla \'ERP_empresa\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableERP_empresa.g_Font_enca_colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string g_Font_piepag_color {
+                get {
+                    try {
+                        return ((string)(this[this.tableERP_empresa.g_Font_piepag_colorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'g_Font_piepag_color\' de la tabla \'ERP_empresa\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableERP_empresa.g_Font_piepag_colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRazon_SocialNull() {
                 return this.IsNull(this.tableERP_empresa.Razon_SocialColumn);
             }
@@ -13736,6 +13832,30 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setg_fondoNull() {
                 this[this.tableERP_empresa.g_fondoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isg_Font_enca_colorNull() {
+                return this.IsNull(this.tableERP_empresa.g_Font_enca_colorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setg_Font_enca_colorNull() {
+                this[this.tableERP_empresa.g_Font_enca_colorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isg_Font_piepag_colorNull() {
+                return this.IsNull(this.tableERP_empresa.g_Font_piepag_colorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setg_Font_piepag_colorNull() {
+                this[this.tableERP_empresa.g_Font_piepag_colorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15550,6 +15670,40 @@ namespace AQCobranza {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string g_Font_enca_color {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Cotizacion_Buscar.g_Font_enca_colorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'g_Font_enca_color\' de la tabla \'ps_Cotizacion_Buscar\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.g_Font_enca_colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string g_Font_piepag_color {
+                get {
+                    try {
+                        return ((string)(this[this.tableps_Cotizacion_Buscar.g_Font_piepag_colorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'g_Font_piepag_color\' de la tabla \'ps_Cotizacion_Buscar\' e" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableps_Cotizacion_Buscar.g_Font_piepag_colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Header_cotizaRow Header_cotizaRow {
                 get {
                     return ((Header_cotizaRow)(this.GetParentRow(this.Table.ParentRelations["Header_cotiza_ps_Cotizacion_Buscar"])));
@@ -16013,6 +16167,30 @@ namespace AQCobranza {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setcosto_unit_cotNull() {
                 this[this.tableps_Cotizacion_Buscar.costo_unit_cotColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isg_Font_enca_colorNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.g_Font_enca_colorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setg_Font_enca_colorNull() {
+                this[this.tableps_Cotizacion_Buscar.g_Font_enca_colorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isg_Font_piepag_colorNull() {
+                return this.IsNull(this.tableps_Cotizacion_Buscar.g_Font_piepag_colorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setg_Font_piepag_colorNull() {
+                this[this.tableps_Cotizacion_Buscar.g_Font_piepag_colorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -23262,10 +23440,12 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             tableMapping.ColumnMappings.Add("g_Encabezado", "g_Encabezado");
             tableMapping.ColumnMappings.Add("g_piepag", "g_piepag");
             tableMapping.ColumnMappings.Add("g_fondo", "g_fondo");
+            tableMapping.ColumnMappings.Add("g_Font_enca_color", "g_Font_enca_color");
+            tableMapping.ColumnMappings.Add("g_Font_piepag_color", "g_Font_piepag_color");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [ERP_empresa] WHERE (([ruc_empresa] = ?) AND ((? = 1 AND [Razon_Social] IS NULL) OR ([Razon_Social] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [telefono] IS NULL) OR ([telefono] = ?)) AND ((? = 1 AND [gerente] IS NULL) OR ([gerente] = ?)) AND ((? = 1 AND [ge_telefono] IS NULL) OR ([ge_telefono] = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [ERP_empresa] WHERE (([ruc_empresa] = ?) AND ((? = 1 AND [Razon_Social] IS NULL) OR ([Razon_Social] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [telefono] IS NULL) OR ([telefono] = ?)) AND ((? = 1 AND [gerente] IS NULL) OR ([gerente] = ?)) AND ((? = 1 AND [ge_telefono] IS NULL) OR ([ge_telefono] = ?)) AND ((? = 1 AND [g_Font_enca_color] IS NULL) OR ([g_Font_enca_color] = ?)) AND ((? = 1 AND [g_Font_piepag_color] IS NULL) OR ([g_Font_piepag_color] = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ruc_empresa", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ruc_empresa", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Razon_Social", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Razon_Social", global::System.Data.DataRowVersion.Original, true, null));
@@ -23278,11 +23458,13 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_gerente", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gerente", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_ge_telefono", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ge_telefono", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ge_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ge_telefono", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_g_Font_enca_color", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_g_Font_enca_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_g_Font_piepag_color", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_g_Font_piepag_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [ERP_empresa] ([ruc_empresa], [Razon_Social], [Direccion], [telefono]" +
-                ", [gerente], [ge_telefono], [e_logo], [g_firma], [g_foto], [g_Encabezado], [g_pi" +
-                "epag], [g_fondo]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [ERP_empresa] ([ruc_empresa], [Razon_Social], [Direccion], [telefono], [gerente], [ge_telefono], [e_logo], [g_firma], [g_foto], [g_Encabezado], [g_piepag], [g_fondo], [g_Font_enca_color], [g_Font_piepag_color]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ruc_empresa", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ruc_empresa", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Razon_Social", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Razon_Social", global::System.Data.DataRowVersion.Current, false, null));
@@ -23296,9 +23478,11 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Encabezado", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Encabezado", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_piepag", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_piepag", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_fondo", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_fondo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Font_enca_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Font_piepag_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [ERP_empresa] SET [ruc_empresa] = ?, [Razon_Social] = ?, [Direccion] = ?, [telefono] = ?, [gerente] = ?, [ge_telefono] = ?, [e_logo] = ?, [g_firma] = ?, [g_foto] = ?, [g_Encabezado] = ?, [g_piepag] = ?, [g_fondo] = ? WHERE (([ruc_empresa] = ?) AND ((? = 1 AND [Razon_Social] IS NULL) OR ([Razon_Social] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [telefono] IS NULL) OR ([telefono] = ?)) AND ((? = 1 AND [gerente] IS NULL) OR ([gerente] = ?)) AND ((? = 1 AND [ge_telefono] IS NULL) OR ([ge_telefono] = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [ERP_empresa] SET [ruc_empresa] = ?, [Razon_Social] = ?, [Direccion] = ?, [telefono] = ?, [gerente] = ?, [ge_telefono] = ?, [e_logo] = ?, [g_firma] = ?, [g_foto] = ?, [g_Encabezado] = ?, [g_piepag] = ?, [g_fondo] = ?, [g_Font_enca_color] = ?, [g_Font_piepag_color] = ? WHERE (([ruc_empresa] = ?) AND ((? = 1 AND [Razon_Social] IS NULL) OR ([Razon_Social] = ?)) AND ((? = 1 AND [Direccion] IS NULL) OR ([Direccion] = ?)) AND ((? = 1 AND [telefono] IS NULL) OR ([telefono] = ?)) AND ((? = 1 AND [gerente] IS NULL) OR ([gerente] = ?)) AND ((? = 1 AND [ge_telefono] IS NULL) OR ([ge_telefono] = ?)) AND ((? = 1 AND [g_Font_enca_color] IS NULL) OR ([g_Font_enca_color] = ?)) AND ((? = 1 AND [g_Font_piepag_color] IS NULL) OR ([g_Font_piepag_color] = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("ruc_empresa", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ruc_empresa", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Razon_Social", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Razon_Social", global::System.Data.DataRowVersion.Current, false, null));
@@ -23312,6 +23496,8 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Encabezado", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Encabezado", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_piepag", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_piepag", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_fondo", global::System.Data.Odbc.OdbcType.Image, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_fondo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Font_enca_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("g_Font_piepag_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ruc_empresa", global::System.Data.Odbc.OdbcType.NChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ruc_empresa", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Razon_Social", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Razon_Social", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Razon_Social", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Razon_Social", global::System.Data.DataRowVersion.Original, false, null));
@@ -23323,6 +23509,10 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_gerente", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "gerente", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_ge_telefono", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ge_telefono", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_ge_telefono", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ge_telefono", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_g_Font_enca_color", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_g_Font_enca_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_enca_color", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_g_Font_piepag_color", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_g_Font_piepag_color", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "g_Font_piepag_color", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23339,8 +23529,8 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ruc_empresa, Razon_Social, Direccion, telefono, gerente, ge_telefon" +
-                "o, e_logo, g_firma, g_foto, g_Encabezado, g_piepag, g_fondo\r\nFROM            ERP" +
-                "_empresa";
+                "o, e_logo, g_firma, g_foto, g_Encabezado, g_piepag, g_fondo, g_Font_enca_color, " +
+                "\r\n                         g_Font_piepag_color\r\nFROM            ERP_empresa";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -23401,7 +23591,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ruc_empresa, string Original_Razon_Social, string Original_Direccion, string Original_telefono, string Original_gerente, string Original_ge_telefono) {
+        public virtual int Delete(string Original_ruc_empresa, string Original_Razon_Social, string Original_Direccion, string Original_telefono, string Original_gerente, string Original_ge_telefono, string Original_g_Font_enca_color, string Original_g_Font_piepag_color) {
             if ((Original_ruc_empresa == null)) {
                 throw new global::System.ArgumentNullException("Original_ruc_empresa");
             }
@@ -23448,6 +23638,22 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ge_telefono));
             }
+            if ((Original_g_Font_enca_color == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_g_Font_enca_color));
+            }
+            if ((Original_g_Font_piepag_color == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_g_Font_piepag_color));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23468,7 +23674,7 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ruc_empresa, string Razon_Social, string Direccion, string telefono, string gerente, string ge_telefono, byte[] e_logo, byte[] g_firma, byte[] g_foto, byte[] g_Encabezado, byte[] g_piepag, byte[] g_fondo) {
+        public virtual int Insert(string ruc_empresa, string Razon_Social, string Direccion, string telefono, string gerente, string ge_telefono, byte[] e_logo, byte[] g_firma, byte[] g_foto, byte[] g_Encabezado, byte[] g_piepag, byte[] g_fondo, string g_Font_enca_color, string g_Font_piepag_color) {
             if ((ruc_empresa == null)) {
                 throw new global::System.ArgumentNullException("ruc_empresa");
             }
@@ -23541,6 +23747,18 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = ((byte[])(g_fondo));
             }
+            if ((g_Font_enca_color == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(g_Font_enca_color));
+            }
+            if ((g_Font_piepag_color == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(g_Font_piepag_color));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -23574,12 +23792,16 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
                     byte[] g_Encabezado, 
                     byte[] g_piepag, 
                     byte[] g_fondo, 
+                    string g_Font_enca_color, 
+                    string g_Font_piepag_color, 
                     string Original_ruc_empresa, 
                     string Original_Razon_Social, 
                     string Original_Direccion, 
                     string Original_telefono, 
                     string Original_gerente, 
-                    string Original_ge_telefono) {
+                    string Original_ge_telefono, 
+                    string Original_g_Font_enca_color, 
+                    string Original_g_Font_piepag_color) {
             if ((ruc_empresa == null)) {
                 throw new global::System.ArgumentNullException("ruc_empresa");
             }
@@ -23652,51 +23874,79 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((byte[])(g_fondo));
             }
+            if ((g_Font_enca_color == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(g_Font_enca_color));
+            }
+            if ((g_Font_piepag_color == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(g_Font_piepag_color));
+            }
             if ((Original_ruc_empresa == null)) {
                 throw new global::System.ArgumentNullException("Original_ruc_empresa");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ruc_empresa));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_ruc_empresa));
             }
             if ((Original_Razon_Social == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Razon_Social));
-            }
-            if ((Original_Direccion == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Direccion));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Razon_Social));
             }
-            if ((Original_telefono == null)) {
+            if ((Original_Direccion == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_telefono));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Direccion));
             }
-            if ((Original_gerente == null)) {
+            if ((Original_telefono == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_gerente));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_telefono));
             }
-            if ((Original_ge_telefono == null)) {
+            if ((Original_gerente == null)) {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_ge_telefono));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_gerente));
+            }
+            if ((Original_ge_telefono == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_ge_telefono));
+            }
+            if ((Original_g_Font_enca_color == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_g_Font_enca_color));
+            }
+            if ((Original_g_Font_piepag_color == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_g_Font_piepag_color));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -23730,13 +23980,17 @@ WHERE        Orden_compra.cod_cot = Header_cotiza.Cod_Cot AND Header_cotiza.Ruc_
                     byte[] g_Encabezado, 
                     byte[] g_piepag, 
                     byte[] g_fondo, 
+                    string g_Font_enca_color, 
+                    string g_Font_piepag_color, 
                     string Original_ruc_empresa, 
                     string Original_Razon_Social, 
                     string Original_Direccion, 
                     string Original_telefono, 
                     string Original_gerente, 
-                    string Original_ge_telefono) {
-            return this.Update(Original_ruc_empresa, Razon_Social, Direccion, telefono, gerente, ge_telefono, e_logo, g_firma, g_foto, g_Encabezado, g_piepag, g_fondo, Original_ruc_empresa, Original_Razon_Social, Original_Direccion, Original_telefono, Original_gerente, Original_ge_telefono);
+                    string Original_ge_telefono, 
+                    string Original_g_Font_enca_color, 
+                    string Original_g_Font_piepag_color) {
+            return this.Update(Original_ruc_empresa, Razon_Social, Direccion, telefono, gerente, ge_telefono, e_logo, g_firma, g_foto, g_Encabezado, g_piepag, g_fondo, g_Font_enca_color, g_Font_piepag_color, Original_ruc_empresa, Original_Razon_Social, Original_Direccion, Original_telefono, Original_gerente, Original_ge_telefono, Original_g_Font_enca_color, Original_g_Font_piepag_color);
         }
     }
     
@@ -25989,6 +26243,8 @@ FROM            Usuarios";
             tableMapping.ColumnMappings.Add("D_validez", "D_validez");
             tableMapping.ColumnMappings.Add("cod_conImpr", "cod_conImpr");
             tableMapping.ColumnMappings.Add("costo_unit_cot", "costo_unit_cot");
+            tableMapping.ColumnMappings.Add("g_Font_enca_color", "g_Font_enca_color");
+            tableMapping.ColumnMappings.Add("g_Font_piepag_color", "g_Font_piepag_color");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -26233,7 +26489,7 @@ FROM            Usuarios";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[3];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[5];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        cod_documen, nombre, serie, correlativ, abre, estado\r\nFROM         " +
@@ -26246,13 +26502,23 @@ FROM            Usuarios";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE       Documento_pago\r\nSET                correlativ = ?\r\nWHERE        (cod" +
-                "_documen = ?) AND (serie = ?) AND (abre = ?)";
+            this._commandCollection[2].CommandText = "SELECT        cod_documen, nombre, serie, correlativ, abre, estado\r\nFROM         " +
+                "   Documento_pago\r\nWHERE        (estado = 1) AND (abre = \'NC\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("correlativ", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "correlativ", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_documen", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_documen", global::System.Data.DataRowVersion.Original, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_serie", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "serie", global::System.Data.DataRowVersion.Original, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_abre", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "abre", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        cod_documen, nombre, serie, correlativ, abre, estado\r\nFROM         " +
+                "   Documento_pago";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "UPDATE       Documento_pago\r\nSET                correlativ = ?\r\nWHERE        (cod" +
+                "_documen = ?) AND (serie = ?) AND (abre = ?)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("correlativ", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "correlativ", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_cod_documen", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_documen", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_serie", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "serie", global::System.Data.DataRowVersion.Original, false, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_abre", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "abre", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -26298,6 +26564,54 @@ FROM            Usuarios";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual DSAQCobranza.Documento_pagoDataTable GetDataBy1() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            DSAQCobranza.Documento_pagoDataTable dataTable = new DSAQCobranza.Documento_pagoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNC(DSAQCobranza.Documento_pagoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DSAQCobranza.Documento_pagoDataTable GetDataBy2() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            DSAQCobranza.Documento_pagoDataTable dataTable = new DSAQCobranza.Documento_pagoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByTodo(DSAQCobranza.Documento_pagoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DSAQCobranza.Documento_pagoDataTable GetDataBy3() {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             DSAQCobranza.Documento_pagoDataTable dataTable = new DSAQCobranza.Documento_pagoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -26542,7 +26856,7 @@ FROM            Usuarios";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateQuery(string correlativ, int Original_cod_documen, string Original_serie, string Original_abre) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[2];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[4];
             if ((correlativ == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -30128,7 +30442,7 @@ WHERE        (comprobante LIKE '%' + ? + '%')";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[4];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[6];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        comprobante, fecha, Ruc_DNI, monto, igv, monto_total, cod_usuario, " +
@@ -30150,10 +30464,25 @@ WHERE        (comprobante LIKE '%' + ? + '%')";
             this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        SUM(monto_total) AS m_total\r\nFROM            Header_Pago\r\nWHERE    " +
-                "    (fecha = ?) AND (estado = 1)";
+            this._commandCollection[3].CommandText = "SELECT        comprobante, fecha, Ruc_DNI, monto, igv, monto_total, cod_usuario, " +
+                "tipo_doc, cod_Gremision, estado\r\nFROM            Header_Pago\r\nWHERE        (comp" +
+                "robante LIKE \'%\' + ? + \'%\') AND (estado = 0 )";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("comprobante", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comprobante", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT        comprobante, fecha, Ruc_DNI, monto, igv, monto_total, cod_usuario, tipo_doc, cod_Gremision, estado
+FROM            Header_Pago
+WHERE        (comprobante LIKE '%' + ? + '%') AND (estado = 1) and 
+not exists (select 'x' from Nota_credito where Nota_credito.comprobante = Header_Pago.comprobante and Nota_credito.estado = 1) ";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("comprobante", global::System.Data.Odbc.OdbcType.VarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "comprobante", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT        SUM(monto_total) AS m_total\r\nFROM            Header_Pago\r\nWHERE    " +
+                "    (fecha = ?) AND (estado = 1)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("fecha", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fecha", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -30222,6 +30551,78 @@ WHERE        (comprobante LIKE '%' + ? + '%')";
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(fecha));
+            }
+            DSAQCobranza.Header_PagoDataTable dataTable = new DSAQCobranza.Header_PagoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_Anulados(DSAQCobranza.Header_PagoDataTable dataTable, string comprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((comprobante == null)) {
+                throw new global::System.ArgumentNullException("comprobante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(comprobante));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DSAQCobranza.Header_PagoDataTable GetDataBy3(string comprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((comprobante == null)) {
+                throw new global::System.ArgumentNullException("comprobante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(comprobante));
+            }
+            DSAQCobranza.Header_PagoDataTable dataTable = new DSAQCobranza.Header_PagoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNC(DSAQCobranza.Header_PagoDataTable dataTable, string comprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((comprobante == null)) {
+                throw new global::System.ArgumentNullException("comprobante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(comprobante));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DSAQCobranza.Header_PagoDataTable GetDataBy4(string comprobante) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((comprobante == null)) {
+                throw new global::System.ArgumentNullException("comprobante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(comprobante));
             }
             DSAQCobranza.Header_PagoDataTable dataTable = new DSAQCobranza.Header_PagoDataTable();
             this.Adapter.Fill(dataTable);
@@ -30681,7 +31082,7 @@ WHERE        (comprobante LIKE '%' + ? + '%')";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object Sum_total(string fecha) {
-            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[3];
+            global::System.Data.Odbc.OdbcCommand command = this.CommandCollection[5];
             if ((fecha == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }

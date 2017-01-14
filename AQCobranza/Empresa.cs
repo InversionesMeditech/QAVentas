@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.IO;
 using AQCbrDao;
+//using System.Windows.Media;
 namespace AQCobranza
 {
     public partial class Empresa : DevExpress.XtraEditors.XtraForm
@@ -64,7 +65,12 @@ namespace AQCobranza
 
         private void Empresa_Load(object sender, EventArgs e)
         {
+           
          this.eRP_empresaTableAdapter.Fill(this.dSAQCobranza.ERP_empresa);
+         Color color1 = System.Drawing.ColorTranslator.FromHtml(g_Font_enca_colorTextEdit.Text);
+         Color color2 = System.Drawing.ColorTranslator.FromHtml(g_Font_piepag_colorTextEdit.Text);
+         button1.BackColor = color1;
+         button2.BackColor = color2;
             if (ruc_empresaTextEdit.Text !="")
             {
                 bindingNavigatorAddNewItem.Enabled = false;
@@ -108,6 +114,29 @@ namespace AQCobranza
         private void g_fondoPictureBox_Click(object sender, EventArgs e)
         {
             //cargarimagen(g_fondoPictureBox);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                button1.BackColor = colorDialog1.Color;
+                g_Font_enca_colorTextEdit.Text = String.Format("#{0:X2}{1:X2}{2:X2}", colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                button2.BackColor = colorDialog1.Color;
+                g_Font_piepag_colorTextEdit.Text = String.Format("#{0:X2}{1:X2}{2:X2}", colorDialog1.Color.R, colorDialog1.Color.G, colorDialog1.Color.B);
+            }
+        }
+
+        private void groupControl5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

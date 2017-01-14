@@ -41,14 +41,14 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empresa));
+            System.Windows.Forms.Label g_Font_enca_colorLabel;
+            System.Windows.Forms.Label g_Font_piepag_colorLabel;
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.eRP_empresaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.eRP_empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.eRP_empresaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -65,8 +65,15 @@
             this.g_firmaPictureBox = new System.Windows.Forms.PictureBox();
             this.gerenteTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ge_telefonoTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.eRP_empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAQCobranza = new AQCobranza.DSAQCobranza();
             this.eRP_empresaTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.ERP_empresaTableAdapter();
             this.tableAdapterManager = new AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.g_Font_enca_colorTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.button2 = new System.Windows.Forms.Button();
+            this.g_Font_piepag_colorTextEdit = new DevExpress.XtraEditors.TextEdit();
             ruc_empresaLabel = new System.Windows.Forms.Label();
             razon_SocialLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -78,6 +85,8 @@
             g_fotoLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            g_Font_enca_colorLabel = new System.Windows.Forms.Label();
+            g_Font_piepag_colorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -87,8 +96,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingNavigator)).BeginInit();
             this.eRP_empresaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -106,6 +113,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.g_firmaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenteTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ge_telefonoTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g_Font_enca_colorTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g_Font_piepag_colorTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ruc_empresaLabel
@@ -202,7 +213,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(5, 137);
+            label1.Location = new System.Drawing.Point(5, 134);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(135, 13);
             label1.TabIndex = 40;
@@ -212,7 +223,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(5, 222);
+            label2.Location = new System.Drawing.Point(5, 246);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(85, 13);
             label2.TabIndex = 41;
@@ -225,7 +236,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(987, 411);
+            this.groupControl1.Size = new System.Drawing.Size(987, 480);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Empresa";
             // 
@@ -238,7 +249,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(983, 370);
+            this.splitContainerControl1.Size = new System.Drawing.Size(983, 439);
             this.splitContainerControl1.SplitterPosition = 121;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -249,7 +260,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(121, 370);
+            this.groupControl3.Size = new System.Drawing.Size(121, 439);
             this.groupControl3.TabIndex = 0;
             // 
             // groupBox1
@@ -295,16 +306,6 @@
             this.bindingNavigatorAddNewItem.Text = "NUEVO";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
-            // eRP_empresaBindingSource
-            // 
-            this.eRP_empresaBindingSource.DataMember = "ERP_empresa";
-            this.eRP_empresaBindingSource.DataSource = this.dSAQCobranza;
-            // 
-            // dSAQCobranza
-            // 
-            this.dSAQCobranza.DataSetName = "DSAQCobranza";
-            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -342,7 +343,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(857, 370);
+            this.groupControl2.Size = new System.Drawing.Size(857, 439);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Datos de la Empresa";
             // 
@@ -351,26 +352,32 @@
             this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl5.Controls.Add(this.button2);
+            this.groupControl5.Controls.Add(this.button1);
+            this.groupControl5.Controls.Add(g_Font_piepag_colorLabel);
+            this.groupControl5.Controls.Add(g_Font_enca_colorLabel);
             this.groupControl5.Controls.Add(this.g_piepagPictureBox);
             this.groupControl5.Controls.Add(label2);
             this.groupControl5.Controls.Add(label1);
             this.groupControl5.Controls.Add(this.g_EncabezadoPictureBox);
             this.groupControl5.Controls.Add(this.e_logoPictureBox);
             this.groupControl5.Controls.Add(e_logoLabel);
+            this.groupControl5.Controls.Add(this.g_Font_enca_colorTextEdit);
+            this.groupControl5.Controls.Add(this.g_Font_piepag_colorTextEdit);
             this.groupControl5.Location = new System.Drawing.Point(379, 26);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(466, 312);
+            this.groupControl5.Size = new System.Drawing.Size(466, 403);
             this.groupControl5.TabIndex = 39;
-            this.groupControl5.Text = "Imagenes para Documetos";
+            this.groupControl5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl5_Paint);
             // 
             // g_piepagPictureBox
             // 
             this.g_piepagPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.g_piepagPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.g_piepagPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.eRP_empresaBindingSource, "g_piepag", true));
-            this.g_piepagPictureBox.Location = new System.Drawing.Point(48, 240);
+            this.g_piepagPictureBox.Location = new System.Drawing.Point(48, 262);
             this.g_piepagPictureBox.Name = "g_piepagPictureBox";
-            this.g_piepagPictureBox.Size = new System.Drawing.Size(337, 50);
+            this.g_piepagPictureBox.Size = new System.Drawing.Size(379, 50);
             this.g_piepagPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.g_piepagPictureBox.TabIndex = 42;
             this.g_piepagPictureBox.TabStop = false;
@@ -381,9 +388,9 @@
             this.g_EncabezadoPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.g_EncabezadoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.g_EncabezadoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.eRP_empresaBindingSource, "g_Encabezado", true));
-            this.g_EncabezadoPictureBox.Location = new System.Drawing.Point(48, 155);
+            this.g_EncabezadoPictureBox.Location = new System.Drawing.Point(48, 150);
             this.g_EncabezadoPictureBox.Name = "g_EncabezadoPictureBox";
-            this.g_EncabezadoPictureBox.Size = new System.Drawing.Size(337, 51);
+            this.g_EncabezadoPictureBox.Size = new System.Drawing.Size(379, 51);
             this.g_EncabezadoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.g_EncabezadoPictureBox.TabIndex = 39;
             this.g_EncabezadoPictureBox.TabStop = false;
@@ -499,6 +506,36 @@
             this.ge_telefonoTextEdit.Size = new System.Drawing.Size(100, 20);
             this.ge_telefonoTextEdit.TabIndex = 34;
             // 
+            // g_Font_enca_colorLabel
+            // 
+            g_Font_enca_colorLabel.AutoSize = true;
+            g_Font_enca_colorLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            g_Font_enca_colorLabel.Location = new System.Drawing.Point(20, 216);
+            g_Font_enca_colorLabel.Name = "g_Font_enca_colorLabel";
+            g_Font_enca_colorLabel.Size = new System.Drawing.Size(89, 13);
+            g_Font_enca_colorLabel.TabIndex = 42;
+            g_Font_enca_colorLabel.Text = "Color de Letra:";
+            // 
+            // g_Font_piepag_colorLabel
+            // 
+            g_Font_piepag_colorLabel.AutoSize = true;
+            g_Font_piepag_colorLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            g_Font_piepag_colorLabel.Location = new System.Drawing.Point(20, 321);
+            g_Font_piepag_colorLabel.Name = "g_Font_piepag_colorLabel";
+            g_Font_piepag_colorLabel.Size = new System.Drawing.Size(89, 13);
+            g_Font_piepag_colorLabel.TabIndex = 43;
+            g_Font_piepag_colorLabel.Text = "Color de Letra:";
+            // 
+            // eRP_empresaBindingSource
+            // 
+            this.eRP_empresaBindingSource.DataMember = "ERP_empresa";
+            this.eRP_empresaBindingSource.DataSource = this.dSAQCobranza;
+            // 
+            // dSAQCobranza
+            // 
+            this.dSAQCobranza.DataSetName = "DSAQCobranza";
+            this.dSAQCobranza.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // eRP_empresaTableAdapter
             // 
             this.eRP_empresaTableAdapter.ClearBeforeFill = true;
@@ -520,15 +557,54 @@
             this.tableAdapterManager.Header_PagoTableAdapter = null;
             this.tableAdapterManager.ImpresionesTableAdapter = null;
             this.tableAdapterManager.MaterialTableAdapter = null;
+            this.tableAdapterManager.Orden_de_CompraTableAdapter = null;
             this.tableAdapterManager.Unidad_MedidaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = AQCobranza.DSAQCobranzaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(171, 211);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 23);
+            this.button1.TabIndex = 46;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // g_Font_enca_colorTextEdit
+            // 
+            this.g_Font_enca_colorTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.eRP_empresaBindingSource, "g_Font_enca_color", true));
+            this.g_Font_enca_colorTextEdit.EditValue = "";
+            this.g_Font_enca_colorTextEdit.Enabled = false;
+            this.g_Font_enca_colorTextEdit.Location = new System.Drawing.Point(111, 213);
+            this.g_Font_enca_colorTextEdit.Name = "g_Font_enca_colorTextEdit";
+            this.g_Font_enca_colorTextEdit.Size = new System.Drawing.Size(54, 20);
+            this.g_Font_enca_colorTextEdit.TabIndex = 43;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(171, 316);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 23);
+            this.button2.TabIndex = 47;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // g_Font_piepag_colorTextEdit
+            // 
+            this.g_Font_piepag_colorTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.eRP_empresaBindingSource, "g_Font_piepag_color", true));
+            this.g_Font_piepag_colorTextEdit.EditValue = "";
+            this.g_Font_piepag_colorTextEdit.Enabled = false;
+            this.g_Font_piepag_colorTextEdit.Location = new System.Drawing.Point(111, 318);
+            this.g_Font_piepag_colorTextEdit.Name = "g_Font_piepag_colorTextEdit";
+            this.g_Font_piepag_colorTextEdit.Size = new System.Drawing.Size(54, 20);
+            this.g_Font_piepag_colorTextEdit.TabIndex = 44;
             // 
             // Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 411);
+            this.ClientSize = new System.Drawing.Size(987, 480);
             this.Controls.Add(this.groupControl1);
             this.LookAndFeel.SkinName = "Office 2013";
             this.Name = "Empresa";
@@ -546,8 +622,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingNavigator)).EndInit();
             this.eRP_empresaBindingNavigator.ResumeLayout(false);
             this.eRP_empresaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -568,6 +642,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.g_firmaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gerenteTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ge_telefonoTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eRP_empresaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAQCobranza)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g_Font_enca_colorTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g_Font_piepag_colorTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,5 +678,10 @@
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private System.Windows.Forms.PictureBox g_EncabezadoPictureBox;
         private System.Windows.Forms.PictureBox g_piepagPictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button2;
+        private DevExpress.XtraEditors.TextEdit g_Font_enca_colorTextEdit;
+        private DevExpress.XtraEditors.TextEdit g_Font_piepag_colorTextEdit;
     }
 }

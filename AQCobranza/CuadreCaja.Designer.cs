@@ -164,7 +164,7 @@
             // lbltotal
             // 
             this.lbltotal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(310, 35);
+            this.lbltotal.Location = new System.Drawing.Point(365, 34);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(82, 14);
             this.lbltotal.TabIndex = 4;
@@ -173,25 +173,26 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(208, 35);
+            this.labelControl2.Location = new System.Drawing.Point(248, 34);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(96, 14);
+            this.labelControl2.Size = new System.Drawing.Size(111, 14);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Ingreso del Día:";
+            this.labelControl2.Text = "Facturado  en Día:";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Location = new System.Drawing.Point(6, 35);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(84, 13);
+            this.labelControl1.Size = new System.Drawing.Size(122, 13);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Fecha de pago:";
+            this.labelControl1.Text = "Fecha de Facturación:";
             // 
             // txtFecha
             // 
             this.txtFecha.EditValue = null;
-            this.txtFecha.Location = new System.Drawing.Point(96, 32);
+            this.txtFecha.Location = new System.Drawing.Point(134, 32);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});

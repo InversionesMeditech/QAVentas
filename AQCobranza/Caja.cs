@@ -100,21 +100,24 @@ namespace AQCobranza
                             string _Cod_concep, _comprobante, _Det_Cot;
                             DateTime _fecha;
                             double _descuento ,  _monto;
+                            bool _entregado;
                             _comprobante = txtTpago.Text.Trim()+txtSerie.Text.Trim()+"-"+txtComprobante.Text.Trim();
                             lstHpago = objDao.Registrar_Hpago(_comprobante, txtFecha.DateTime, txtRuc_DNI.Text, Convert.ToDouble(txtmonto.Text), Convert.ToDouble(txtigv.Text),
                                                  Convert.ToDouble(txtmonto_total.Text), txtcod_usuario.Text, Convert.ToInt16(cbTpago.SelectedValue), txtcod_orden.Text,Convert.ToInt16(txtDias_venc.Text));
                            
                             for (int i = 0; i < gridView2.RowCount; i++)
                             {
-                                _fecha = txtFecha.DateTime;
-                                _monto = Convert.ToDouble(gridView2.GetRowCellValue(i, "Sub_total"));
-                                _descuento = Convert.ToDouble(gridView2.GetRowCellValue(i, "descuento"));
-                                _Cod_concep = Convert.ToString(gridView2.GetRowCellValue(i, "Cod_concep"));
-                                _Det_Cot = Convert.ToString(gridView2.GetRowCellValue(i, "Det_Cot"));
-                                objDao.Registrar_Dpago(_Cod_concep, _fecha, _descuento, _monto, _comprobante, _Det_Cot);
+                                _entregado = Convert.ToBoolean(gridView2.GetRowCellValue(i, "flg_entregado"));
+                                if (_entregado)
+                                {
+                                    _fecha = txtFecha.DateTime;
+                                    _monto = Convert.ToDouble(gridView2.GetRowCellValue(i, "Sub_total"));
+                                    _descuento = Convert.ToDouble(gridView2.GetRowCellValue(i, "descuento"));
+                                    _Cod_concep = Convert.ToString(gridView2.GetRowCellValue(i, "Cod_concep"));
+                                    _Det_Cot = Convert.ToString(gridView2.GetRowCellValue(i, "Det_Cot"));
+                                    objDao.Registrar_Dpago(_Cod_concep, _fecha, _descuento, _monto, _comprobante, _Det_Cot);
+                                }
                             }
-               
-
                             intValue = Convert.ToInt32(txtComprobante.Text)+1;
                             this.documento_pagoTableAdapter.UpdateQuery(intValue.ToString(fmt), Convert.ToInt32(cbTpago.SelectedValue), txtSerie.Text, txtTpago.Text);
                             ps_GeneraDTpagoGridControl.Enabled = false;
@@ -276,6 +279,16 @@ namespace AQCobranza
         private void txtcod_usuario_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            if (this.Controls.Find("Nota_credito", true).Count() == 0)
+            {
+                Nota_credito chForm = new Nota_credito();
+                chForm.usuario = txtcod_usuario.Text;
+                chForm.Show();
+            }
         }
 
    

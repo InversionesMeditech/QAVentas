@@ -33,6 +33,7 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnAnular = new DevExpress.XtraEditors.SimpleButton();
             this.pccOrdenPago = new DevExpress.XtraEditors.PopupContainerControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
@@ -49,7 +50,6 @@
             this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colApellidos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnRegistrar = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.txtDias_venc = new DevExpress.XtraEditors.TextEdit();
@@ -112,6 +112,7 @@
             this.view_Guia_remision_busquedaTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.View_Guia_remision_busquedaTableAdapter();
             this.header_PagoTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.Header_PagoTableAdapter();
             this.view_ComprobanteTableAdapter = new AQCobranza.DSAQCobranzaTableAdapters.View_ComprobanteTableAdapter();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -183,15 +184,26 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.simpleButton4);
+            this.groupControl3.Controls.Add(this.btnRegistrar);
+            this.groupControl3.Controls.Add(this.simpleButton2);
             this.groupControl3.Controls.Add(this.btnAnular);
             this.groupControl3.Controls.Add(this.pccOrdenPago);
-            this.groupControl3.Controls.Add(this.simpleButton2);
-            this.groupControl3.Controls.Add(this.btnRegistrar);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(144, 437);
             this.groupControl3.TabIndex = 0;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(10, 59);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(119, 34);
+            this.simpleButton2.TabIndex = 55;
+            this.simpleButton2.Text = "Nuevo";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // btnAnular
             // 
@@ -200,7 +212,7 @@
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(119, 34);
             this.btnAnular.TabIndex = 56;
-            this.btnAnular.Text = "ANULAR";
+            this.btnAnular.Text = "Anular Compr";
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // pccOrdenPago
@@ -347,16 +359,6 @@
             this.searchControl1.Properties.Client = this.CGordenPago;
             this.searchControl1.Size = new System.Drawing.Size(169, 20);
             this.searchControl1.TabIndex = 0;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(10, 59);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(119, 34);
-            this.simpleButton2.TabIndex = 55;
-            this.simpleButton2.Text = "Nuevo";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // btnRegistrar
             // 
@@ -902,7 +904,6 @@
             this.colpagar.FieldName = "flg_entregado";
             this.colpagar.Image = ((System.Drawing.Image)(resources.GetObject("colpagar.Image")));
             this.colpagar.Name = "colpagar";
-            this.colpagar.OptionsColumn.AllowEdit = false;
             this.colpagar.Visible = true;
             this.colpagar.VisibleIndex = 8;
             this.colpagar.Width = 72;
@@ -978,6 +979,16 @@
             // view_ComprobanteTableAdapter
             // 
             this.view_ComprobanteTableAdapter.ClearBeforeFill = true;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(10, 139);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(119, 34);
+            this.simpleButton4.TabIndex = 57;
+            this.simpleButton4.Text = "Nota Crédito";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // Caja
             // 
@@ -1124,5 +1135,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Det_Cot;
         private DevExpress.XtraEditors.TextEdit txtDias_venc;
         private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
     }
 }

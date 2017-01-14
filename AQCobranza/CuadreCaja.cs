@@ -59,12 +59,18 @@ namespace AQCobranza
 
         private void CuadreCaja_Load(object sender, EventArgs e)
         {
+            txtFecha.DateTime = DateTime.Now.Date;
             listar();
         }
 
         private void txtFecha_EditValueChanged(object sender, EventArgs e)
         {
             listar();
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

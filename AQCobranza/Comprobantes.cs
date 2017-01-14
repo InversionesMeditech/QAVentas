@@ -20,16 +20,24 @@ namespace AQCobranza
 
         private void documento_pagoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.documento_pagoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dSAQCobranza);
+            try
+            {
+                this.Validate();
+                this.documento_pagoBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dSAQCobranza);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error :"+ ex.Message);
+            }
+           
 
         }
 
         private void Comprobantes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dSAQCobranza.Documento_pago' Puede moverla o quitarla según sea necesario.
-            this.documento_pagoTableAdapter.Fill(this.dSAQCobranza.Documento_pago);
+            this.documento_pagoTableAdapter.FillByTodo(this.dSAQCobranza.Documento_pago);
 
         }
 

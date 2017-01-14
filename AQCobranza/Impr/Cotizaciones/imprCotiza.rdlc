@@ -840,7 +840,6 @@
                         <rd:FormatSymbolCulture>es-PE</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1726,7 +1725,7 @@
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
-                    <Color>Gray</Color>
+                    <Color>=First(Fields!g_Font_enca_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1777,7 +1776,7 @@
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                     <TextDecoration>Underline</TextDecoration>
-                    <Color>Gray</Color>
+                    <Color>=First(Fields!g_Font_enca_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1810,7 +1809,7 @@
                   <Value>=First(Fields!Fecha.Value, "DataSet1")</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
-                    <Color>Gray</Color>
+                    <Color>=First(Fields!g_Font_enca_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1868,7 +1867,7 @@
                   <Value>=Globals!PageNumber</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
-                    <Color>DimGray</Color>
+                    <Color>=First(Fields!g_Font_piepag_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1903,7 +1902,7 @@
                   <Value>=Globals!TotalPages</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
-                    <Color>DimGray</Color>
+                    <Color>=First(Fields!g_Font_piepag_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1938,7 +1937,7 @@
                   <Value>/</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
-                    <Color>DimGray</Color>
+                    <Color>=First(Fields!g_Font_piepag_color.Value, "DataSet1")</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -2177,6 +2176,14 @@
         <Field Name="costo_unit_cot">
           <DataField>costo_unit_cot</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="g_Font_enca_color">
+          <DataField>g_Font_enca_color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_Font_piepag_color">
+          <DataField>g_Font_piepag_color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

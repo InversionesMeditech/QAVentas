@@ -201,6 +201,7 @@
             this.barRdeuda.Id = 9;
             this.barRdeuda.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barRdeuda.LargeGlyph")));
             this.barRdeuda.Name = "barRdeuda";
+            this.barRdeuda.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barRdeuda_ItemClick);
             // 
             // barAcabados
             // 
